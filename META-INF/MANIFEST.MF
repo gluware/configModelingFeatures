@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Bundle-SymbolicName: NIB.174a45fc-6b35-4b2d-a0b7-2645b4472e99.plugin
-Bundle-Version: 0.0.3.qualifier
-Bundle-Name: Example Baseline Features
-NIB-Dist-Areas: distArea.central.8312;version="0.0.3.202410311615"
-Bundle-ManifestVersion: 2
-NIB-Control-Type: Package
-NIB-Src-Encoding: code212
-
