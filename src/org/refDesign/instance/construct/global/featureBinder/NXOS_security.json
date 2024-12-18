@@ -1,0 +1,30 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/featureBinder.jtype"
+	},
+	"@id" : "b92f0840-cc29-479f-b303-040969e0ac9a",
+	"vendor": "cisco",
+	"os" : "nxos",
+	"featureName" : "security",
+	"featureDisplayName" : "Security feature",
+	"renderList" : [
+		{
+			"item" : {
+				"@ref" : "/org/instance/construct/global/conceptItem/NXOS_IpAcl.json"
+			},
+			"maskCommands" : [
+			],
+			"dCli" : [
+			]
+		},
+		{
+			"item" : {
+				"@ref" : "/org/instance/construct/global/conceptItem/NXOS_Intf2.json"
+			},
+			"maskCommands" : [
+			],
+			"dCli" : [
+			]
+		}
+	]
+}

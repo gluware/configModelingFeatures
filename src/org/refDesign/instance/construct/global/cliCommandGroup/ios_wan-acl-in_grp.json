@@ -1,0 +1,17 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommandGroup.jtype"
+	},
+	"@id" : "f8191d68-fee1-4edc-9784-cc96f8a420c0",
+	"regEx" : "acl-wan-.+",
+	"ignoreDelete" : false,
+	"cliBlocks" : {
+		"@ref" : [
+			"/org/instance/construct/global/cliCommands/ios_wan-acl-in_cli.json"
+		]
+	},
+	"advanced" : {
+	},
+	"maskCommands" : [
+	]
+}

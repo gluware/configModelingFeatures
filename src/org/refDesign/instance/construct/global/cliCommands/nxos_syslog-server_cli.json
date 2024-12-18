@@ -1,0 +1,18 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "d2533d30-8c45-47a7-9bc5-3d74d21eabd6",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/NXOS_SyslogServer.json"
+	},
+	"cliCommands" : [
+		"logging buffered $context.syslog.bufferSize",
+		"logging server $context.syslog.server[*].ip #context.syslog.server[*].level",
+		"logging event link-status default",
+		"logging event trunk-status default"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

@@ -1,0 +1,31 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/featureBinder.jtype"
+	},
+	"@id" : "41b706bf-2ac0-49ec-90ae-173395213514",
+	"vendor": "cisco",
+	"os" : "nxos",
+	"featureName" : "dns",
+	"featureDisplayName" : "DNS Feature",
+	"renderList" : [
+		{
+			"item" : {
+				"@ref" : "/org/instance/construct/global/conceptItem/NXOS_DomainLookup.json"
+			},
+			"maskCommands" : [
+				""
+			],
+			"dCli" : [
+			]
+		},
+		{
+			"item" : {
+				"@ref" : "/org/instance/construct/global/conceptItem/NXOS_DomainName.json"
+			},
+			"maskCommands" : [
+			],
+			"dCli" : [
+			]
+		}
+	]
+}

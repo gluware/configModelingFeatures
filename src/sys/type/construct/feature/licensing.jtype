@@ -1,0 +1,115 @@
+{
+    "@Info": {
+        "phaseNumber@Display.label": "Execution Group",
+        "phaseNumber": 0,
+        "displayName": "Smart Licensing",
+        "description": "This Feature manages Cisco's Smart Licensing",
+        "featureDependencies": {
+            "jnib": {
+                "/sys/jnib/features/licensing/cm_licensing.template.jnib": {}
+            },
+            "preRequiredFeatures": {}
+        },
+        "domainDependencies": {},
+        "nodeDependencies": {},
+        "augments": {
+            "/sys/type/construct/domain/asaFirewallAssembly": {
+                "expertFeatureOption": {
+                    "properties": {
+                        "name": "licensing",
+                        "featureLabel": "Smart Licensing Feature",
+                        "policyLabel": "Smart Licensing Policy",
+                        "policyPath": "/org/instance/construct/feature/licensing/*"
+                    }
+                }
+            },
+            "/sys/type/construct/domain/iosRouterAssembly": {
+                "expertFeatureOption": {
+                    "properties": {
+                        "name": "licensing",
+                        "featureLabel": "Smart Licensing Feature",
+                        "policyLabel": "Smart Licensing Policy",
+                        "policyPath": "/org/instance/construct/feature/licensing/*"
+                    }
+                }
+            },
+            "/sys/type/construct/domain/iosSwitchAssembly": {
+                "expertFeatureOption": {
+                    "properties": {
+                        "name": "licensing",
+                        "featureLabel": "Smart Licensing Feature",
+                        "policyLabel": "Smart Licensing Policy",
+                        "policyPath": "/org/instance/construct/feature/licensing/*"
+                    }
+                }
+            },
+            "/sys/type/construct/domain/nxosSwitchAssembly": {
+                "expertFeatureOption": {
+                    "properties": {
+                        "name": "licensing",
+                        "featureLabel": "Smart Licensing Feature",
+                        "policyLabel": "Smart Licensing Policy",
+                        "policyPath": "/org/instance/construct/feature/licensing/*"
+                    }
+                }
+            }
+        }
+    },
+    "featureConcept@Display.tab": "Feature Concept",
+    "featureConcept": {
+        "name@Display.label": "Feature Concept Name",
+        "name@Display.description": "A name that describes the collection of the selected CLI Command Groups",
+        "name@Searchable": {
+            "propName": "Feature Concept Name",
+            "description": "Feature Concept Name"
+        },
+        "name@Required!": "",
+        "cliCommandGroups@Display.label": "CLI Command Groups",
+        "cliCommandGroups@Ref": {
+            "paths": [
+                "/org/instance/construct/global/cliCommandGroup/*",
+                "/org/instance/construct/global/vsCliCommandGroup/*"
+            ],
+            "many": true
+        },
+        "cliCommandGroups@Display.pickList": {
+            "optionsLabel": "Available",
+            "selectedLabel": "Selected",
+            "showReorder": true,
+            "showCheckAll": false,
+            "showUnCheckAll": false,
+            "multiSelect": true,
+            "minLineCount": 6
+        }
+    },
+    "form@Display.tab": "Configuration",
+    "form": {
+        "license@Display.label": "Smart Licensing",
+        "license": {
+            "token@Display.label" : "Token",
+            "token" : ""
+        },
+        "dns@Display.label": "DNS",
+        "dns": {
+            "domainName@Display.label": "Domain Name",
+            "domainName": "",
+            "vrf@Display.label" : "VRF",
+            "vrf@Ref" : {
+                "paths" : ["/org/instance/construct/global/vrf"]
+            },
+            "server@Display.label": "Nameservers",
+            "server@Display.addLabel": "Add Servers",
+            "server": [{
+                "ip@Display.label": "IP Address",
+                "ip": ""
+            }]
+        },
+        "http@Display.label": "HTTP Settings",
+        "http": {
+            "srcInt@Display.label" : "HTTP Client Source Interface",
+            "srcInt@Ref" : {
+                "paths" : ["/org/instance/construct/global/lanInterface", "/org/instance/construct/global/wanInterface"]
+            }
+        }
+    }
+}

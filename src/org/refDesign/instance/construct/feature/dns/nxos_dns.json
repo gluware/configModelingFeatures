@@ -1,0 +1,25 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/feature/dns.jtype"
+	},
+	"@id" : "07c6a080-a905-469c-a7ed-2e7abad3e280",
+	"featureConcept" : {
+		"name" : "NXOS DNS",
+		"cliCommandGroups" : {
+			"@ref" : [
+				"/org/instance/construct/global/cliCommandGroup/nxos_domain-name_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/nxos_name-server_grp.json"
+			]
+		}
+	},
+	"form" : {
+		"dns" : {
+			"domainName" : "nuc.lab",
+			"server" : [
+				{
+					"ip" : "10.1.255.12"
+				}
+			]
+		}
+	}
+}

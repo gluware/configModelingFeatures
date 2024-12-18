@@ -1,0 +1,25 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/switchportCommandGroup.jtype"
+	},
+	"@id" : "8e2c60d4-b9dc-4bd3-a64d-77f690f04224",
+	"regEx" : ".+",
+	"linkedFeature" : {
+		"path" : "/sys/type/construct/feature/switching.jtype"
+	},
+	"associatedFeatureType" : "featurePath",
+	"cliBlocks" : {
+		"@ref" : [
+			"/org/instance/construct/global/cliCommands/ios_access-interface_cli.json"
+		]
+	},
+	"advanced" : {
+		"renderingConditions" : [
+			""
+		]
+	},
+	"maskCommands" : [
+		"^interface",
+		"^switchport"
+	]
+}

@@ -1,0 +1,91 @@
+// Copyright (C) 2017 Glue Networks - All Rights Reserved
+// This feature package is provided as is with no implied warranties or fitness for a particular purpose.
+// Glue Networks, Inc. will not provide maintenance, support, updates, enhancements or modifications.
+
+featureParams : {
+
+	// featureParams currently contains two fields: concept and portMap.
+	//   • concept is that path to the featureConcept global. That's the CLI model for this aaa template feature.
+	//   • portMap is the path to the abstraction map global. This is used to model all the interfaces involved in 
+	//   the template in order to call/refer to them by name. That allows deploying the same feature across platform with a
+	//   different port/interface layout. For instance, for a firewall using wan, lan and dmz as ports for the physical
+	//   appliance vs port1, port2 and port3 for the virtual edition, the abstraction map can declare these three interfaces
+	//   and calling them by name in the CLI under $context.intfs (for ex. $context.intfs.DATA or $context.intfs.ISP).
+
+},
+
+initFeature: function() {
+
+	// TODO (optional): Add here the pre processing code for the $(feature) feature.
+	// This function will be executed before the processFeature function will run. This function is useful when
+	// conditional concept files need to be used. As a consequence, the concept file can be loaded dynamically. 
+	// For instance, when vendor and/or hardware abstraction is required: 
+	//   switch (node.vendor) {
+	//     case "cisco":
+	//       thisNib.featureParams.concept = "/org/instance/construct/global/featureConcept/qosFeatureConcept_for_Cisco.json"; 		
+	//       break;
+	//     case "juniper":
+	//       thisNib.featureParams.concept = "/org/instance/construct/global/featureConcept/qosFeatureConcept_for_Juniper.json"; 		
+	//       break;
+	//   }
+
+},
+
+processFeature : function () {
+
+	// TODO: Add here any additional process to add/modify/delete template values.
+	// All the template values from the $(feature) feature UI form is available through thisNib.ref.
+	// Every property within thisNib.ref is accessible using the $context prefix to "call" the value of that property
+	// to be templated in the CLI template.
+	// For instance, if thisNib.ref. contains a property called "prop1", the value is accessible using $context.prop1
+	// This method is mandatory but adding into it is optional.
+
+},
+
+postProcess : function () {
+
+	// TODO (optional): Add here the post processing code for the $(feature) feature.
+	// This function will be executed after the FSE has finished rendering all the objects in the node object store.
+	// This is an optional feature that is useful if the feature required handling of additional commands once the CLI
+	// configuration has been sent to the target node (for instance, enrolling a certificate once the trustpoint has
+	// been configured). This method is optional.
+	//
+	// Quick reminder of the shell commands available:
+	//   • send() is what is sending the CLI command to the node.
+	//   • getSendResponseStr() is the method that gets the CLI response.
+	//   • getSendResponseMatch() is the equivalent that is mapped to a regex match.
+	//   • setResponseInactivityTimeout() defines the inactivity timer the engine will wait the node response.
+	//   • registerResponseInactivity(<function>, args…) calls the <function> when the inactivity timer has been triggered.
+	//   • registerConnectSuccess(<function>, args…) calls the <function> when the connection with the node is successful.
+
+},
+
+deleteNode: function() {
+
+	// TODO (optional): Add here all the processing required when the node is being deleted such as cleaning up some data 
+	// in the attached storage or similar. This method is optional.
+
+},
+
+unprovision: function() {
+
+	// TODO (optional): Add here all the processing required when the feature is being removed from the node assembly.
+	// If you want the feature to become unmanaged (in other words, you want the associated CLI to be kept in the node
+	// but no longer handled by gluware, then remove the unprovision() call. However, if you want the feature to be
+	// also removed from the target node, then this is why the unprovision() call has been designed for. 
+	// Remember that the rendering is always called after the expert code and the FSE will look into the node object
+	// store to see what objects needs to be rendered. If the object store is empty (because you don't do anything
+	// in the unprovision() mathod, and because the FSE works with a declarative approach, all the objects following
+	// the naming convention (and associated CLI commands) will be removed from the target node. 
+	// This method is optional.
+
+},
+
+preview: function() {
+
+	// TODO (optional): Add here all the processing required when you want to make visible an output when the preview action
+	// is called. This method is optional.
+
+	thisNib.run();
+
+}

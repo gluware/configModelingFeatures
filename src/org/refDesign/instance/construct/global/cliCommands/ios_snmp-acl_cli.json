@@ -1,0 +1,17 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "0f294d1e-384e-42d9-84d5-f800772056ce",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_IpAcl.json"
+	},
+	"cliCommands" : [
+		"ip access-list standard $context.snmp.version.v2c.community[*].accessList",
+		" permit $context.snmp.version.v2c.community[*].host[*].ip",
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

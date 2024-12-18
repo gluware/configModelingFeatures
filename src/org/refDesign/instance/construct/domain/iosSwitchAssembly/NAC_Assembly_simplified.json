@@ -1,0 +1,37 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/domain/iosSwitchAssembly.jtype"
+	},
+	"@id" : "8c16a86c-a3c6-4f17-a2a1-2b9bd1483dc0",
+	"domains" : {
+		"modules" : {
+            "nac" : {
+                "policy" : {
+                    "@ref" : "/org/instance/construct/feature/nac/ios_nac-simplified.json"
+                }
+            }
+		}
+	},
+	"interfaces" : {
+		"portLayout" : {
+			"@ref" : null
+		},
+		"portMap" : {
+			"@ref" : null
+		},
+		"ipNumbering" : {
+			"@ref" : null
+		}
+	},
+	"agents" : {
+		"watchdog" : {
+			"policy" : {
+				"@ref" : null
+			}
+		}
+	},
+	"state" : {
+		"assessment" : {
+		}
+	}
+}

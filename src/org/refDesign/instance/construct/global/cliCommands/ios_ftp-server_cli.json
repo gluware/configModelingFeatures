@@ -1,0 +1,15 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "fabe9a68-d5c0-404f-b6fb-0bee962eb774",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_FtpServer.json"
+	},
+	"cliCommands" : [
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

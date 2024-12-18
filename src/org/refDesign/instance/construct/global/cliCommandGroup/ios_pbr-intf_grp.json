@@ -1,0 +1,21 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommandGroup.jtype"
+	},
+	"@id" : "e7c95ed9-dcfa-4526-80af-ad5a67650db0",
+	"regEx" : ".+",
+	"ignoreDelete" : true,
+	"cliBlocks" : {
+		"@ref" : [
+			"/org/instance/construct/global/cliCommands/ios_pbr-intf_cli.json"
+		]
+	},
+	"advanced" : {
+		"renderingConditions" : [
+		]
+	},
+	"maskCommands" : [
+		"^interface",
+		"^ip policy"
+	]
+}

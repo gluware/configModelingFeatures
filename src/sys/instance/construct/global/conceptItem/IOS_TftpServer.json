@@ -1,0 +1,27 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/conceptItem.jtype"
+	},
+	"@id" : "54a374ed-7550-4b9b-afc6-35b4d67daafc",
+	"name" : "TftpServer",
+	"vendors" : {
+		"cisco" : {
+			"type" : [
+				"ios"
+			]
+		}
+	},
+	"showCmds" : [
+		"sh run all | inc ^tftp-server"
+	],
+	"mode" : "basic",
+	"keyCliLine" : "",
+	"rootEntryFlag" : true,
+	"boundaries" : {
+		"start" : null
+	},
+	"discover" : {
+	},
+	"removeSyntax" : {
+	}
+}

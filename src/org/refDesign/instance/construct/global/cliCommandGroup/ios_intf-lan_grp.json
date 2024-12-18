@@ -1,0 +1,25 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommandGroup.jtype"
+	},
+	"@id" : "e7964c61-e4af-4636-9f1f-3bd3fd201397",
+	"regEx" : "GigabitEthernet0/1$",
+	"ignoreDelete" : true,
+	"cliBlocks" : {
+		"@ref" : [
+			"/org/instance/construct/global/cliCommands/ios_intf-lan_cli.json"
+		]
+	},
+	"maskCommands" : [
+		"^interface",
+		"^description",
+		"^ip address",
+		"^no ip redirects",
+		"^no ip proxy-arp",
+		"^no ip unreachables"
+	],
+	"advanced" : {
+		"renderingConditions" : [
+		]
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/feature/security.jtype"
+	},
+	"@id" : "0fb4efca-5ebb-4b96-a479-447987552819",
+	"featureConcept" : {
+		"name" : "Prefix-list",
+		"cliCommandGroups" : {
+			"@ref" : [
+				"/org/instance/construct/global/cliCommandGroup/ios_prefix-list_grp.json"
+			]
+		}
+	},
+	"form" : {
+		"comment" : null
+	}
+}

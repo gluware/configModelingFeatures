@@ -1,0 +1,15 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "0b5b4f82-504a-4bc6-bb43-12027e2cff96",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_SourceRoute.json"
+	},
+	"cliCommands" : [
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/conceptItem.jtype"
+	},
+	"@id" : "2e037235-d89a-45bd-9e79-13248d379efc",
+	"name" : "SourceRoute",
+	"vendors" : {
+		"cisco" : {
+			"type" : [
+				"ios"
+			]
+		}
+	},
+	"showCmds" : [
+		"sh run all | inc ip source-route"
+	],
+	"mode" : "basic",
+	"keyCliLine" : "",
+	"rootEntryFlag" : true,
+	"boundaries" : {
+		"start" : null
+	},
+	"discover" : {
+	},
+	"removeSyntax" : {
+	}
+}

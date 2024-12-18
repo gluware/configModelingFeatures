@@ -1,0 +1,25 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/domain/ipv4Pool.jtype"
+	},
+	"@id" : "cfeae02a-db8b-4bb0-a0a5-6f0fcd57b901",
+	"description" : "",
+	"type" : "ipv4",
+	"summary" : "10.10.40.0/24",
+	"reservations" : [
+	],
+	"ranges" : [
+		{
+			"name" : {
+				"@ref" : "/org/instance/construct/global/subnetRange/reserved_subnet.json"
+			},
+			"ips" : [
+				"10.10.40.10-10.10.40.254"
+			]
+		}
+	],
+	"allocationMode" : "hostBased",
+	"options" : {
+		"oversubscribingMode" : false
+	}
+}

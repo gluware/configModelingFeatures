@@ -1,0 +1,192 @@
+{
+	"@type": {
+		"ref": "/sys/type/construct/global/cliStatePolicy.jtype"
+	},
+	"@id": "9122ac7b-634c-445b-9598-0dfddcfc595f",
+	"list" : [
+	    {
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/NXOS_Check_Print.json"
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : ""
+        },
+        {
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/NXOS_show_version.json"
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : ""
+        },
+        {
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/NXOS_dir.json"
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : ""
+        },
+        {
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/NXOS_show_cdp_neighbors_detail.json"
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : ""
+        },
+        {
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/NXOS_show_mac_address_table_count.json"
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : ""
+        },
+        {
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/NXOS_show_mac_addr-table.json"
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : ""
+        },
+        {
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/NXOS_show_int_status_connected.json"
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : ""
+        },
+        {
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/NXOS_show_int_status_sfpAbsent.json"
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : ""
+        },
+        {
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/NXOS_show_int_status_noOperMem.json"
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : ""
+        },
+        {
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/NXOS_show_int_status_CANS.json"
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : ""
+        },
+        {
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/NXOS_show_fcoe_database.json"
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : ""
+        },
+        {
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/NXOS_show_flogi_table.json"
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : ""
+        },
+        {
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/NXOS_show_npv_status.json"
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : ""
+        },
+        {
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/NXOS_show_vsan_membership.json"
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : ""
+        },
+        {
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/NXOS_show_vpc_brief.json"
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : ""
+        },
+        {
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/NXOS_show_vpc_consistency_global.json"
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : ""
+        },
+        {
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/NXOS_show_fabricpath_isis_adj.json"
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : ""
+        },
+        {
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/NXOS_show_fabricpath_isis_database.json"
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : ""
+        },
+        {
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/NXOS_show_fabricpath_isis_hostname.json"
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : ""
+        },
+        {
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/NXOS_show_fabricpath_isis_route.json"
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : ""
+        },
+        {
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/NXOS_show_fabricpath_isis_tree.json"
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : ""
+        },
+        {
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/NXOS_show_fabricpath_isis_vlan.json"
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : ""
+        },
+        {
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/NXOS_show_fabricpath_switch_id.json"
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : ""
+        }
+	]
+}

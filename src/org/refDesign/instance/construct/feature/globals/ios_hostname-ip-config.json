@@ -1,0 +1,22 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/feature/globals.jtype"
+	},
+	"@id" : "a15c7bf2-9198-4353-bb09-540c8e35386f",
+	"featureConcept" : {
+		"name" : "Custom Use Case",
+		"cliCommandGroups" : {
+			"@ref" : [
+				"/org/instance/construct/global/cliCommandGroup/ios_dns-server_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_domain-name_grp.json"
+			]
+		}
+	},
+	"form" : {
+		"globals" : {
+			"hostName" : true,
+			"ip" : true,
+			"domainName" : ""
+		}
+	}
+}

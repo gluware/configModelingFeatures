@@ -1,0 +1,47 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/domain/iosSwitchAssembly.jtype"
+	},
+	"@id" : "9d6d5b2d-d331-4f37-9dcb-d07a17b7d84b",
+	"domains" : {
+		"modules" : {
+			"banner" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/feature/banner/ios_banner.json"
+				}
+			}
+		}
+	},
+	"interfaces" : {
+		"portLayout" : {
+			"@ref" : null
+		},
+		"portMap" : {
+			"@ref" : null
+		},
+		"ipNumbering" : {
+			"@ref" : null
+		}
+	},
+	"agents" : {
+		"watchdog" : {
+			"policy" : {
+				"@ref" : null
+			}
+		}
+	},
+	"boot" : {
+		"firmware" : {
+			"policy" : {
+				"@ref" : null
+			},
+			"catalog" : {
+				"@ref" : null
+			}
+		}
+	},
+	"state" : {
+		"assessment" : {
+		}
+	}
+}

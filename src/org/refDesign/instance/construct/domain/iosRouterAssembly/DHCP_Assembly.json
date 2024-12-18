@@ -1,0 +1,34 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/domain/iosRouterAssembly.jtype"
+	},
+	"@id" : "82831c57-4cc6-49ba-b64a-3d71cb8ca0db",
+	"domains" : {
+		"modules" : {
+            "dhcp" : {
+                "policy" : {
+                    "@ref" : "/org/instance/construct/feature/dhcp/ios_dhcp.json"
+                }
+            }
+        }
+	},
+	"interfaces" : {
+		"portMap" : {
+			"@ref" : "/org/instance/construct/global/portMap/csr1000v.json"
+		},
+		"ipNumbering" : {
+			"@ref" : null
+		}
+	},
+	"agents" : {
+		"watchdog" : {
+			"policy" : {
+				"@ref" : null
+			}
+		}
+	},
+	"state" : {
+		"assessment" : {
+		}
+	}
+}

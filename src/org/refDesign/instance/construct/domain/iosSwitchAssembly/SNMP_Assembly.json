@@ -1,0 +1,47 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/domain/iosSwitchAssembly.jtype"
+	},
+	"@id" : "60fd2f56-af9f-4283-9126-b2cd1796ea62",
+	"domains" : {
+		"modules" : {
+			"snmp" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/feature/snmp/ios_snmp-v2c.json"
+				}
+			}
+		}
+	},
+	"interfaces" : {
+		"portLayout" : {
+			"@ref" : null
+		},
+		"portMap" : {
+			"@ref" : null
+		},
+		"ipNumbering" : {
+			"@ref" : null
+		}
+	},
+	"agents" : {
+		"watchdog" : {
+			"policy" : {
+				"@ref" : null
+			}
+		}
+	},
+	"boot" : {
+		"firmware" : {
+			"policy" : {
+				"@ref" : null
+			},
+			"catalog" : {
+				"@ref" : null
+			}
+		}
+	},
+	"state" : {
+		"assessment" : {
+		}
+	}
+}

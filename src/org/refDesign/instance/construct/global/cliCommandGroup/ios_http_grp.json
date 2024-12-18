@@ -1,0 +1,19 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommandGroup.jtype"
+	},
+	"@id" : "3e80caed-5019-42e1-a5a6-ac42469ca3a0",
+	"regEx" : "^server|^secure.server",
+	"ignoreDelete" : true,
+	"cliBlocks" : {
+		"@ref" : [
+			"/org/instance/construct/global/cliCommands/ios_http_cli.json"
+		]
+	},
+	"maskCommands" : [
+	],
+	"advanced" : {
+		"renderingConditions" : [
+		]
+	}
+}

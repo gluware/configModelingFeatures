@@ -1,0 +1,15 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "a2b93ce4-909d-4d8c-a92c-02d7492f9432",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_Tcp.json"
+	},
+	"cliCommands" : [
+		"ip tcp synwait-time 10"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

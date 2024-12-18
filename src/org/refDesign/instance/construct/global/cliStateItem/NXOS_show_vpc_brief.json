@@ -1,0 +1,37 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id" : "cdd598ad-d5d3-48d2-90b1-fe893469c0e9",
+	"cmd": "show vpc brief",
+	"groupName": "vpcBrief",
+	"discover": {
+		"Data": {
+			"expressions": [
+				"^vPC domain id \\s+: (?<domain>\\d+)",
+				"^Peer status\\s+: (?<peerStatus>.+)",
+				"^vPC keep-alive status\\s+: (?<keepAliveStatus>.+)",
+				"^Per-vlan consistency status\\s+: (?<perVlanConsistencyStatus>.+)",
+				"^Configuration inconsistency reason+: (?<inconsistencyReason>.+)",
+				"^Type-2 consistency status\\s+: (?<t2ConsistencyStatus>.+)",
+				"^Type-2 inconsistency reason\\s+: (?<t2InconsistencyStatus>.+)",
+				"^vPC role\\s+: (?<role>.+)",
+				"^Number of vPCs configured\\s+: (?<vpcConfiguredCount>\\d+)",
+				"^Peer Gateway\\s+: (?<peerGW>.+)",
+				"^Dual-active excluded VLANs\\s+: (?<dualActiveExcluded>.+)",
+				"^Graceful Consistency Check\\s+: (?<gracefulConsistencyCheck>.+)",
+				"^Auto-recovery status\\s+: (?<autoRecoveryStatus>.+)",
+				"^Delay-restore status\\s+: (?<delayRestoreStatus>.+)",
+				"^Delay-restore SVI status\\s+: (?<delayRestoreSVIStatus>.+)",
+				"^Operational Layer3 Peer-router\\s+: (?<L3PeerRouter>.+)",
+				"^Virtual-peerlink mode\\s+: (?<peerlinkMode>.+)"
+			],
+			"localKey": "",
+			"preserveLocalKey": false
+		}
+	},
+	"options": {
+		"generateLocalKey": true
+	},
+	"rootEntry": "yes"
+}

@@ -1,0 +1,21 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/featureBinder.jtype"
+	},
+	"@id" : "d166d32a-e78e-480d-b8bb-fb61f3902715",
+	"vendor": "cisco",
+	"os" : "nxos",
+	"featureName" : "banner",
+	"featureDisplayName" : "Banner Feature",
+	"renderList" : [
+		{
+			"item" : {
+				"@ref" : "/org/instance/construct/global/conceptItem/NXOS_Banner.json"
+			},
+			"maskCommands" : [
+			],
+			"dCli" : [
+			]
+		}
+	]
+}

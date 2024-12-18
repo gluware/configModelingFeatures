@@ -1,0 +1,27 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/conceptItem.jtype"
+	},
+	"@id" : "d3bf115e-7e95-4e17-a116-8764ff4d65b7",
+	"name" : "GratuitousArp",
+	"vendors" : {
+		"cisco" : {
+			"type" : [
+				"ios"
+			]
+		}
+	},
+	"showCmds" : [
+		"sh run all | inc ip gratuitous-arps"
+	],
+	"mode" : "basic",
+	"keyCliLine" : "",
+	"rootEntryFlag" : true,
+	"boundaries" : {
+		"start" : null
+	},
+	"discover" : {
+	},
+	"removeSyntax" : {
+	}
+}

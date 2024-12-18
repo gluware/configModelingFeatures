@@ -1,0 +1,19 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommandGroup.jtype"
+	},
+	"@id" : "be34c3d9-d372-4b84-a497-b5b2482b7120",
+	"regEx" : "cisco",
+	"ignoreDelete" : true,
+	"cliBlocks" : {
+		"@ref" : [
+			"/org/instance/construct/global/cliCommands/ios_aaa-username_cli.json"
+		]
+	},
+	"maskCommands" : [
+	],
+	"advanced" : {
+		"renderingConditions" : [
+		]
+	}
+}

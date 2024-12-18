@@ -1,0 +1,15 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "8a3bc58e-e425-4843-9559-b4d18368f3d8",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/NXOS_NameServer.json"
+	},
+	"cliCommands" : [
+		"ip name-server $context.dns.server[*].ip"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

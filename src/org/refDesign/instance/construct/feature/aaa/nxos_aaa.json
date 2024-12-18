@@ -1,0 +1,44 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/feature/aaa.jtype"
+	},
+	"@id" : "9f21bd08-5401-4bf1-b28c-cf314eef4f8b",
+	"featureConcept" : {
+		"name" : "AAA Feature",
+		"cliCommandGroups" : {
+			"@ref" : [
+				"/org/instance/construct/global/cliCommandGroup/nxos_feature-tacacs_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/nxos_tacacs-server_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/nxos_aaa-group_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/nxos_aaa-auth_grp.json"
+			]
+		}
+	},
+	"form" : {
+		"aaa" : [
+			{
+				"name" : "tacacsServer",
+				"tacacs" : [
+					{
+						"name" : "demoServer1",
+						"ip" : "10.1.255.203",
+						"key" : "thisKey1",
+						"timeout" : 5
+					},
+					{
+						"name" : "demoServer2",
+						"ip" : "10.1.205.203",
+						"key" : "thisKey2",
+						"timeout" : 5
+					}
+				],
+				"srcInt" : {
+					"@ref" : null
+				},
+				"vrf" : {
+					"@ref" : null
+				}
+			}
+		]
+	}
+}

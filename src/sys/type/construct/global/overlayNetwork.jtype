@@ -1,0 +1,60 @@
+{
+    "@Info": {
+        "displayName": "Overlay Networks",
+        "vendor": "Cisco Systems",
+        "description": "Details for DMVPN Overlay Networks."
+    },
+    "id@Display.label": "Unique ID",
+    "id@Searchable": {
+        "propName": "Unique ID",
+        "description": "Unique ID"
+    },
+    "id@Number": {
+        "min": 1,
+        "max": 999999,
+        "onlyInteger": true
+    },
+    "region@Display.label":"Region",
+    "region":"",
+    "authentication@Display.label": "Authentication",
+    "authentication": {
+        "method@Display.label": "Method",
+        "method@Select.options": {
+            "secret": {
+                "key@Display.label": "Pre-Shared Key",
+                "key": ""
+            }
+        },
+        "method": "secret"
+    },
+    "settings@Display.label": "Settings",
+    "settings": {
+        "authentication@Display.label": "NHRP Authentication String",
+        "authentication@String": {
+            "min": 1,
+            "max": 8
+        },
+        "tunnelKey@Display.label": "DMVPN Tunnel Key",
+        "tunnelKey@Number": {
+            "min": 10,
+            "max": 9999999,
+            "onlyInteger": true
+        },
+        "mapping@Display.label": "Static NBMA Mappings",
+        "mapping@Display.addLabel": "Add Mapping",
+        "mapping": [
+            {
+                "nhs@Display.label": "Tunnel IP Address",
+                "nhs": "",
+                "nhs@String": {
+                    "pattern": "((?:\\d+\\.){3}\\d+)"
+                },
+                "nbma@Display.label": "NBMA IP Address",
+                "nbma": "",
+                "nbma@String": {
+                    "pattern": "((?:\\d+\\.){3}\\d+)"
+                }
+            }
+        ]
+    }
+}

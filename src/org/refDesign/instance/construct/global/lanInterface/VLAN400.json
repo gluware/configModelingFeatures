@@ -1,0 +1,8 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/lanInterface.jtype"
+	},
+	"@id" : "98a5892d-da5c-425a-b98f-09249b14eba2",
+	"description" : "VLAN 400 Interface description",
+	"location" : "internal"
+}

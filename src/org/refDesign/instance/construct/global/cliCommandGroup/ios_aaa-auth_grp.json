@@ -1,0 +1,21 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommandGroup.jtype"
+	},
+	"@id" : "e9a62811-a3d7-4c09-a0fb-368356a58811",
+	"regEx" : ".+",
+	"ignoreDelete" : false,
+	"cliBlocks" : {
+		"@ref" : [
+			"/org/instance/construct/global/cliCommands/ios_aaa-auth_cli.json"
+		]
+	},
+	"advanced" : {
+	},
+	"maskCommands" : [
+	],
+	"removeSyntax" : {
+		"list" : [
+		]
+	}
+}

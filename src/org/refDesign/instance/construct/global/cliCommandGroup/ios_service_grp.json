@@ -1,0 +1,19 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommandGroup.jtype"
+	},
+	"@id" : "fb86c0b2-75dd-4da5-97be-2118eed10386",
+	"regEx" : "timestamps|tcp-keepalives.+|password-encryption|pad$|finger|^.+small-servers|sequence-numbers|counters",
+	"ignoreDelete" : true,
+	"cliBlocks" : {
+		"@ref" : [
+			"/org/instance/construct/global/cliCommands/ios_service_cli.json"
+		]
+	},
+	"maskCommands" : [
+	],
+	"advanced" : {
+		"renderingConditions" : [
+		]
+	}
+}

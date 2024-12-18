@@ -1,0 +1,15 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliMetadata.jtype"
+	},
+	"@id" : "5dc17221-7a79-44a1-a632-b3869fe7af28",
+	"META-DATA" : {
+		"entrySequenceIdHandlers" : [
+			{
+				"start" : 10,
+				"increment" : 10,
+				"lineMatch" : "^\\s(permit\\s|deny\\s|remark\\s).+"
+			}
+		]
+	}
+}

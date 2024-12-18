@@ -1,0 +1,19 @@
+{
+	"@type": {
+		"ref": "/sys/type/construct/global/cliStatePolicy.jtype"
+	},
+	"@id": "9351b479-f78e-46fb-b27e-d978881f976e",
+	"list" : [
+        {
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/NXOS_show_vpc_role.json"
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : "",
+            "query": {
+				"@ref": "/org/instance/construct/global/cliStateQuery/NXOS_VPC_None_Check.json"
+				}
+        }
+	]
+}

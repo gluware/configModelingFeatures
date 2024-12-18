@@ -1,0 +1,65 @@
+{
+    "@Info": {
+        "phaseNumber@Display.label": "Execution Order",
+        "phaseNumber": "final",
+        "displayName": "WCCP Feature",
+        "description": "WCCP Feature",
+        "featureDependencies": {
+            "jnib": {
+                "/sys/jnib/features/wccp/cm_wccp.template.jnib": {}
+            },
+            "preRequiredFeatures": {}
+        },
+        "domainDependencies": {},
+        "nodeDependencies": {},
+        "augments": {
+            "targets": [
+                "/sys/type/construct/domain/iosSwitchAssembly",
+                "/sys/type/construct/domain/nxosSwitchAssembly",
+                "/sys/type/construct/domain/iosRouterAssembly"
+            ],
+            "blocks": {
+                "expertFeatureOption": {
+                    "properties": {
+                        "name": "wccp",
+                        "featureLabel": "WCCP Feature",
+                        "policyLabel": "WCCP Policy",
+                        "policyPath": "/org/instance/construct/feature/wccp/*"
+                    }
+                }
+            }
+        }
+    },
+    "featureConcept@Display.tab": "Feature Concept",
+    "featureConcept": {
+        "name@Display.label": "Feature Concept Name",
+        "name@Display.description": "A name that describes the collection of the selected CLI Command Groups",
+        "name@Searchable": {
+            "propName": "Feature Concept Name",
+            "description": "Feature Concept Name"
+        },
+        "name@Required!": "",
+        "cliCommandGroups@Display.label": "CLI Command Groups",
+        "cliCommandGroups@Ref": {
+            "paths": [
+                "/org/instance/construct/global/cliCommandGroup/*",
+                "/org/instance/construct/global/vsCliCommandGroup/*"
+            ],
+            "many": true
+        },
+        "cliCommandGroups@Display.pickList": {
+            "optionsLabel": "Available",
+            "selectedLabel": "Selected",
+            "showReorder": true,
+            "showCheckAll": false,
+            "showUnCheckAll": false,
+            "multiSelect": true,
+            "minLineCount": 6
+        }
+    },
+    "form@Display.tab": "Configuration",
+    "form": {
+        "comment@Display.label": "No configurable parameters for this feature",
+        "comment": null
+    }
+}

@@ -1,0 +1,118 @@
+{
+    "@Info": {
+        "phaseNumber@Display.label": "Execution Order",
+        "phaseNumber": 10,
+        "displayName": "Netflow Feature",
+        "description": "Netflow Feature",
+        "featureDependencies": {
+            "jnib": {
+                "/sys/jnib/features/netflow/cm_netflow.template.jnib": {}
+            },
+            "preRequiredFeatures": {}
+        },
+        "domainDependencies": {},
+        "nodeDependencies": {},
+        "augments": {
+            "targets": [
+                "/sys/type/construct/domain/exSwitchAssembly",
+                "/sys/type/construct/domain/arubaosWirelessControllerAssembly",
+                "/sys/type/construct/domain/arubaoscxSwitchAssembly",
+                "/sys/type/construct/domain/arubaosSwitchAssembly",
+                "/sys/type/construct/domain/provisionSwitchAssembly",
+                "/sys/type/construct/domain/srxRouterAssembly",
+                "/sys/type/construct/domain/qfxSwitchAssembly",
+                "/sys/type/construct/domain/mxRouterAssembly",
+                "/sys/type/construct/domain/iosSwitchAssembly",
+                "/sys/type/construct/domain/nxosSwitchAssembly",
+                "/sys/type/construct/domain/iosRouterAssembly",
+                "/sys/type/construct/domain/asaFirewallAssembly"
+            ],
+            "blocks": {
+                "expertFeatureOption": {
+                    "properties": {
+                        "name": "netflow",
+                        "featureLabel": "Netflow Feature",
+                        "policyLabel": "Netflow Policy",
+                        "policyPath": "/org/instance/construct/feature/netflow/*"
+                    }
+                }
+            }
+        }
+    },
+    "featureConcept@Display.tab": "Feature Concept",
+    "featureConcept": {
+        "name@Display.label": "Feature Concept Name",
+        "name@Display.description": "A name that describes the collection of the selected CLI Command Groups",
+        "name@Searchable": {
+            "propName": "Feature Concept Name",
+            "description": "Feature Concept Name"
+        },
+        "name@Required!": "",
+        "cliCommandGroups@Display.label": "CLI Command Groups",
+        "cliCommandGroups@Ref": {
+            "paths": [
+                "/org/instance/construct/global/cliCommandGroup/*",
+                "/org/instance/construct/global/vsCliCommandGroup/*"
+            ],
+            "many": true
+        },
+        "cliCommandGroups@Display.pickList": {
+            "optionsLabel": "Available",
+            "selectedLabel": "Selected",
+            "showReorder": true,
+            "showCheckAll": false,
+            "showUnCheckAll": false,
+            "multiSelect": true,
+            "minLineCount": 6
+        }
+    },
+    "form@Display.tab": "Configuration",
+    "form": {
+        "flow@Display.label":"Flow",
+        "flow":{
+            "record@Display.tab": "Record",
+            "record": {
+                "name@Display.label": "Name",
+                "name": "",
+                "description@Display.label": "Description",
+                "description": ""
+            },
+            "exporter@Display.tab": "Exporter",
+            "exporter@Display.addLabel": "Add Exporter",
+            "exporter": [{
+                "name@Display.label": "Name",
+                "name": "",
+                "description@Display.label": "Description",
+                "description": "",
+                "srcInt@Display.label" : "Source Interface",
+                "srcInt@Ref" : {
+                    "paths" : ["/org/instance/construct/global/lanInterface", "/org/instance/construct/global/wanInterface"]
+                },
+                "destination@Display.label": "Destination",
+                "destination@Display.addLabel": "Add Collector",
+                "destination": {
+                    "ip@Display.label": "IP Address",
+                    "ip": "",
+                    "port@Display.label": "UDP Port",
+                    "port": ""
+                }
+            }],
+            "monitor@Display.tab": "Monitor",
+            "monitor":{
+                "name@Display.label": "Name",
+                "name": "",
+                "description@Display.label": "Description",
+                "description": "",
+                "inactive@Display.label": "Cache Timeout Inactive",
+                "inactive@Number" : { "min": 1, "max": 604800, "onlyInteger": true },
+                "inactive@Display.description" : "Inactive Flow Timeout in seconds between 1-604800",       
+                "active@Display.label": "Cache Timeout Active",
+                "active@Number" : { "min": 1, "max": 604800, "onlyInteger": true },
+                "active@Display.description" : "Active Flow Timeout in seconds between 1-604800",       
+                "entries@Display.label": "Maximum Flow Entries",
+                "entries@Number" : { "min": 1, "max": 2000000, "onlyInteger": true },
+                "entries@Display.description" : "Maximum flow entries in the Flow Cache 16-2000000"              
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/feature/snmp.jtype"
+	},
+	"@id" : "a8d998ad-3d9f-4e7f-9243-7a72fcec1758",
+	"featureConcept" : {
+		"name" : "SNMP v3",
+		"cliCommandGroups" : {
+			"@ref" : [
+				"/org/instance/construct/global/cliCommandGroup/ios_snmp-acl_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_snmp-server_grp.json"
+			]
+		}
+	},
+	"form" : {
+		"snmp" : {
+			"location" : "Gluware Virtual LAB",
+			"contact" : "support@gluware.com",
+			"version" : {
+				"v3" : {
+					"group" : [
+						{
+							"name" : "snmpV3Group",
+							"method" : "authPriv",
+							"view" : {
+								"read" : {
+									"name" : "v3readView"
+								},
+								"write" : {
+									"name" : "v3writeView"
+								}
+							}
+						}
+					],
+					"user" : [
+						{
+							"name" : "snmpv3user",
+							"authentication" : {
+								"hash" : "md5",
+								"password" : "0x476edff41f920b7a52ea116c7bab140e"
+							},
+							"encryption" : {
+								"cipher" : "aes 256",
+								"password" : "0x476edff41f920b7a52ea116c7bab140e"
+							}
+						}
+					]
+				}
+			}
+		}
+	}
+}

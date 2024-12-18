@@ -1,0 +1,27 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/conceptItem.jtype"
+	},
+	"@id" : "38890309-1998-46c1-bccc-bde1707fd091",
+	"name" : "Tftp",
+	"vendors" : {
+		"cisco" : {
+			"type" : [
+				"ios"
+			]
+		}
+	},
+	"showCmds" : [
+		"sh run all | inc ip tftp"
+	],
+	"mode" : "basic",
+	"keyCliLine" : "ip\\stftp\\s(\\S+)",
+	"rootEntryFlag" : true,
+	"boundaries" : {
+		"start" : null
+	},
+	"discover" : {
+	},
+	"removeSyntax" : {
+	}
+}

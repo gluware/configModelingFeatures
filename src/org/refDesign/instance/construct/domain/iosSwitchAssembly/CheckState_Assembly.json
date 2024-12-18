@@ -1,0 +1,32 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/domain/iosSwitchAssembly.jtype"
+	},
+	"@id" : "8e2d00fd-5518-48c0-8d2e-8701ce27ff1e",
+	"domains" : {
+		"modules" : {
+		}
+	},
+	"interfaces" : {
+		"portLayout" : {
+			"@ref" : null
+		},
+		"portMap" : {
+			"@ref" : null
+		},
+		"ipNumbering" : {
+			"@ref" : null
+		}
+	},
+	"agents" : {
+		"watchdog" : {
+			"policy" : {
+				"@ref" : null
+			}
+		}
+	},
+	"state" : {
+		"assessment" : {
+		}
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "f645cac2-ee97-4eb2-b525-0f2c37e69c4e",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_PrefixList.json"
+	},
+	"cliCommands" : [
+		"ip prefix-list plist-distribute-local description allow distribution of local subnets into dmvpn",
+		"ip prefix-list plist-distribute-local seq 10 permit $context.portMap.DATA.ipv4.subnet.ipPrefix",
+		"ip prefix-list plist-distribute-local seq 20 permit $context.portMap.MGNT1.ipv4.subnet.ipPrefix",
+		"!",
+		"ip prefix-list plist-default-route description allow default route",
+		"ip prefix-list plist-default-route seq 10 permit 0.0.0.0/0",
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/conceptItem.jtype"
+	},
+	"@id" : "f58c37b1-3f9b-4bca-9581-63feb23414d9",
+	"name" : "ScpServer",
+	"vendors" : {
+		"cisco" : {
+			"type" : [
+				"ios"
+			]
+		}
+	},
+	"showCmds" : [
+		"sh run all | inc ^ip scp"
+	],
+	"mode" : "basic",
+	"keyCliLine" : "",
+	"rootEntryFlag" : true,
+	"boundaries" : {
+		"start" : null
+	},
+	"discover" : {
+	},
+	"removeSyntax" : {
+	}
+}

@@ -1,0 +1,18 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/feature/security.jtype"
+	},
+	"@id" : "3016b73c-50ad-484c-be54-d30f6e5ce6ce",
+	"featureConcept" : {
+		"name" : "Dynamic Object",
+		"cliCommandGroups" : {
+			"@ref" : [
+				"/org/instance/construct/global/cliCommandGroup/ios_object-intf_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_object-group_grp.json"
+			]
+		}
+	},
+	"form" : {
+		"comment" : null
+	}
+}

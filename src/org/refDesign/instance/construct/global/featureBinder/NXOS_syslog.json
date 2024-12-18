@@ -1,0 +1,21 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/featureBinder.jtype"
+	},
+	"@id" : "ef38b61b-9627-4b4c-a51e-832af7b4a5e1",
+	"vendor": "cisco",
+	"os" : "nxos",
+	"featureName" : "syslog",
+	"featureDisplayName" : "Syslog Feature",
+	"renderList" : [
+		{
+			"item" : {
+				"@ref" : "/org/instance/construct/global/conceptItem/NXOS_SyslogServer.json"
+			},
+			"maskCommands" : [
+			],
+			"dCli" : [
+			]
+		}
+	]
+}

@@ -1,0 +1,26 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommandGroup.jtype"
+	},
+	"@id" : "44f1339d-1acd-48d4-9d79-44fd882fb40e",
+	"regEx" : ".+",
+	"ignoreDelete" : true,
+	"cliBlocks" : {
+		"@ref" : [
+			"/org/instance/construct/global/cliCommands/ios_ip-helper_cli.json"
+		]
+	},
+	"advanced" : {
+		"renderingConditions" : [
+			"$discover.helper.address in 10.142.35.3"
+		]
+	},
+	"maskCommands" : [
+		"interface",
+		"ip helper-address.*3$"
+	],
+	"removeSyntax" : {
+		"list" : [
+		]
+	}
+}

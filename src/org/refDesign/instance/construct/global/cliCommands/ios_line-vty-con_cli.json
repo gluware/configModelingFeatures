@@ -1,0 +1,34 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "9ae026cc-92b8-4247-b3c8-c3d43a738485",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_LineConVty.json"
+	},
+	"cliCommands" : [
+		"line con 0",
+		" exec-timeout 15 0",
+		" privilege level 15",
+		" password 7 140713181F13253920",
+		" logging synchronous",
+		"!",
+		"line vty 0 4",
+		" exec-timeout 15 0",
+		" access-class acl-ssh-in in",
+		" transport preferred none",
+		" transport input ssh",
+		" transport output telnet ssh",
+		"!",
+		"line vty 5 15",
+		" exec-timeout 15 0",
+		" access-class acl-ssh-in in",
+		" transport preferred none",
+		" transport input ssh",
+		" transport output telnet ssh",
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

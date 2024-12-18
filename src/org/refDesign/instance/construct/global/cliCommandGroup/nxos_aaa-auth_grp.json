@@ -1,0 +1,19 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommandGroup.jtype"
+	},
+	"@id" : "97d4cc21-b1f4-4f46-aacc-07b1cf32559c",
+	"regEx" : ".+",
+	"ignoreDelete" : false,
+	"cliBlocks" : {
+		"@ref" : [
+			"/org/instance/construct/global/cliCommands/nxos_aaa-auth_cli.json"
+		]
+	},
+	"maskCommands" : [
+	],
+	"advanced" : {
+		"renderingConditions" : [
+		]
+	}
+}

@@ -1,0 +1,65 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/conceptItem.jtype"
+	},
+	"@id" : "ae1bc87e-926f-4d7f-a47b-53d38f475bed",
+	"name" : "SwitchPort",
+	"vendors" : {
+		"cisco" : {
+			"type" : [
+				"ios"
+			]
+		}
+	},
+	"showCmds" : [
+		"sh run | sec ^interface"
+	],
+	"mode" : "basic",
+	"keyCliLine" : "interface (.+)",
+	"rootEntryFlag" : false,
+	"boundaries" : {
+		"start" : null
+	},
+	"discover" : {
+		"description" : {
+			"expressions" : [
+				"description (.+)"
+			]
+		},
+		"shutdown" : {
+			"expressions" : [
+				"^shutdown$"
+			]
+		},
+		"dot1q" : {
+			"expressions" : [
+				"(?<trunkMode>^switchport trunk encapsulation dot1q$)",
+				"switchport trunk allowed vlan (?<operatingMode>^all$|^none$)",
+				"switchport trunk allowed vlan (?<includedVlansRange>.+)",
+				"switchport trunk native vlan (?<nativeVlan>.+)"
+			]
+		},
+		"vlan" : {
+			"expressions" : [
+				"(?<accessMode>^switchport mode access$)",
+				"(?<trunkMode>^switchport mode trunk$)",
+				"(?<trunkAllowed>^switchport trunk allowed vlan .+$)",
+				"switchport access vlan (?<access>.+)",
+				"switchport voice vlan (?<voice>.+)"
+			]
+		},
+		"spanningTree" : {
+			"expressions" : [
+				"spanning-tree vlan (?<vlanId>.+)",
+				"spanning-tree cost (?<pathCost>.+)"
+			]
+		},
+		"portChannel" : {
+			"expressions" : [
+				"channel-group (?<id>\\d+) mode (?<mode>active|on)"
+			]
+		}
+	},
+	"removeSyntax" : {
+	}
+}

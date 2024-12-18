@@ -1,0 +1,22 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "f3004978-52fa-4a32-8167-7f46c73f98fc",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_NetflowExporter.json"
+	},
+	"cliCommands" : [
+		"flow exporter $context.flow.exporter[*].name",
+		" description $context.flow.exporter[*].description",
+		" destination $context.flow.exporter[*].destination.ip",
+		" transport udp $context.flow.exporter[*].destination.port",
+		" source $context.portMap.MGNT1.name",
+		" option interface-table",
+		" option application-table",
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

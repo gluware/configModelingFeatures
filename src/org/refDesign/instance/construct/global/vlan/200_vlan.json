@@ -1,0 +1,8 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/vlan.jtype"
+	},
+	"@id" : "818f9b48-b622-4ae3-b07d-e265f75e68d5",
+	"id" : 200,
+	"name" : "DATA2"
+}

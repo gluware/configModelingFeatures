@@ -1,0 +1,18 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "e6a65782-d0b0-4e7c-bcd7-2c0d9910ccbb",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_IpAcl.json"
+	},
+	"cliCommands" : [
+		"ip access-list extended acl_pbr-data",
+		" permit tcp $context.portMap.DATA.ipv4.subnet.subnetId $context.portMap.DATA.ipv4.subnet.wildCardMask any eq www 443",
+		" permit tcp 192.168.10.0 0.0.0.255 any eq www 443",
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

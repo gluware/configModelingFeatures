@@ -1,0 +1,17 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommandGroup.jtype"
+	},
+	"@id" : "2f74a541-a7ca-4ad6-97f7-661b5a1eba0a",
+	"regEx" : "acl.pbr",
+	"ignoreDelete" : false,
+	"cliBlocks" : {
+		"@ref" : [
+			"/org/instance/construct/global/cliCommands/ios_pbr-acl_cli.json"
+		]
+	},
+	"advanced" : {
+	},
+	"maskCommands" : [
+	]
+}

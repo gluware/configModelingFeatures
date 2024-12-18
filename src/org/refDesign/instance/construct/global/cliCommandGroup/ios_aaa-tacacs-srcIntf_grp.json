@@ -1,0 +1,19 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommandGroup.jtype"
+	},
+	"@id" : "7e55826e-274f-4f4c-a22d-484245c5dfee",
+	"regEx" : ".+",
+	"ignoreDelete" : true,
+	"cliBlocks" : {
+		"@ref" : [
+			"/org/instance/construct/global/cliCommands/ios_aaa-tacacs-srcIntf_cli.json"
+		]
+	},
+	"maskCommands" : [
+	],
+	"advanced" : {
+		"renderingConditions" : [
+		]
+	}
+}

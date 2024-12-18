@@ -1,0 +1,33 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/conceptItem.jtype"
+	},
+	"@id" : "863f43c3-fc64-46e8-8774-a85840a85201",
+	"name" : "DomainName",
+	"vendors" : {
+		"cisco" : {
+			"type" : [
+				"ios"
+			]
+		}
+	},
+	"showCmds" : [
+		"sh run | inc ^(ip domain.name)"
+	],
+	"mode" : "advanced",
+	"keyCliLine" : "ip domain.name\\s(vrf\\s\\S+\\s)?(.+)",
+	"rootEntryFlag" : true,
+	"keyLineDepth" : 1,
+	"keyGroup" : 2,
+	"regEx" : "",
+	"metadata" : {
+		"@ref" : null
+	},
+	"boundaries" : {
+		"start" : null
+	},
+	"discover" : {
+	},
+	"removeSyntax" : {
+	}
+}

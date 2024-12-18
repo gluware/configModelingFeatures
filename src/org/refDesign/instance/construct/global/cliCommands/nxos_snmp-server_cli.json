@@ -1,0 +1,20 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "cf1ae84e-447c-4f14-b17e-ce2d5a0a95f4",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/NXOS_Snmp.json"
+	},
+	"cliCommands" : [
+		"snmp-server location $context.snmp.location",
+		"snmp-server contact $context.snmp.contact",
+		"snmp-server community $context.snmp.version.v2c.community[*].name group network-operator",
+		"snmp-server community $context.snmp.version.v2c.community[*].name use-acl $context.snmp.version.v2c.community[*].accessList",
+		"snmp-server host $context.snmp.version.v2c.community[*].host[*].ip traps version 1 $context.snmp.version.v2c.community[*].name",
+		"snmp-server trap-source $context.portMap.MGMT1.name"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

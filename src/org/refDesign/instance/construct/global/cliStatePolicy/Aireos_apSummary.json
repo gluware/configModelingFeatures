@@ -1,0 +1,16 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStatePolicy.jtype"
+	},
+	"@id" : "c787f717-1020-49ab-ad7c-3f80f07c7a6e",
+	"list" : [
+		{
+			"item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/Aireos_apSummary.json"
+            },
+            "params" : "",
+			"includePattern" : ".+",
+			"excludePattern" : ""
+		}
+	]
+}

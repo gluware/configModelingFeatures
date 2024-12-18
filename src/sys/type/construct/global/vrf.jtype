@@ -1,0 +1,102 @@
+{
+    "@Info": {
+        "displayName": "VRF",
+        "description": "Details for support of multiple routing tables used simultaneously on Control provisioned nodes.  When used on an external interface, the VRF must exist and the interfaces assigned to the VRF on the node prior to provisioning."
+    },
+    "type": "basic",
+    "type@Display.label": "Type",
+    "type@Required!Select.options": {
+        "basic": {
+            "id@Searchable": {
+                "propName": "VRF ID",
+                "description": "VRF ID"
+            },
+            "id@Number": {
+                "min": 0,
+                "max": 100
+            },
+            "id": 1,
+            "alias": "",
+            "rd@Searchable": {
+                "propName": "Route Distinguisher",
+                "description": "Route Distinguisher"
+            },
+            "rd@String": {
+                "pattern": "^$|^(\\d+:\\d+)$"
+            },
+            "id@Display.label": "ID",
+            "alias@Display.label": "Alias",
+            "rd@Display.label": "Route Distinguisher"
+        },
+        "vxlan": {
+            "alias": "",
+            "vlan@Required!Ref": {
+                "paths": [
+                    "/org/instance/construct/global/vlan/*"
+                ],
+                "types": [
+                    {
+                        "labPath": "/org/instance/construct/global/vlan/*",
+                        "construct": "global",
+                        "subref": "*",
+                        "typeName": "vlan",
+                        "ignored": "",
+                        "typePath": "global/vlan",
+                        "many": false,
+                        "valueOnly": false,
+                        "displayName": "VLAN"
+                    }
+                ]
+            },
+            "vni@Required!": 0,
+            "ipNumbering": "pool",
+            "alias@Display.label": "Alias",
+            "vlan@Display.label": "Associated VLAN",
+            "vni@Display.label": "VNI",
+            "ipNumbering@Display.label": "IP Numbering",
+            "ipNumbering@Required!Select.options": {
+                "static": {
+                    "ipPrefix@Required!": "",
+                    "ipPrefix@Display.label": "Shared IP Prefix"
+                },
+                "pool": {
+                    "ipPrefix@Required!Ref": {
+                        "paths": [
+                            "/org/instance/construct/domain/ipv4Pool/*"
+                        ],
+                        "valueOnly": true,
+                        "types": [
+                            {
+                                "labPath": "/org/instance/construct/domain/ipv4Pool/*",
+                                "construct": "domain",
+                                "subref": "*",
+                                "typeName": "ipv4Pool",
+                                "ignored": "",
+                                "typePath": "domain/ipv4Pool",
+                                "many": false,
+                                "valueOnly": true,
+                                "displayName": "IPv4 Address Pool"
+                            }
+                        ]
+                    },
+                    "virtualIp": "no",
+                    "ipPrefix@Display.label": "Associated IP Subnet Pool",
+                    "virtualIp@Display.label": "Virtual IP (optional)",
+                    "virtualIp@Required!Select.options": {
+                        "yes": {
+                            "ipNumberingOffset@Required!": 1,
+                            "ipNumberingOffset@Display.label": "Virtual IP Numbering Offset (within subnet)"
+                        },
+                        "no": {},
+                        "yes@Display.label": "Yes",
+                        "no@Display.label": "No"
+                    }
+                },
+                "static@Display.label": "Static IP",
+                "pool@Display.label": "IP Subnet Pool"
+            }
+        },
+        "basic@Display.label": "Basic",
+        "vxlan@Display.label": "Type-5 EVPN -Routed VRF"
+    }
+}

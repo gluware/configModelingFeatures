@@ -1,0 +1,21 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/feature/pbr.jtype"
+	},
+	"@id" : "25648a35-38b5-45e0-9d41-2d17e9ac9db9",
+	"featureConcept" : {
+		"name" : " ",
+		"cliCommandGroups" : {
+			"@ref" : [
+				"/org/instance/construct/global/cliCommandGroup/ios_pbr-acl_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_pbr-rmap_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_pbr-intf_grp.json"
+			]
+		}
+	},
+	"form" : {
+		"pbr" : {
+			"comment" : null
+		}
+	}
+}

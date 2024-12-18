@@ -1,0 +1,18 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "5c800ea5-aa5f-46b1-959f-524cf8f5aa72",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_IkePolicyV2.json"
+	},
+	"cliCommands" : [
+		"crypto ikev2 policy DMVPN-IKE-POLICY-$context.networks[*].overlayNetwork.id",
+		" match fvrf $context.networks[*].underlyingIntf.vrf",
+		" proposal DMVPN-IKE-PROPOSAL-$context.networks[*].overlayNetwork.id",
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

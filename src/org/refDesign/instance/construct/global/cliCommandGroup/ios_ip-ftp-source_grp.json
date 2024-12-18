@@ -1,0 +1,20 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommandGroup.jtype"
+	},
+	"@id" : "1f95d747-6dfe-4689-aba7-ce814252d57c",
+	"regEx" : "source-interface",
+	"ignoreDelete" : true,
+	"cliBlocks" : {
+		"@ref" : [
+			"/org/instance/construct/global/cliCommands/ios_ip-ftp-source_cli.json"
+		]
+	},
+	"maskCommands" : [
+		"^ip ftp source-interface"
+	],
+	"advanced" : {
+		"renderingConditions" : [
+		]
+	}
+}

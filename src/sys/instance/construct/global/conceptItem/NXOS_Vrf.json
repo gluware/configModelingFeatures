@@ -1,0 +1,33 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/conceptItem.jtype"
+	},
+	"@id" : "25d0f378-bb57-4636-a21f-5bb378708260",
+	"name" : "Vrf",
+	"vendors" : {
+		"cisco" : {
+			"type" : [
+				"nxos"
+			]
+		}
+	},
+	"showCmds" : [
+		"sh run | sec ^vrf"
+	],
+	"mode" : "advanced",
+	"keyCliLine" : "(vrf context)\\s(.+)",
+	"rootEntryFlag" : false,
+	"keyLineDepth" : 1,
+	"keyGroup" : 2,
+	"regEx" : "",
+	"metadata" : {
+		"@ref" : null
+	},
+	"boundaries" : {
+		"start" : null
+	},
+	"discover" : {
+	},
+	"removeSyntax" : {
+	}
+}

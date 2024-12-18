@@ -1,0 +1,23 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id" : "ee0a63d3-d9fc-4593-b65f-47a4f9df0d4f",
+	"cmd" : "show cdp neighbors detail",
+	"rootEntry" : "no",
+	"keyLineRegEx" : "Interface: (?<localPort>[\\/\\w]+)",
+	"groupName" : "cdp",
+	"discover" : {
+		"neighbors" : {
+			"expressions" : [
+				"Device ID: (?<deviceId>[-.()\\w]+)",
+                "Interface: (?<localPort>[\\/\\w]+),\\s+Port ID \\(outgoing port\\): (?<remotePort>[\\/\\w]+)",
+                "Holdtime : (?<holdTime>\\d+)",
+                "\\), Version (?<version>\\d+\\.\\d+(?:\\([.\\w]+\\))*(?:\\.\\d+)*)\\.?(?<build>\\w+)*,? (?:(?:RELEASE|MAINTENANCE INTERIM) SOFTWARE|CUST-SPECIAL:V\\w+SR(\\w+))*",
+                "VTP Management Domain: '(?<vtpDomain>[-\\w]+)'"
+			]
+		}
+	},
+	"options" : {
+	}
+}

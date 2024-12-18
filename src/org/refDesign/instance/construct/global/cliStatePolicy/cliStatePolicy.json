@@ -1,0 +1,19 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStatePolicy.jtype"
+	},
+	"@id" : "b72bff6f-68d8-46c5-a2f3-52f45898485d",
+	"list" : [
+		{
+			"params" : "10.255.150.11",
+			"includePattern" : ".+",
+			"excludePattern" : "",
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/IOS_ping.json"
+            },
+            "query" : {
+                "@ref" : "/org/instance/construct/global/cliStateQuery/pingLatencyQuery.json"
+            }
+		}
+	]
+}

@@ -1,0 +1,432 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/switchPortMap.jtype"
+	},
+	"@id" : "6f5f3f0a-a908-4224-bbaf-555bb85e29e2",
+	"platform" : {
+		"onBoard" : {
+			"ports" : "48",
+			"layout" : {
+				"1" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"2" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"3" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"4" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"5" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"6" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"7" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"8" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"9" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"10" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"11" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"12" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"13" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"14" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"15" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"16" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"17" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"18" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"19" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"20" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"21" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"22" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"23" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"24" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"25" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"26" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"27" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"28" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"29" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"30" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"31" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"32" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"33" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"34" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"35" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"36" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"37" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"38" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"39" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"40" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"41" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"42" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"43" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"44" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"45" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"46" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"47" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"48" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				}
+			},
+			"templates" : [
+				{
+					"cliCommandGroups" : {
+						"@ref" : [
+							"/org/instance/construct/global/switchportCommandGroup/ios_access-interface-swCliGroup.json"
+						]
+					},
+					"ports" : [
+						"1",
+						"2",
+						"3",
+						"4",
+						"5",
+						"6",
+						"7",
+						"8",
+						"9",
+						"10",
+						"11",
+						"12",
+						"13",
+						"14",
+						"15",
+						"16",
+						"17",
+						"18",
+						"19",
+						"20",
+						"21",
+						"22",
+						"23",
+						"24",
+						"25",
+						"26",
+						"27",
+						"28",
+						"29",
+						"30",
+						"31",
+						"32",
+						"33",
+						"34",
+						"35",
+						"36",
+						"37",
+						"38",
+						"39",
+						"40",
+						"41",
+						"42",
+						"43",
+						"44",
+						"45",
+						"46",
+						"47",
+						"48"
+					]
+				}
+			]
+		},
+		"uplinks" : {
+			"ports" : "4",
+			"layout" : {
+				"1" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"2" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"3" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"4" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				}
+			},
+			"templates" : [
+				{
+					"cliCommandGroups" : {
+						"@ref" : [
+							"/org/instance/construct/global/switchportCommandGroup/ios_trunk-interface-swCliGroup.json"
+						]
+					},
+					"ports" : [
+						"1",
+						"2",
+						"3",
+						"4"
+					]
+				}
+			]
+		},
+		"aggregated" : {
+		},
+		"module1" : {
+			"ports" : null
+		},
+		"module2" : {
+			"ports" : "none"
+		}
+	},
+	"namingConventions" : {
+		"unmanaged" : "",
+		"portNamingPolicies" : {
+			"onBoard" : {
+				"@ref" : "/org/instance/construct/global/switchPortNamingProfile/onboardNamingProfile.json"
+			},
+			"uplinks" : {
+				"@ref" : "/org/instance/construct/global/switchPortNamingProfile/uplink-3850.json"
+			},
+			"aggregated" : {
+				"@ref" : null
+			},
+			"module1" : {
+				"@ref" : null
+			},
+			"module2" : {
+				"@ref" : null
+			}
+		}
+	}
+}

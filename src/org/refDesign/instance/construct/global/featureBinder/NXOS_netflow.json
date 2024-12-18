@@ -1,0 +1,48 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/featureBinder.jtype"
+	},
+	"@id" : "9d86a245-5302-47eb-a1ea-b55d35cd40d2",
+	"vendor": "cisco",
+	"os" : "nxos",
+	"featureName" : "netflow",
+	"featureDisplayName" : "Netflow Feature",
+	"renderList" : [
+		{
+			"item" : {
+				"@ref" : "/org/instance/construct/global/conceptItem/NXOS_NetflowExporter.json"
+			},
+			"maskCommands" : [
+			],
+			"dCli" : [
+			]
+		},
+		{
+			"item" : {
+				"@ref" : "/org/instance/construct/global/conceptItem/NXOS_NetflowMonitor.json"
+			},
+			"maskCommands" : [
+			],
+			"dCli" : [
+			]
+		},
+		{
+			"item" : {
+				"@ref" : "/org/instance/construct/global/conceptItem/NXOS_NetflowRecord.json"
+			},
+			"maskCommands" : [
+			],
+			"dCli" : [
+			]
+		},
+		{
+			"item" : {
+				"@ref" : "/org/instance/construct/global/conceptItem/NXOS_Intf.json"
+			},
+			"maskCommands" : [
+			],
+			"dCli" : [
+			]
+		}
+	]
+}

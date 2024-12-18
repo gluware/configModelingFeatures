@@ -1,0 +1,19 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/feature/banner.jtype"
+	},
+	"@id" : "88595e47-bf8d-4125-8654-837ac422bbb3",
+	"featureConcept" : {
+		"name" : "NXOS Banner",
+		"cliCommandGroups" : {
+			"@ref" : [
+				"/org/instance/construct/global/cliCommandGroup/nxos_banner_grp.json"
+			]
+		}
+	},
+	"form" : {
+		"banner" : {
+			"comment" : null
+		}
+	}
+}

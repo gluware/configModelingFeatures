@@ -1,0 +1,18 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "507e2022-3590-482b-8ceb-0e6d4fe618a1",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_RouteMap.json"
+	},
+	"cliCommands" : [
+		"route-map rmap_pbr permit 10",
+		" match ip address acl_pbr-data",
+		" set ip next-hop peer-address",
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "196e0529-660c-472b-957f-e0a5b1230744",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_AAA.json"
+	},
+	"cliCommands" : [
+		"aaa new-model",
+		"!",
+		"aaa authentication login default group $context.aaa[*].name line",
+		"aaa authentication enable default group $context.aaa[*].name enable",
+		"aaa authorization config-commands",
+		"aaa authorization exec default group $context.aaa[*].name if-authenticated",
+		"aaa authorization commands 0 default group $context.aaa[*].name if-authenticated",
+		"aaa authorization commands 7 default group $context.aaa[*].name if-authenticated",
+		"aaa authorization commands 15 default group $context.aaa[*].name if-authenticated",
+		"aaa accounting exec default start-stop group $context.aaa[*].name",
+		"aaa accounting commands 0 default start-stop group $context.aaa[*].name",
+		"aaa accounting commands 7 default start-stop group $context.aaa[*].name",
+		"aaa accounting commands 15 default start-stop group $context.aaa[*].name",
+		"!",
+		"aaa session-id common"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

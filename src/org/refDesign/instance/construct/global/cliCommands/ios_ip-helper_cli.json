@@ -1,0 +1,17 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "1f69d3fd-390c-462c-bfe8-2400513ea55b",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_Intf2_modified.json"
+	},
+	"cliCommands" : [
+		"interface $context.portMap[*].name",
+		" ip helper-address 10.88.35.33",
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

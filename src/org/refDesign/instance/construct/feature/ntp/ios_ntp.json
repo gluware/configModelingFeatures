@@ -1,0 +1,33 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/feature/ntp.jtype"
+	},
+	"@id" : "72a8b426-1d65-4519-9951-44ca4d3c3141",
+	"featureConcept" : {
+		"name" : "IOS NTP",
+		"cliCommandGroups" : {
+			"@ref" : [
+				"/org/instance/construct/global/cliCommandGroup/ios_ntp-server_grp.json"
+			]
+		}
+	},
+	"form" : {
+		"ntp" : {
+			"server" : [
+				{
+					"ip" : "10.12.3.11",
+					"version" : 4,
+					"key" : ""
+				},
+				{
+					"ip" : "10.12.4.11",
+					"version" : 4,
+					"key" : ""
+				}
+			],
+			"srcInt" : {
+				"@ref" : null
+			}
+		}
+	}
+}

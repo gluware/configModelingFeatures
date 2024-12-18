@@ -1,0 +1,20 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "d52aecae-9bf3-491c-b76a-252e8b2a9395",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_Intf2.json"
+	},
+	"cliCommands" : [
+		"interface GigabitEthernet0/0",
+		" description Outside Interface",
+		" no ip redirects",
+		" no ip unreachables",
+		" no ip proxy-arp",
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

@@ -1,0 +1,18 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"cmd": "acidiag fnvread",
+	"groupName": "nodes",
+	"discover": {
+		"teps": {
+			"expressions": [
+				"^\s+(?<id>\d+)\s+(?<podId>\d+)\s+(?<devName>\w+)\s+(?<tepId>\S+)\s+(?<tepIp>\S+)\s+(?<role>\S+)\s+(?<state>\S+)\s+(?<lastMsg>\d+)$"
+			],
+			"localKey": "",
+			"preserveLocalKey": true
+		}
+	},
+	"options": {},
+	"rootEntry": "yes"
+}

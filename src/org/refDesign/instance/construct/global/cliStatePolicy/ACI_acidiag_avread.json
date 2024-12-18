@@ -1,0 +1,18 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"cmd": "acidiag avread",
+	"groupName": "appliance",
+	"discover": {
+		"vector": {
+			"expressions": [
+				"^policy_count+\\s+:\\s+(?<count>\\d+$)"
+			],
+			"localKey": "",
+			"preserveLocalKey": true
+		}
+	},
+	"options": {},
+	"rootEntry": "yes"
+}

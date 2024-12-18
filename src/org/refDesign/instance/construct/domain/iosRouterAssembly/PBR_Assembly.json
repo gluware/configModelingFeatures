@@ -1,0 +1,34 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/domain/iosRouterAssembly.jtype"
+	},
+	"@id" : "f1b91b10-3e19-4ccd-9a2a-598b23eb3cb4",
+	"domains" : {
+		"modules" : {
+			"pbr" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/feature/pbr/ios_pbr.json"
+				}
+			}
+		}
+	},
+	"interfaces" : {
+		"portMap" : {
+			"@ref" : "/org/instance/construct/global/portMap/ASR1001.json"
+		},
+		"ipNumbering" : {
+			"@ref" : null
+		}
+	},
+	"agents" : {
+		"watchdog" : {
+			"policy" : {
+				"@ref" : null
+			}
+		}
+	},
+	"state" : {
+		"assessment" : {
+		}
+	}
+}

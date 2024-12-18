@@ -1,0 +1,30 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/feature/username.jtype"
+	},
+	"@id" : "72dc4879-84ea-4f3b-8635-f087337cba7a",
+	"featureConcept" : {
+		"name" : "Local Users",
+		"cliCommandGroups" : {
+			"@ref" : [
+				"/org/instance/construct/global/cliCommandGroup/nxos_username_grp.json"
+			]
+		}
+	},
+	"form" : {
+		"user" : [
+			{
+				"name" : "testUser",
+				"password" : "myUserPassword",
+				"hash" : "cleartext",
+				"privilege" : "15"
+			},
+			{
+				"name" : "gluUser",
+				"password" : "myGluPassword",
+				"hash" : "cleartext",
+				"privilege" : "15"
+			}
+		]
+	}
+}

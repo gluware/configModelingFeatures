@@ -1,0 +1,16 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStatePolicy.jtype"
+	},
+	"@id" : "fe06232c-b77d-4a5c-8087-465f06918374",
+	"list" : [
+		{
+			"item" : {
+                "@ref": "/org/instance/construct/global/cliStateItem/IOS_show_spanning-tree.json"
+            },
+            "params" : "",
+			"includePattern" : ".+",
+			"excludePattern" : ""
+		}
+	]
+}

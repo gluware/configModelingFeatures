@@ -1,0 +1,32 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/domain/iosRouterAssembly.jtype"
+	},
+	"@id" : "2069b23c-ec1a-403f-a971-49087c71733d",
+	"domains" : {
+        "modules" : {
+            "security" : {
+                "policy" : {
+                    "@ref" : "/org/instance/construct/feature/security/ios_security.json"
+                }
+            }
+        }
+	},
+	"interfaces" : {
+		"portMap" : {
+		},
+		"ipNumbering" : {
+		}
+	},
+	"agents" : {
+		"watchdog" : {
+			"policy" : {
+				"@ref" : null
+			}
+		}
+	},
+	"state" : {
+		"assessment" : {
+		}
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/portMap.jtype"
+	},
+	"@id" : "03540581-0ee8-4c5f-8549-fbc16fe5f643",
+	"map" : [
+		{
+			"refName" : {
+				"@ref" : "/org/instance/construct/global/lanInterface/MGNT1.json"
+			},
+			"name" : "Vlan619",
+			"extendedName" : ""
+		}
+	]
+}

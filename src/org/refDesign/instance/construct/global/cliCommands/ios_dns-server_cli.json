@@ -1,0 +1,17 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "8a3bc58e-e425-4843-9559-b4d18368f3d8",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_DnsServer.json"
+	},
+	"cliCommands" : [
+		"ip name-server{#context.dns.vrf} $context.dns.server.0.ip $context.dns.server.1.ip",
+		"",
+		"ip name-server $context.globals.ip"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

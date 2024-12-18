@@ -1,0 +1,33 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/conceptItem.jtype"
+	},
+	"@id" : "5b7da3cf-82cd-465a-b5bb-19c97bf59f10",
+	"name" : "AccessList",
+	"vendors" : {
+		"cisco" : {
+			"type" : [
+				"nxos"
+			]
+		}
+	},
+	"showCmds" : [
+		"sh run all | sec \"^ip access-list\""
+	],
+	"mode" : "advanced",
+	"keyCliLine" : "(^ip|^ipv6) access-list (.+)",
+	"rootEntryFlag" : false,
+	"keyLineDepth" : 1,
+	"keyGroup" : 2,
+	"regEx" : "",
+	"metadata" : {
+		"@ref" : "/org/instance/construct/global/cliMetadata/NXOS_IpAcl_cliMetadata.json"
+	},
+	"boundaries" : {
+		"start" : null
+	},
+	"discover" : {
+	},
+	"removeSyntax" : {
+	}
+}

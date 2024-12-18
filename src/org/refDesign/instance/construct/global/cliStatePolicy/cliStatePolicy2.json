@@ -1,0 +1,13 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStatePolicy.jtype"
+	},
+	"@id" : "09362466-e9f9-4a5b-9da2-415011bd0171",
+	"list" : [
+		{
+			"params" : "",
+			"includePattern" : ".+",
+			"excludePattern" : ""
+		}
+	]
+}

@@ -1,0 +1,21 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "9bec95c2-9b29-47a0-bf12-002fb8668a17",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_IkeProfileV2.json"
+	},
+	"cliCommands" : [
+		"crypto ikev2 profile DMVPN-IKE-PROFILE-$context.networks[*].overlayNetwork.id",
+		" match fvrf $context.networks[*].underlyingIntf.vrf",
+		" match identity remote address 0.0.0.0",
+		" authentication local pre-share",
+		" authentication remote pre-share",
+		" keyring local DMVPN-KEYRING-$context.networks[*].overlayNetwork.id",
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

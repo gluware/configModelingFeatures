@@ -1,0 +1,21 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/featureBinder.jtype"
+	},
+	"@id" : "73d460ba-543a-4d79-8b7b-d2fef11b9f51",
+	"vendor": "cisco",
+	"os" : "nxos",
+	"featureName" : "snmp",
+	"featureDisplayName" : "SNMP Feature",
+	"renderList" : [
+		{
+			"item" : {
+				"@ref" : "/org/instance/construct/global/conceptItem/NXOS_Snmp.json"
+			},
+			"maskCommands" : [
+			],
+			"dCli" : [
+			]
+		}
+	]
+}

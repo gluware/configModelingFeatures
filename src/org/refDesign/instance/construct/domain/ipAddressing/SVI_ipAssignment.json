@@ -1,0 +1,71 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/domain/ipAddressing.jtype"
+	},
+	"@id" : "c0202e38-1773-476c-ae65-9861a78d3ee0",
+	"intfs" : [
+		{
+			"intf" : {
+				"map" : {
+					"@ref" : "/org/instance/construct/global/lanInterface/VLAN200.json"
+				}
+			},
+			"ipv4" : {
+				"category" : "local",
+				"method" : "hostPool",
+				"supernet" : {
+					"ipPrefix" : {
+						"@ref" : "/org/instance/construct/domain/ipv4Pool/vlan200_pool.json"
+					}
+				},
+				"host" : {
+					"range" : {
+						"@ref" : "/org/instance/construct/global/subnetRange/reserved_subnet.json"
+					}
+				}
+			}
+		},
+		{
+			"intf" : {
+				"map" : {
+					"@ref" : "/org/instance/construct/global/lanInterface/VLAN400.json"
+				}
+			},
+			"ipv4" : {
+				"category" : "local",
+				"method" : "hostPool",
+				"supernet" : {
+					"ipPrefix" : {
+						"@ref" : "/org/instance/construct/domain/ipv4Pool/vlan400_pool.json"
+					}
+				},
+				"host" : {
+					"range" : {
+						"@ref" : "/org/instance/construct/global/subnetRange/reserved_subnet.json"
+					}
+				}
+			}
+		},
+		{
+			"intf" : {
+				"map" : {
+					"@ref" : "/org/instance/construct/global/lanInterface/VLAN600.json"
+				}
+			},
+			"ipv4" : {
+				"category" : "local",
+				"method" : "hostPool",
+				"supernet" : {
+					"ipPrefix" : {
+						"@ref" : "/org/instance/construct/domain/ipv4Pool/vlan600_pool.json"
+					}
+				},
+				"host" : {
+					"range" : {
+						"@ref" : "/org/instance/construct/global/subnetRange/reserved_subnet.json"
+					}
+				}
+			}
+		}
+	]
+}

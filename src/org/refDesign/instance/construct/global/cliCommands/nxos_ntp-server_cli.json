@@ -1,0 +1,16 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "a0c89135-5b18-4bbd-b611-da01383b3a76",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/NXOS_NtpAgent.json"
+	},
+	"cliCommands" : [
+		"ntp server $context.ntp.server[*].ip prefer use-vrf management",
+		"ntp source $context.portMap.MGNT1.name"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

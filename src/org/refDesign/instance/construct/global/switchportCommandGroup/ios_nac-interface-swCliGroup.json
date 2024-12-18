@@ -1,0 +1,28 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/switchportCommandGroup.jtype"
+	},
+	"@id" : "d4a07d75-ffab-42cd-abae-cd61b63e484f",
+	"regEx" : ".+",
+	"linkedFeature" : {
+		"path" : "/sys/type/construct/feature/nac.jtype"
+	},
+	"associatedFeatureType" : "featurePath",
+	"ignoreDelete" : true,
+	"cliBlocks" : {
+		"@ref" : [
+			"/org/instance/construct/global/cliCommands/ios_nac-interface_cli.json"
+		]
+	},
+	"maskCommands" : [
+		"^interface",
+		"^authentication",
+		"^mab",
+		"^dot1x"
+	],
+	"advanced" : {
+		"renderingConditions" : [
+			"$discover.vlan.accessMode"
+		]
+	}
+}

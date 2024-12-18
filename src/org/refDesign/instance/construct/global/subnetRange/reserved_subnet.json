@@ -1,0 +1,7 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/subnetRange.jtype"
+	},
+	"@id" : "ebfa4b00-483e-4b3d-ad2d-e46f17f2b4bc",
+	"description" : "reserved range"
+}

@@ -1,0 +1,29 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/domain/ipAddressing.jtype"
+	},
+	"@id" : "48ea2c50-0258-4179-9bfb-d4444a11fcd4",
+	"intfs" : [
+		{
+			"intf" : {
+				"map" : {
+					"@ref" : "/org/instance/construct/global/lanInterface/OVRL2.json"
+				}
+			},
+			"ipv4" : {
+				"category" : "local",
+				"method" : "hostPool",
+				"supernet" : {
+					"ipPrefix" : {
+						"@ref" : "/org/instance/construct/domain/ipv4Pool/DMVPN-200.json"
+					}
+				},
+				"host" : {
+					"range" : {
+						"@ref" : "/org/instance/construct/global/subnetRange/dmvpn-spoke-subnetRange.json"
+					}
+				}
+			}
+		}
+	]
+}

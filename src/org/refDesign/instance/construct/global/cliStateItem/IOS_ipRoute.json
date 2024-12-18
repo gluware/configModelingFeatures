@@ -1,0 +1,22 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id" : "6e18fc19-3dca-4d06-a764-6f74bdf01dcc",
+	"cmd" : "show ip route",
+	"rootEntry" : "yes",
+	"groupName" : "routes",
+	"discover" : {
+		"table" : {
+			"expressions" : [
+				"(?<type>^[A-Z])\\*?\\s*(?<destination>.+)\\s\\[(?<ad>\\d*)\\/(?<c>\\d*)]\\svia\\s(?<nextHop>.+)",
+				"\\s*(?<subnet>.+)\\sis variably subnetted,(?<subnetCount>.+)\\ssubnets,(?:\\s*(?<maskCount>.+)\\smasks)*",
+				"(?<type>[a-zA-Z])\\s*(?<source>.+)\\sis directly connected,\\s(?<interfaceName>.+)",
+				"\\s*(?<subnet>.+)\\sis subnetted,(?<subnetCount>.+)\\ssubnets"
+			],
+			"localKey" : "destination, source"
+		}
+	},
+	"options" : {
+	}
+}

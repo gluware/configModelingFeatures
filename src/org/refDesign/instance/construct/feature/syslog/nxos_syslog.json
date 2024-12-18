@@ -1,0 +1,47 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/feature/syslog.jtype"
+	},
+	"@id" : "d141451c-cd74-4589-928e-24212547e716",
+	"featureConcept" : {
+		"name" : "Cisco NXOS Syslog",
+		"cliCommandGroups" : {
+			"@ref" : [
+				"/org/instance/construct/global/cliCommandGroup/nxos_syslog-server_grp.json"
+			]
+		}
+	},
+	"form" : {
+		"syslog" : {
+			"level" : "debugging",
+			"srcInt" : {
+				"@ref" : "/org/instance/construct/global/lanInterface/MGNT1.json"
+			},
+			"bufferSize" : 128000,
+			"mode" : "advanced",
+			"server" : [
+				{
+					"ip" : "10.1.1.255",
+					"protocol" : "udp",
+					"port" : 514,
+					"level" : "informational",
+					"sessionId" : null
+				},
+				{
+					"ip" : "10.2.2.255",
+					"protocol" : "udp",
+					"port" : 514,
+					"level" : "debugging",
+					"sessionId" : null
+				},
+				{
+					"ip" : "10.3.3.255",
+					"protocol" : "udp",
+					"port" : 514,
+					"level" : "emergencies",
+					"sessionId" : null
+				}
+			]
+		}
+	}
+}

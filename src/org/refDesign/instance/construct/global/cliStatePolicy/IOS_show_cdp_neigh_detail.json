@@ -1,0 +1,16 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStatePolicy.jtype"
+	},
+	"@id" : "276abe47-b367-4c27-94b1-a57b0d11d940",
+	"list" : [
+		{
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/IOS_show_cdp_neigh_detail.json"
+            },
+			"params" : "",
+			"includePattern" : ".+",
+			"excludePattern" : ""
+		}
+	]
+}

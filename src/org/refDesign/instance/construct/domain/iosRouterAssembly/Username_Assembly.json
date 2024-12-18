@@ -1,0 +1,40 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/domain/iosRouterAssembly.jtype"
+	},
+	"@id" : "f88d8ece-943f-4568-89ea-0678c7b44149",
+	"domains" : {
+		"modules" : {
+			"username" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/feature/username/ios_username.json"
+				}
+			}
+		}
+	},
+	"interfaces" : {
+		"portMap" : {
+			"@ref" : null
+		},
+		"ipNumbering" : {
+			"@ref" : null
+		}
+	},
+	"agents" : {
+		"watchdog" : {
+			"policy" : {
+				"@ref" : null
+			}
+		}
+	},
+	"boot" : {
+		"firmware" : {
+			"policy" : {
+				"@ref" : null
+			},
+			"catalog" : {
+				"@ref" : null
+			}
+		}
+	}
+}

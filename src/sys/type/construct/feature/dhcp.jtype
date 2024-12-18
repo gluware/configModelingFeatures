@@ -1,0 +1,171 @@
+{
+    "@Info": {
+        "phaseNumber@Display.label": "Execution Order",
+        "phaseNumber": 10,
+        "displayName": "DHCP Feature",
+        "description": "DHCP Feature",
+        "featureDependencies": {
+            "jnib": {
+                "/sys/jnib/features/dhcp/cm_dhcp.template.jnib": {}
+            },
+            "preRequiredFeatures": {}
+        },
+        "domainDependencies": {},
+        "nodeDependencies": {},
+        "augments": {
+            "targets" : [
+                "/sys/type/construct/domain/aireosWirelessControllerAssembly",
+                "/sys/type/construct/domain/arubaosWirelessControllerAssembly",
+                "/sys/type/construct/domain/arubaoscxSwitchAssembly",
+                "/sys/type/construct/domain/arubaosSwitchAssembly",
+                "/sys/type/construct/domain/provisionSwitchAssembly",
+                "/sys/type/construct/domain/sgosWanOptimizerAssembly",
+                "/sys/type/construct/domain/dnosSwitchAssembly",
+                "/sys/type/construct/domain/gaiaFirewallAssembly",
+                "/sys/type/construct/domain/eosSwitchAssembly",
+                "/sys/type/construct/domain/exSwitchAssembly",
+                "/sys/type/construct/domain/srxRouterAssembly",
+                "/sys/type/construct/domain/qfxSwitchAssembly",
+                "/sys/type/construct/domain/mxRouterAssembly",
+                "/sys/type/construct/domain/iosSwitchAssembly",
+                "/sys/type/construct/domain/nxosSwitchAssembly",
+                "/sys/type/construct/domain/iosRouterAssembly",
+                "/sys/type/construct/domain/asaFirewallAssembly"
+            ],
+            "blocks" : {
+                "expertFeatureOption": {
+                    "properties": {
+                        "name": "dhcp",
+                        "featureLabel": "DHCP Feature",
+                        "policyLabel": "DHCP Policy",
+                        "policyPath": "/org/instance/construct/feature/dhcp/*"
+                    }
+                }
+            }
+        }
+    },
+    "featureConcept@Display.tab": "Feature Concept",
+    "featureConcept": {
+        "name@Display.label": "Feature Concept Name",
+        "name@Display.description": "A name that describes the collection of the selected CLI Command Groups",
+        "name@Searchable": {
+            "propName": "Feature Concept Name",
+            "description": "Feature Concept Name"
+        },
+        "name@Required!": "",
+        "cliCommandGroups@Display.label": "CLI Command Groups",
+        "cliCommandGroups@Ref": {
+            "paths": [
+                "/org/instance/construct/global/cliCommandGroup/*",
+                "/org/instance/construct/global/vsCliCommandGroup/*"
+            ],
+            "many": true
+        },
+        "cliCommandGroups@Display.pickList": {
+            "optionsLabel": "Available",
+            "selectedLabel": "Selected",
+            "showReorder": true,
+            "showCheckAll": false,
+            "showUnCheckAll": false,
+            "multiSelect": true,
+            "minLineCount": 6
+        }
+    },
+    "form@Display.tab": "Configuration",
+    "form": {
+        "dhcp@Display.label": "DHCP Servers",
+	    "dhcp@Display.addLabel": "Add DHCP Pool",
+	    "dhcp": [{
+	        "pool@Display.label": "Pool Name",
+	        "pool": "",
+	        "intf@Display.label": "Interface Name",
+            "intf@Ref": {
+                "paths": ["/org/instance/construct/global/lanInterface/*"]
+            },
+            "vrf@Display.label": "VRF Name",
+            "vrf@Ref": {
+                "paths": ["/org/instance/construct/global/vrf/*"]
+            },
+
+            "@Complete.options": {
+                "@Display.addLabel": "Add Option",
+                "domainName@Display.label": "Domain Name",
+                "domainName@Searchable": {
+                    "propName": "Domain Name",
+                    "description": "Domain Name"
+                },
+                "domainName": "",
+                "dnsServers@Display.label": "DNS Servers",
+                "dnsServers@Searchable": {
+                    "propName": "DNS Servers",
+                    "description": "DNS Servers"
+                },
+                "dnsServers@Display.addLabel": "Add DNS Server",
+                "dnsServers": [],
+                "winsServers@Display.label": "WINS Servers",
+                "winsServers@Searchable": {
+                    "propName": "Netbios WINS Servers",
+                    "description": "WINS Servers"
+                },
+                "winsServers@Display.addLabel": "Add Netbios WINS Server",
+                "winsServers": {
+                    "addresses@Display.label": "Addresses",
+                    "addresses@Display.addLabel": "Add WINS Server",
+                    "addresses": [],
+                    "nodeType@Enum": ["b-node", "h-node", "m-node", "p-node"]
+                },
+                "tftpServers@Display.label": "TFTP Servers (option 150)",
+                "tftpServers@Searchable": {
+                    "propName": "TFTP Servers",
+                    "description": "TFTP Servers (option 150)"
+                },
+                "tftpServers@Display.addLabel": "Add TFTP Server",
+                "tftpServers": [],
+                "avayaServers@Display.label": "Avaya Servers (option 242)",
+                "avayaServers": {
+                    "registrationServers@Display.label": "Registration Servers",
+                    "registrationServers@Display.addLabel": "Add Registration Server",
+                    "registrationServers@Searchable": {
+                        "propName": "Avaya Registration Servers",
+                        "description": "Avaya Registration Servers (option 242)"
+                    },
+                    "registrationServers": [],
+                    "callControllers@Display.label": "Call Controllers",
+                    "callControllers@Searchable": {
+                        "propName": "Avaya Call Controllers",
+                        "description": "Avaya Call Controllers"
+                    },
+                    "callControllers@Display.addLabel": "Add Call Controller",
+                    "callControllers": [],
+                    "httpDir@Display.label": "HTTP Directory",
+                    "httpDir@Searchable": {
+                        "propName": "Avaya HTTP Directory",
+                        "description": "Avaya HTTP Directory"
+                    },
+                    "httpDir": "/",
+                    "ascii@Display.label": "Avaya String",
+                    "ascii@Searchable": {
+                        "propName": "Avaya String",
+                        "description": "Avaya String"
+                    },
+                    "ascii": ""
+                },
+                "option043@Display.label": "Wireless Controllers (option 043 tlv)",
+                "option043@Display.addLabel": "Add Wireless Controller",
+                "option043@Searchable": {
+                    "propName": "Wireless Controllers",
+                    "description": "Wireless Controllers (option 043 tlv)"
+                },
+                "option043": [],
+                "exclude@Display.label": "Exclusions",
+                "exclude@Display.addLabel": "Add Exclusion",
+                "exclude": [{
+                    "range@Display.label": "IP Range",
+                    "range@String": {
+                        "pattern": "(^(?:(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3})(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$)|(^(?:(?:(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3})(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))\\s(?:(?:(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3})(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))$)"
+                    }
+                }]
+            }
+	    }]
+    }
+}

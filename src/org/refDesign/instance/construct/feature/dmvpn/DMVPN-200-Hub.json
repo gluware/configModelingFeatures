@@ -1,0 +1,48 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/feature/dmvpn.jtype"
+	},
+	"@id" : "a4b36286-3e31-4a2f-b72e-9b81c5f1b4e8",
+	"featureConcept" : {
+		"name" : "ios_dmvpn-hub-concept",
+		"cliCommandGroups" : {
+			"@ref" : [
+				"/org/instance/construct/global/cliCommandGroup/ios_dmvpn-ikev2-keyring_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_dmvpn-ikev2-proposal_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_dmvpn-ikev2-policy_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_dmvpn-ikev2-profile_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_dmvpn-ipsec-security_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_dmvpn-ipsec-proposal_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_dmvpn-ipsec-profile_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_dmvpn-intf-hub_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_dmvpn-plist-hub-routing_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_dmvpn-eigrp-hub_grp.json"
+			]
+		}
+	},
+	"form" : {
+		"networks" : [
+			{
+				"overlayNetwork" : {
+					"@ref" : "/org/instance/construct/global/overlayNetwork/DMVPN-200.json"
+				},
+				"overlayIntf" : {
+					"@ref" : "/org/instance/construct/global/lanInterface/OVRL2.json"
+				},
+				"underlyingIntf" : {
+					"wanIntf" : {
+						"@ref" : "/org/instance/construct/global/wanInterface/ISP1.json"
+					},
+					"vrf" : {
+						"@ref" : "/org/instance/construct/global/vrf/inet-public.json"
+					}
+				},
+				"routing" : {
+					"delay" : {
+						"@ref" : "/org/instance/construct/global/routingDelay/primary.json"
+					}
+				}
+			}
+		]
+	}
+}

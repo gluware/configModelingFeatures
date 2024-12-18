@@ -1,0 +1,39 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/featureBinder.jtype"
+	},
+	"@id" : "4444946f-ab4e-4f85-9cff-e964e454e146",
+	"vendor": "cisco",
+	"os" : "nxos",
+	"featureName" : "qos",
+	"featureDisplayName" : "QOS Feature",
+	"renderList" : [
+		{
+			"item" : {
+				"@ref" : "/org/instance/construct/global/conceptItem/NXOS_IpAcl.json"
+			},
+			"maskCommands" : [
+			],
+			"dCli" : [
+			]
+		},
+		{
+			"item" : {
+				"@ref" : "/org/instance/construct/global/conceptItem/NXOS_ClassMap.json"
+			},
+			"maskCommands" : [
+			],
+			"dCli" : [
+			]
+		},
+		{
+			"item" : {
+				"@ref" : "/org/instance/construct/global/conceptItem/NXOS_PolicyMapQos.json"
+			},
+			"maskCommands" : [
+			],
+			"dCli" : [
+			]
+		}
+	]
+}

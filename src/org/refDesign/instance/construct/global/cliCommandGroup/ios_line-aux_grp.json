@@ -1,0 +1,20 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommandGroup.jtype"
+	},
+	"@id" : "b5937ee8-be77-4999-8110-5cad03ff64d7",
+	"regEx" : "aux",
+	"ignoreDelete" : false,
+	"cliBlocks" : {
+		"@ref" : [
+			"/org/instance/construct/global/cliCommands/ios_line-aux_cli.json"
+		]
+	},
+	"maskCommands" : [
+	],
+	"advanced" : {
+		"renderingConditions" : [
+			"$discover.line.aux"
+		]
+	}
+}

@@ -1,0 +1,84 @@
+{
+    "@Info": {
+        "phaseNumber@Display.label": "Execution Order",
+        "phaseNumber": "final",
+        "displayName": "VTP Feature",
+        "description": "VTP Feature",
+        "featureDependencies": {
+            "jnib": {
+                "/sys/jnib/features/vtp/cm_vtp.template.jnib": {}
+            },
+            "preRequiredFeatures": {}
+        },
+        "domainDependencies": {},
+        "nodeDependencies": {},
+        "augments": {
+            "targets": [
+                "/sys/type/construct/domain/iosSwitchAssembly",
+                "/sys/type/construct/domain/nxosSwitchAssembly"
+            ],
+            "blocks": {
+                "expertFeatureOption": {
+                    "properties": {
+                        "name": "vtp",
+                        "featureLabel": "VTP Feature",
+                        "policyLabel": "VTP Policy",
+                        "policyPath": "/org/instance/construct/feature/vtp/*"
+                    }
+                }
+            }
+        }
+    },
+    "featureConcept@Display.tab": "Feature Concept",
+    "featureConcept": {
+        "name@Display.label": "Feature Concept Name",
+        "name@Display.description": "A name that describes the collection of the selected CLI Command Groups",
+        "name@Searchable": {
+            "propName": "Feature Concept Name",
+            "description": "Feature Concept Name"
+        },
+        "name@Required!": "",
+        "cliCommandGroups@Display.label": "CLI Command Groups",
+        "cliCommandGroups@Ref": {
+            "paths": [
+                "/org/instance/construct/global/cliCommandGroup/*",
+                "/org/instance/construct/global/vsCliCommandGroup/*"
+            ],
+            "many": true
+        },
+        "cliCommandGroups@Display.pickList": {
+            "optionsLabel": "Available",
+            "selectedLabel": "Selected",
+            "showReorder": true,
+            "showCheckAll": false,
+            "showUnCheckAll": false,
+            "multiSelect": true,
+            "minLineCount": 6
+        }
+    },
+    "form@Display.tab": "Configuration",
+    "form": {
+        "vtp@Display.label": "VTP",
+        "vtp": {
+            "mode": "client",
+            "mode@Display.label": "Mode",
+            "mode@Enum": [ "off", "client", "transparent", "server" ],
+            "domain": "",
+            "domain@Display.label": "Domain",
+            "domain@String": {
+                "min": 0,
+                "max": 32
+            },
+            "version": "3",
+            "version@Display.label": "Version",
+            "version@Enum" : [ "1", "2", "3" ],
+            "password": "",
+            "password@Display.label": "Password",
+            "password@Display.password!": "",
+            "passwordOptions": "hidden",
+            "passwordOptions@Display.label": "Password Options",
+            "passwordOptions@Display.description": "Hidden option will hash the password so it cannot be seen in clear-text from 'show vtp password'.\nSecret option is used when specifying the hashed password in the Password field.",
+            "passwordOptions@Enum": [ "hidden", "secret" ]
+        }
+    }
+}

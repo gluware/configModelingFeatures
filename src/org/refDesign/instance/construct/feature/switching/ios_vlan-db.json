@@ -1,0 +1,46 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/feature/switching.jtype"
+	},
+	"@id" : "408fe754-1fd3-4550-b1e8-d834d9c6dcfc",
+	"featureConcept" : {
+		"name" : "SVI",
+		"cliCommandGroups" : {
+			"@ref" : [
+				"/org/instance/construct/global/cliCommandGroup/ios_vlan-db_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_svi-intf_grp.json"
+			]
+		}
+	},
+	"form" : {
+		"layer2" : [
+			{
+				"vlan" : {
+					"@ref" : "/org/instance/construct/global/vlan/200_vlan.json"
+				},
+				"intf" : {
+					"@ref" : "/org/instance/construct/global/lanInterface/VLAN200.json"
+				}
+			},
+			{
+				"vlan" : {
+					"@ref" : "/org/instance/construct/global/vlan/400_vlan.json"
+				},
+				"intf" : {
+					"@ref" : "/org/instance/construct/global/lanInterface/VLAN400.json"
+				}
+			},
+			{
+				"vlan" : {
+					"@ref" : "/org/instance/construct/global/vlan/600_vlan.json"
+				},
+				"intf" : {
+					"@ref" : "/org/instance/construct/global/lanInterface/VLAN600.json"
+				}
+			}
+		],
+		"switchports" : {
+			"profile" : null
+		}
+	}
+}

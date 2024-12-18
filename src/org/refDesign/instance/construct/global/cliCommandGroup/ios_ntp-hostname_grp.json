@@ -1,0 +1,24 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommandGroup.jtype"
+	},
+	"@id" : "13d24762-c5f3-491c-805c-c486cf19bac5",
+	"regEx" : ".+",
+	"ignoreDelete" : false,
+	"cliBlocks" : {
+		"@ref" : [
+			"/org/instance/construct/global/cliCommands/ios_ntp-server_cli.json"
+		]
+	},
+	"advanced" : {
+		"renderingConditions" : [
+			"$discover.Hostname.global.host.shortName == c365"
+		]
+	},
+	"maskCommands" : [
+	],
+	"removeSyntax" : {
+		"list" : [
+		]
+	}
+}

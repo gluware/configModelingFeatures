@@ -1,0 +1,16 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "30731b86-6cc9-43c3-a3a7-5cc95fb532da",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_Http.json"
+	},
+	"cliCommands" : [
+		"no ip http server",
+		"no ip http secure-server"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

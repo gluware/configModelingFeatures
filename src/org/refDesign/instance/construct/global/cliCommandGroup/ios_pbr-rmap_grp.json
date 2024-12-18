@@ -1,0 +1,19 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommandGroup.jtype"
+	},
+	"@id" : "33016a4a-998a-4994-8215-b2106516c598",
+	"regEx" : "rmap.pbr",
+	"ignoreDelete" : false,
+	"cliBlocks" : {
+		"@ref" : [
+			"/org/instance/construct/global/cliCommands/ios_pbr-rmap_cli.json"
+		]
+	},
+	"advanced" : {
+		"renderingConditions" : [
+		]
+	},
+	"maskCommands" : [
+	]
+}

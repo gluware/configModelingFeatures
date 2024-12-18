@@ -1,0 +1,82 @@
+{
+    "@Info": {
+        "phaseNumber@Display.label": "Execution Order",
+        "phaseNumber": 10,
+        "displayName": "Banner Feature",
+        "description": "Banner Feature",
+        "featureDependencies": {
+            "jnib": {
+                "/sys/jnib/features/banner/cm_banner.template.jnib": {}
+            },
+            "preRequiredFeatures": {}
+        },
+        "domainDependencies": {},
+        "nodeDependencies": {},
+        "augments": {
+            "targets" : [
+                "/sys/type/construct/domain/aireosWirelessControllerAssembly",
+                "/sys/type/construct/domain/arubaosWirelessControllerAssembly",
+                "/sys/type/construct/domain/arubaoscxSwitchAssembly",
+                "/sys/type/construct/domain/arubaosSwitchAssembly",
+                "/sys/type/construct/domain/provisionSwitchAssembly",
+                "/sys/type/construct/domain/sgosWanOptimizerAssembly",
+                "/sys/type/construct/domain/dnosSwitchAssembly",
+                "/sys/type/construct/domain/gaiaFirewallAssembly",
+                "/sys/type/construct/domain/eosSwitchAssembly",
+                "/sys/type/construct/domain/exSwitchAssembly",
+                "/sys/type/construct/domain/srxRouterAssembly",
+                "/sys/type/construct/domain/qfxSwitchAssembly",
+                "/sys/type/construct/domain/mxRouterAssembly",
+                "/sys/type/construct/domain/iosSwitchAssembly",
+                "/sys/type/construct/domain/nxosSwitchAssembly",
+                "/sys/type/construct/domain/iosRouterAssembly",
+                "/sys/type/construct/domain/asaFirewallAssembly"
+            ],
+            "blocks" : {
+                "expertFeatureOption": {
+                    "properties": {
+                        "name": "banner",
+                        "featureLabel": "Banner Feature",
+                        "policyLabel": "Banner Policy",
+                        "policyPath": "/org/instance/construct/feature/banner/*"
+                    }
+                }
+            }
+        }
+    },
+    "featureConcept@Display.tab": "Feature Concept",
+    "featureConcept": {
+        "name@Display.label": "Feature Concept Name",
+        "name@Display.description": "A name that describes the collection of the selected CLI Command Groups",
+        "name@Searchable": {
+            "propName": "Feature Concept Name",
+            "description": "Feature Concept Name"
+        },
+        "name@Required!": "",
+        "cliCommandGroups@Display.label": "CLI Command Groups",
+        "cliCommandGroups@Ref": {
+            "paths": [
+                "/org/instance/construct/global/cliCommandGroup/*",
+                "/org/instance/construct/global/vsCliCommandGroup/*"
+            ],
+            "many": true
+        },
+        "cliCommandGroups@Display.pickList": {
+            "optionsLabel": "Available",
+            "selectedLabel": "Selected",
+            "showReorder": true,
+            "showCheckAll": false,
+            "showUnCheckAll": false,
+            "multiSelect": true,
+            "minLineCount": 6
+        }
+    },
+    "form@Display.tab": "Configuration",
+    "form": {
+        "banner@Display.label": "Banner",
+        "banner": {
+            "comment@Display.label": "No configurable parameters for this feature",
+            "comment": null
+        }
+    }
+}

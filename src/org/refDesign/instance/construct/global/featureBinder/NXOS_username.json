@@ -1,0 +1,21 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/featureBinder.jtype"
+	},
+	"@id" : "585c1be5-d58c-45c7-881c-e817aac55342",
+	"vendor": "cisco",
+	"os" : "nxos",
+	"featureName" : "username",
+	"featureDisplayName" : "UserName Feature",
+	"renderList" : [
+		{
+			"item" : {
+				"@ref" : "/org/instance/construct/global/conceptItem/NXOS_Username.json"
+			},
+			"maskCommands" : [
+			],
+			"dCli" : [
+			]
+		}
+	]
+}

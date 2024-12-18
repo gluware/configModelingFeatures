@@ -1,0 +1,51 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/conceptItem.jtype"
+	},
+	"@id" : "edc2ed9e-9e10-4db9-b723-0fbe3fc880e2",
+	"name" : "Intf",
+	"vendors" : {
+		"cisco" : {
+			"type" : [
+				"ios"
+			]
+		}
+	},
+	"showCmds" : [
+		"sh run | sec ^interface"
+	],
+	"keyCliLine" : "interface (.+)",
+	"rootEntryFlag" : false,
+	"mode" : "basic",
+	"boundaries" : {
+		"start" : null
+	},
+	"discover" : {
+		"accessVlan" : {
+			"expressions" : [
+				"switchport access vlan (.+)"
+			]
+		},
+		"vlan" : {
+			"expressions" : [
+				"(?<accessMode>^switchport mode access$)",
+				"(?<trunkMode>^switchport mode trunk$)",
+				"(?<trunkAllowed>^switchport trunk allowed vlan .+$)",
+				"switchport access vlan (?<access>.+)",
+				"switchport voice vlan (?<voice>.+)"
+			]
+		},
+		"subnet" : {
+			"expressions" : [
+				"ip address\\s(?<address>.+)\\s(?<mask>.+)"
+			]
+		},
+		"description" : {
+			"expressions" : [
+				"description\\s(.+)"
+			]
+		}
+	},
+	"removeSyntax" : {
+	}
+}

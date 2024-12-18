@@ -1,0 +1,43 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/domain/iosSwitchAssembly.jtype"
+	},
+	"@id" : "017fc5e8-2b2e-4af6-9a09-6cf7524313ef",
+	"domains" : {
+		"modules" : {
+			"switching" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/feature/switching/ios_switching.json"
+				}
+			}
+		}
+	},
+	"interfaces" : {
+		"portLayout" : {
+			"@ref" : "/org/instance/construct/global/switchPortMap/cisco_48p4u.json"
+		},
+		"portMap" : {
+			"@ref" : null
+		},
+		"ipNumbering" : {
+			"@ref" : null
+		}
+	},
+	"agents" : {
+		"watchdog" : {
+			"policy" : {
+				"@ref" : null
+			}
+		}
+	},
+	"boot" : {
+		"firmware" : {
+			"policy" : {
+				"@ref" : null
+			},
+			"catalog" : {
+				"@ref" : null
+			}
+		}
+	}
+}

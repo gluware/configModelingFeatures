@@ -1,0 +1,19 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/feature/interface.jtype"
+	},
+	"@id" : "65af3c52-c718-4ded-b8f5-1d4c1c68e5b4",
+	"featureConcept" : {
+		"name" : " ",
+		"cliCommandGroups" : {
+			"@ref" : [
+				"/org/instance/construct/global/cliCommandGroup/ios_intf-mgmt_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_intf-lan_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_intf-wan_grp.json"
+			]
+		}
+	},
+	"form" : {
+		"comment" : null
+	}
+}

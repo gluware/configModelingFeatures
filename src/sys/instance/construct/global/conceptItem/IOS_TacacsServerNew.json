@@ -1,0 +1,27 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/conceptItem.jtype"
+	},
+	"@id" : "c814de59-9f43-469b-a602-cc5f826c3c42",
+	"name" : "TacacsServerNew",
+	"vendors" : {
+		"cisco" : {
+			"type" : [
+				"ios"
+			]
+		}
+	},
+	"showCmds" : [
+		"sh run | sec ^tacacs server"
+	],
+	"keyCliLine" : "tacacs server (.+)",
+	"rootEntryFlag" : false,
+	"mode" : "basic",
+	"boundaries" : {
+		"start" : null
+	},
+	"discover" : {
+	},
+	"removeSyntax" : {
+	}
+}

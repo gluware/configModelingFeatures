@@ -1,0 +1,20 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/feature/switching.jtype"
+	},
+	"@id" : "44896165-57f5-461c-96cb-a8815b6d77b7",
+	"featureConcept" : {
+		"name" : "Switching",
+		"cliCommandGroups" : {
+			"@ref" : [
+			]
+		}
+	},
+	"form" : {
+		"layer2" : [
+		],
+		"switchports" : {
+			"profile" : null
+		}
+	}
+}

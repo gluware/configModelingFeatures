@@ -1,0 +1,8 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/vrf.jtype"
+	},
+	"@id" : "73992447-dbca-4d16-b2b1-0d3748f3bb6f",
+	"id" : 1,
+	"rd" : null
+}

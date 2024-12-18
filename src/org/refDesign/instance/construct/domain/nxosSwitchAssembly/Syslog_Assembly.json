@@ -1,0 +1,37 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/domain/nxosSwitchAssembly.jtype"
+	},
+	"@id" : "c7618323-304f-49a1-8956-6939d8663f39",
+	"domains" : {
+		"modules" : {
+			"syslog" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/feature/syslog/nxos_syslog.json"
+				}
+			}
+		}
+	},
+	"interfaces" : {
+		"portMap" : {
+			"@ref" : null
+		},
+		"ipNumbering" : {
+			"@ref" : null
+		}
+	},
+	"boot" : {
+		"firmware" : {
+			"policy" : {
+				"@ref" : null
+			},
+			"catalog" : {
+				"@ref" : null
+			}
+		}
+	},
+	"state" : {
+		"assessment" : {
+		}
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "26fadc75-94ba-44e7-8b5e-31cabe9b6b40",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_Intf2_modified.json"
+	},
+	"cliCommands" : [
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

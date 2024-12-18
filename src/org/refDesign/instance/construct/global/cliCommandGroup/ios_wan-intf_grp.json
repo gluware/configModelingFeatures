@@ -1,0 +1,22 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommandGroup.jtype"
+	},
+	"@id" : "227c93df-c9d7-4323-a944-eea8b4be8f35",
+	"regEx" : ".+",
+	"ignoreDelete" : true,
+	"cliBlocks" : {
+		"@ref" : [
+			"/org/instance/construct/global/cliCommands/ios_wan-intf_cli.json"
+		]
+	},
+	"advanced" : {
+		"renderingConditions" : [
+			"$discover.description == Outside Internet Provider"
+		]
+	},
+	"maskCommands" : [
+		"^interface",
+		"^ip access-group"
+	]
+}

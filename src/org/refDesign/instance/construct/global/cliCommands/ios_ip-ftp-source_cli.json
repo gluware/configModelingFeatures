@@ -1,0 +1,15 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "51794d92-3fa9-46e5-b9b1-0c53b8a1d21c",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_Ftp.json"
+	},
+	"cliCommands" : [
+		"ip ftp source-interface Loopback0"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

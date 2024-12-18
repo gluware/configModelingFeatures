@@ -1,0 +1,84 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/domain/iosRouterAssembly.jtype"
+	},
+	"@id" : "e807f75d-6018-4b82-8d9b-7f95df9a3911",
+	"domains" : {
+		"modules" : {
+			"dns" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/feature/dns/ios_dns.json"
+				}
+			},
+			"ntp" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/feature/ntp/ios_ntp.json"
+				}
+			},
+			"syslog" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/feature/syslog/ios_syslog.json"
+				}
+			},
+			"snmp" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/feature/snmp/ios_snmp-v2c.json"
+				}
+			},
+			"banner" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/feature/banner/ios_banner.json"
+				}
+			},
+			"qos" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/feature/qos/ios_qos.json"
+				}
+			},
+			"globals" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/feature/globals/iosSwitch_globals.json"
+				}
+			},
+			"services" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/feature/services/ios_services.json"
+				}
+			},
+			"username" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/feature/username/ios_username.json"
+				}
+			}
+		}
+	},
+	"interfaces" : {
+		"portMap" : {
+			"@ref" : null
+		},
+		"ipNumbering" : {
+			"@ref" : null
+		}
+	},
+	"agents" : {
+		"watchdog" : {
+			"policy" : {
+				"@ref" : null
+			}
+		}
+	},
+	"boot" : {
+		"firmware" : {
+			"policy" : {
+				"@ref" : null
+			},
+			"catalog" : {
+				"@ref" : null
+			}
+		}
+	},
+	"state" : {
+		"assessment" : {
+		}
+	}
+}

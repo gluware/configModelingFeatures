@@ -1,0 +1,15 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "9c4dd56e-b3b7-4f34-bef9-4c79aaee4308",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_SyslogServer.json"
+	},
+	"cliCommands" : [
+		"logging buffered 128000"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

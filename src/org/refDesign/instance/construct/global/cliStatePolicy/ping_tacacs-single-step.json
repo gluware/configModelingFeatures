@@ -1,0 +1,30 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStatePolicy.jtype"
+	},
+	"@id" : "00439b70-853c-46ed-a441-16da1d5d3133",
+	"list" : [
+        {
+            "params" : "10.185.42.11",
+            "includePattern" : ".+",
+            "excludePattern" : "",
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/IOS_ping.json"
+            },
+            "query" : {
+                "@ref" : "/org/instance/construct/global/cliStateQuery/pingLatencyQuery.json"
+            }
+        },
+                {
+            "params" : "10.150.42.11",
+            "includePattern" : ".+",
+            "excludePattern" : "",
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/IOS_ping.json"
+            },
+            "query" : {
+                "@ref" : "/org/instance/construct/global/cliStateQuery/pingLatencyQuery.json"
+            }
+        }
+	]
+}

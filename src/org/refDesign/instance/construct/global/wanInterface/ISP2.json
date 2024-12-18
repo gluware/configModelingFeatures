@@ -1,0 +1,8 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/wanInterface.jtype"
+	},
+	"@id" : "63a5a9fb-a333-4adc-b298-67264865ff13",
+	"description" : "",
+	"location" : "external"
+}

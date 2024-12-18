@@ -1,0 +1,22 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/overlayNetwork.jtype"
+	},
+	"@id" : "59848421-e6f9-4f98-87d9-60aa2f3fa57d",
+	"id" : 100,
+	"region" : "",
+	"authentication" : {
+		"method" : "secret",
+		"key" : "Secret123"
+	},
+	"settings" : {
+		"authentication" : "nhrp@100",
+		"tunnelKey" : 100001,
+		"mapping" : [
+			{
+				"nhs" : "10.0.1.11",
+				"nbma" : "172.16.0.11"
+			}
+		]
+	}
+}

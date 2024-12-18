@@ -1,0 +1,17 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "cf55aece-c69f-4b93-a7a4-0b6b81084f5f",
+	"item" : {
+        "@ref" : "/org/instance/construct/global/conceptItem/IOS_Switch_SwitchPort.json"
+	},
+	"cliCommands" : [
+		"interface $context.switchPorts[*].name",
+		" service-policy input pmap_qos-lan-marking-in",
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

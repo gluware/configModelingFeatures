@@ -1,0 +1,10 @@
+{
+    "@Info": {
+        "displayName": "VLAN",
+        "featureDependencies": {}
+    },
+    "id@Display.label" : "VLAN ID",
+    "id@Required!" : 0,
+    "alias" : "",
+    "alias@Display.label" : "Alias (optional)"
+}

@@ -1,0 +1,15 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "5202a77b-cb6f-4952-abfc-7372c002ec86",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_SubnetZero.json"
+	},
+	"cliCommands" : [
+		"ip subnet-zero"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

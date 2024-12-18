@@ -1,0 +1,16 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStatePolicy.jtype"
+	},
+	"@id" : "9d6c128a-1b78-4267-858c-3252d6440ff1",
+	"list" : [
+        {
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/IOS_show_interface_status.json"
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : ""
+        }
+	]
+}

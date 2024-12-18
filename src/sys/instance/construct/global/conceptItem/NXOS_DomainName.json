@@ -1,0 +1,33 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/conceptItem.jtype"
+	},
+	"@id" : "b943dbab-37e7-4eec-9e1d-16dfb242082c",
+	"name" : "DomainName",
+	"vendors" : {
+		"cisco" : {
+			"type" : [
+				"nxos"
+			]
+		}
+	},
+	"showCmds" : [
+		"sh run all | inc \"^ip domain.name\""
+	],
+	"mode" : "advanced",
+	"keyCliLine" : "ip domain.name\\s(vrf\\s\\S+\\s)?(.+)",
+	"rootEntryFlag" : true,
+	"keyLineDepth" : 1,
+	"keyGroup" : 2,
+	"regEx" : "",
+	"metadata" : {
+		"@ref" : null
+	},
+	"boundaries" : {
+		"start" : null
+	},
+	"discover" : {
+	},
+	"removeSyntax" : {
+	}
+}

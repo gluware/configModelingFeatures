@@ -1,0 +1,14 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/switchportSettings.jtype"
+	},
+	"@id" : "20afc920-ae24-44b5-9e78-3308ce3b3dfc",
+	"dot1q" : {
+		"includedVlansRange" : "100,101,200,201",
+		"nativeVlan" : 1
+	},
+	"spanningTree" : {
+		"vlanId" : "1",
+		"pathCost" : 32768
+	}
+}

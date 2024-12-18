@@ -1,0 +1,15 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "ae03431b-5e62-4e4b-9e05-4624a94a3e0b",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_BgpCommunity.json"
+	},
+	"cliCommands" : [
+		"ip bgp-community new-format"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

@@ -1,0 +1,18 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommandGroup.jtype"
+	},
+	"@id" : "2719797e-d610-461c-89fd-78eeb19a00c6",
+	"regEx" : ".+",
+	"ignoreDelete" : false,
+	"cliBlocks" : {
+		"@ref" : [
+			"/org/instance/construct/global/cliCommands/ios_http-source-interface_cli.json"
+		]
+	},
+	"advanced" : {
+	},
+	"maskCommands" : [
+		"ip http client source-interface"
+	]
+}

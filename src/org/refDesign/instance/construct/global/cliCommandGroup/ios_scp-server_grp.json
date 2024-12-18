@@ -1,0 +1,20 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommandGroup.jtype"
+	},
+	"@id" : "3dd46024-f99a-48c8-a24b-64bd5a2c2bb2",
+	"regEx" : ".+",
+	"ignoreDelete" : true,
+	"cliBlocks" : {
+		"@ref" : [
+			"/org/instance/construct/global/cliCommands/ios_scp-server_cli.json"
+		]
+	},
+	"maskCommands" : [
+		"ip scp server"
+	],
+	"advanced" : {
+		"renderingConditions" : [
+		]
+	}
+}

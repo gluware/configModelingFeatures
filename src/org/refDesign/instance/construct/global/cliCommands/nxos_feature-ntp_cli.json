@@ -1,0 +1,15 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "31ef4365-d259-4125-becf-1fd49e164a27",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/NXOS_Feature.json"
+	},
+	"cliCommands" : [
+		"feature ntp"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

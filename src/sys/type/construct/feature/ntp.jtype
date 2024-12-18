@@ -1,0 +1,115 @@
+{
+    "@Info": {
+        "phaseNumber@Display.label": "Execution Order",
+        "phaseNumber": 10,
+        "displayName": "NTP Feature",
+        "description": "NTP Feature",
+        "featureDependencies": {
+            "jnib": {
+                "/sys/jnib/features/ntp/cm_ntp.template.jnib": {}
+            },
+            "preRequiredFeatures": {}
+        },
+        "domainDependencies": {},
+        "nodeDependencies": {},
+        "augments": {
+            "targets": [
+                "/sys/type/construct/domain/aireosWirelessControllerAssembly",
+                "/sys/type/construct/domain/arubaosWirelessControllerAssembly",
+                "/sys/type/construct/domain/arubaoscxSwitchAssembly",
+                "/sys/type/construct/domain/arubaosSwitchAssembly",
+                "/sys/type/construct/domain/provisionSwitchAssembly",
+                "/sys/type/construct/domain/sgosWanOptimizerAssembly",
+                "/sys/type/construct/domain/dnosSwitchAssembly",
+                "/sys/type/construct/domain/gaiaFirewallAssembly",
+                "/sys/type/construct/domain/eosSwitchAssembly",
+                "/sys/type/construct/domain/exSwitchAssembly",
+                "/sys/type/construct/domain/srxRouterAssembly",
+                "/sys/type/construct/domain/qfxSwitchAssembly",
+                "/sys/type/construct/domain/mxRouterAssembly",
+                "/sys/type/construct/domain/iosSwitchAssembly",
+                "/sys/type/construct/domain/nxosSwitchAssembly",
+                "/sys/type/construct/domain/iosRouterAssembly",
+                "/sys/type/construct/domain/asaFirewallAssembly"
+            ],
+            "blocks": {
+                "expertFeatureOption": {
+                    "properties": {
+                        "name": "ntp",
+                        "featureLabel": "NTP Feature",
+                        "policyLabel": "NTP Policy",
+                        "policyPath": "/org/instance/construct/feature/ntp/*"
+                    }
+                }
+            }
+        }
+    },
+    "featureConcept@Display.tab": "Feature Concept",
+    "featureConcept": {
+        "name@Display.label": "Feature Concept Name",
+        "name@Display.description": "A name that describes the collection of the selected CLI Command Groups",
+        "name@Searchable": {
+            "propName": "Feature Concept Name",
+            "description": "Feature Concept Name"
+        },
+        "name@Required!": "",
+        "cliCommandGroups@Display.label": "CLI Command Groups",
+        "cliCommandGroups@Ref": {
+            "paths": [
+                "/org/instance/construct/global/cliCommandGroup/*",
+                "/org/instance/construct/global/vsCliCommandGroup/*"
+            ],
+            "many": true
+        },
+        "cliCommandGroups@Display.pickList": {
+            "optionsLabel": "Available",
+            "selectedLabel": "Selected",
+            "showReorder": true,
+            "showCheckAll": false,
+            "showUnCheckAll": false,
+            "multiSelect": true,
+            "minLineCount": 6
+        }
+    },
+    "form@Display.tab": "Configuration",
+    "form": {
+        "ntp@Display.label": "NTP",
+        "ntp": {
+            "srcInt@Display.label" : "Source Interface",
+            "srcInt@Ref" : {
+                "paths" : ["/org/instance/construct/global/lanInterface", "/org/instance/construct/global/wanInterface"]
+            },
+            "@Complete.options": {
+                "@Display.addLabel": "Add",
+                "peer@Display.label": "Peers",
+                "peer@Display.addLabel": "Add Peers",
+                "peer": [{
+                    "ip@Display.label": "IP Address",
+                    "ip": "",
+                    "version@Display.label": "Version (1-4)",
+                    "version": 4,
+                    "version@Number": {
+                        "min": 1,
+                        "max": 4
+                    },
+                    "key@Display.label": "Key",
+                    "key": ""
+                }],
+                "server@Display.label": "Servers",
+                "server@Display.addLabel": "Add Servers",
+                "server": [{
+                    "ip@Display.label": "IP Address",
+                    "ip": "",
+                    "version@Display.label": "Version (1-4)",
+                    "version": 4,
+                    "version@Number": {
+                        "min": 1,
+                        "max": 4
+                    },
+                    "key@Display.label": "Key",
+                    "key": ""
+                }]
+            }
+        }
+    }
+}

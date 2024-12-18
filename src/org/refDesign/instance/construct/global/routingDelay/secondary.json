@@ -1,0 +1,7 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/routingDelay.jtype"
+	},
+	"@id" : "c4ab9bca-0aff-4690-8cec-a2627566a7f2",
+	"delay" : 2000
+}

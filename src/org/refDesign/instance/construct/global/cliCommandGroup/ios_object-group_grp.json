@@ -1,0 +1,17 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommandGroup.jtype"
+	},
+	"@id" : "ca527416-b658-4ce0-84de-b38bf2fed52e",
+	"regEx" : ".+",
+	"ignoreDelete" : true,
+	"cliBlocks" : {
+		"@ref" : [
+			"/org/instance/construct/global/cliCommands/ios_object-group_cli.json"
+		]
+	},
+	"advanced" : {
+	},
+	"maskCommands" : [
+	]
+}

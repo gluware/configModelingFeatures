@@ -1,0 +1,34 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/domain/ipv4Pool.jtype"
+	},
+	"@id" : "43bf2477-bee2-45e4-9248-f79a760f4583",
+	"description" : "Router Loopback0 Addressing",
+	"type" : "ipv4",
+	"summary" : "10.0.0.0/24",
+	"subnetPrefixLength" : 32,
+	"reservations" : [
+		{
+			"subnet" : "10.0.0.1",
+			"device" : {
+				"serialNumber" : "FOX2018GA37",
+				"intfName" : {
+					"@ref" : null
+				}
+			}
+		},
+		{
+			"subnet" : "10.0.0.2",
+			"device" : {
+				"serialNumber" : "",
+				"intfName" : {
+					"@ref" : null
+				}
+			}
+		}
+	],
+	"allocationMode" : "subnetBased",
+	"options" : {
+		"oversubscribingMode" : false
+	}
+}

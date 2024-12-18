@@ -1,0 +1,42 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/domain/iosRouterAssembly.jtype"
+	},
+	"@id" : "7c33460d-453e-4b80-9a8e-23cb2b55af5a",
+	"domains" : {
+		"modules" : {
+			"banner" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/feature/banner/ios_banner.json"
+				}
+			}
+		}
+	},
+	"interfaces" : {
+		"portMap" : {
+			"@ref" : null
+		},
+		"ipNumbering" : {
+			"@ref" : null
+		}
+	},
+	"agents" : {
+		"watchdog" : {
+			"policy" : {
+				"@ref" : null
+			}
+		}
+	},
+	"state" : {
+		"assessment" : {
+			"provision" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/global/cliStatePolicy/cliStatePolicy.json"
+				},
+				"schedule" : "both",
+				"compare" : false,
+				"action" : "ignore"
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/switchPortNamingProfile.jtype"
+	},
+	"@id" : "b3486d20-fe53-4646-b54b-8818dadc900e",
+	"ethernetPorts" : {
+		"namedType" : "GigabitEthernet",
+		"mapping" : "specific",
+		"range" : "25-26",
+		"pathId" : "0/%portId"
+	},
+	"breakoutPorts" : {
+		"namedType" : "Ethernet",
+		"pathId" : "%stackId/0/%portId/%breakoutId"
+	},
+	"otherSettings" : {
+		"intialStackId" : 1
+	},
+	"comment1" : null,
+	"comment2" : null
+}

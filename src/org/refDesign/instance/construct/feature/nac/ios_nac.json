@@ -1,0 +1,17 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/feature/nac.jtype"
+	},
+	"@id" : "db6cd6c3-ca35-440b-a075-1c8b4644de85",
+	"featureConcept" : {
+		"name" : "NAC",
+		"cliCommandGroups" : {
+			"@ref" : [
+				"/org/instance/construct/global/cliCommandGroup/ios_nac-global_grp.json"
+			]
+		}
+	},
+	"form" : {
+		"comment" : null
+	}
+}

@@ -1,0 +1,57 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/stackPortMap.jtype"
+	},
+	"@id" : "1ffaeee1-9815-4204-b402-7de364bb4b94",
+	"stack" : [
+		{
+			"switchPortMap" : {
+				"@ref" : "/org/instance/construct/global/switchPortMap/iosSwitch_NAC.json"
+			}
+		},
+		{
+			"switchPortMap" : {
+				"@ref" : "/org/instance/construct/global/switchPortMap/iosSwitch_NAC.json"
+			}
+		},
+		{
+			"switchPortMap" : {
+				"@ref" : "/org/instance/construct/global/switchPortMap/iosSwitch_NAC.json"
+			}
+		},
+		{
+			"switchPortMap" : {
+				"@ref" : "/org/instance/construct/global/switchPortMap/iosSwitch_NAC.json"
+			}
+		},
+		{
+			"switchPortMap" : {
+				"@ref" : "/org/instance/construct/global/switchPortMap/iosSwitch_NAC.json"
+			}
+		},
+		{
+			"switchPortMap" : {
+				"@ref" : "/org/instance/construct/global/switchPortMap/iosSwitch_NAC.json"
+			}
+		},
+		{
+			"switchPortMap" : {
+				"@ref" : "/org/instance/construct/global/switchPortMap/iosSwitch_NAC.json"
+			}
+		},
+		{
+			"switchPortMap" : {
+				"@ref" : "/org/instance/construct/global/switchPortMap/iosSwitch_NAC.json"
+			}
+		}
+	],
+	"aggregated" : {
+	},
+	"namingConventions" : {
+		"portNamingPolicies" : {
+			"aggregated" : {
+				"@ref" : null
+			}
+		}
+	}
+}

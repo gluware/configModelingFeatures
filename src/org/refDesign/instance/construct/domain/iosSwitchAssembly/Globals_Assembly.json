@@ -1,0 +1,77 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/domain/iosSwitchAssembly.jtype"
+	},
+	"@id" : "f58c83f1-e03a-44e7-b331-3dbe43817a03",
+	"domains" : {
+		"modules" : {
+			"banner" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/feature/banner/ios_banner.json"
+				}
+			},
+			"dns" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/feature/dns/ios_dns.json"
+				}
+			},
+			"ntp" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/feature/ntp/ios_ntp.json"
+				}
+			},
+			"snmp" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/feature/snmp/ios_snmp-v2c.json"
+				}
+			},
+			"globals" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/feature/globals/iosSwitch_globals.json"
+				}
+			},
+			"services" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/feature/services/ios_services.json"
+				}
+			},
+			"syslog" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/feature/syslog/ios_syslog.json"
+				}
+			}
+		}
+	},
+	"interfaces" : {
+		"portLayout" : {
+			"@ref" : null
+		},
+		"portMap" : {
+			"@ref" : null
+		},
+		"ipNumbering" : {
+			"@ref" : null
+		}
+	},
+	"agents" : {
+		"watchdog" : {
+			"policy" : {
+				"@ref" : null
+			}
+		}
+	},
+	"boot" : {
+		"firmware" : {
+			"policy" : {
+				"@ref" : null
+			},
+			"catalog" : {
+				"@ref" : null
+			}
+		}
+	},
+	"state" : {
+		"assessment" : {
+		}
+	}
+}

@@ -1,0 +1,250 @@
+{
+    "@Info": {
+        "phaseNumber@Display.label": "Execution Order",
+        "phaseNumber": 1,
+        "displayName": "Routing Feature",
+        "description": "Routing Feature",
+        "featureDependencies": {
+            "jnib": {
+                "/sys/jnib/features/routing/cm_routing.template.jnib": {}
+            },
+            "preRequiredFeatures": {}
+        },
+        "domainDependencies": {},
+        "nodeDependencies": {},
+        "augments": {
+            "targets": [
+                "/sys/type/construct/domain/eosSwitchAssembly",
+                "/sys/type/construct/domain/arubaosWirelessControllerAssembly",
+                "/sys/type/construct/domain/arubaoscxSwitchAssembly",
+                "/sys/type/construct/domain/arubaosSwitchAssembly",
+                "/sys/type/construct/domain/provisionSwitchAssembly",
+                "/sys/type/construct/domain/dnosSwitchAssembly",
+                "/sys/type/construct/domain/exSwitchAssembly",
+                "/sys/type/construct/domain/srxRouterAssembly",
+                "/sys/type/construct/domain/qfxSwitchAssembly",
+                "/sys/type/construct/domain/mxRouterAssembly",
+                "/sys/type/construct/domain/iosSwitchAssembly",
+                "/sys/type/construct/domain/nxosSwitchAssembly",
+                "/sys/type/construct/domain/iosRouterAssembly",
+                "/sys/type/construct/domain/asaFirewallAssembly"
+            ],
+            "blocks": {
+                "expertFeatureOption": {
+                    "properties": {
+                        "name": "routing",
+                        "featureLabel": "Routing Feature",
+                        "policyLabel": "Routing Policy",
+                        "policyPath": "/org/instance/construct/feature/routing/*"
+                    }
+                }
+            }
+        }
+    },
+    "featureConcept@Display.tab": "Feature Concept",
+    "featureConcept": {
+        "name@Display.label": "Feature Concept Name",
+        "name@Display.description": "A name that describes the collection of the selected CLI Command Groups",
+        "name@Searchable": {
+            "propName": "Feature Concept Name",
+            "description": "Feature Concept Name"
+        },
+        "name@Required!": "",
+        "cliCommandGroups@Display.label": "CLI Command Groups",
+        "cliCommandGroups@Ref": {
+            "paths": [
+                "/org/instance/construct/global/cliCommandGroup/*",
+                "/org/instance/construct/global/vsCliCommandGroup/*"
+            ],
+            "many": true
+        },
+        "cliCommandGroups@Display.pickList": {
+            "optionsLabel": "Available",
+            "selectedLabel": "Selected",
+            "showReorder": true,
+            "showCheckAll": false,
+            "showUnCheckAll": false,
+            "multiSelect": true,
+            "minLineCount": 6
+        }
+    },
+    "form@Display.tab": "Configuration",
+    "form": {
+        "distributionLayer@Display.label": "Distribution Layer",
+        "distributionLayer": {
+            "ipv4@Display.label": "IPv4",
+            "ipv4": {
+                "routingProtocol@Display.label": "Dynamic Routing Protocol",
+                "routingProtocol": {
+                    "protocol@Display.label": "Protocol",
+                    "protocol@Choice.options": {
+                        "bgp@Display.label": "BGP",
+                        "bgp": {
+                            "asn@Display.label": "ASN",
+                            "asn@Number": {},
+                            "routerId@Display.label": "Router ID",
+                            "routerId": "",
+                            "advertise@Display.label": "Networks",
+                            "advertise@Display.addLabel": "Add Network to Advertise",
+                            "advertise@Required!": [],
+                            "advertise@Searchable": {
+                                "propName": "Show Commands",
+                                "description": "Show Commands"
+                            },
+                            "peering@Display.label": "Peering",
+                            "peering@Display.addLabel": "Add Peers",
+                            "peering": [
+                                {
+                                    "vrf@Display.label": "VRF",
+                                    "vrf@Ref": {
+                                        "paths": [
+                                            "/org/instance/construct/global/vrf/*"
+                                        ]
+                                    },
+                                    "neighbors@Display.label": "Neighbors",
+                                    "neighbors@Display.addLabel": "Add Neighbor",
+                                    "neighbors": [
+                                        {
+                                            "ip@Display.label": "IP Address",
+                                            "ip": "",
+                                            "remoteAsn@Display.label": "Remote ASN",
+                                            "remoteAsn@Number": {
+                                                "min": 1,
+                                                "max": 4294967295,
+                                                "onlyInteger": true
+                                            },
+                                            "peerGroup@Display.label": "Peer Group (optional)",
+                                            "peerGroup": "",
+                                            "distance@Display.label": "Administrative Distance (optional)",
+                                            "distance@Number": {
+                                                "min": 1,
+                                                "max": 255,
+                                                "onlyInteger": true
+                                            },
+                                            "password@Display.label": "Password (optional)",
+                                            "password": "",
+                                            "description@Display.label": "Description",
+                                            "description": "",
+                                            "options@Display.label": "Options",
+                                            "options": {
+                                                "timers@Display.label": "Timers",
+                                                "timers": {
+                                                    "hellotime@Display.label": "Hello Time (sec)",
+                                                    "hellotime@Number": {
+                                                        "min": 1,
+                                                        "max": 65535,
+                                                        "onlyInteger": true
+                                                    },
+                                                    "hellotime": 20,
+                                                    "holdtime@Display.label": "Hold Time (sec)",
+                                                    "holdtime": 60
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "eigrp@Display.label": "EIGRP",
+                        "eigrp": {
+                            "asn@Display.label": "ASN",
+                            "asn": "",
+                            "eigrpMetrics@Display.label": "EIGRP Metrics (optional)",
+                            "eigrpMetrics": {
+                                "eigrpMetrics@Display.label": "EIGRP Metrics",
+                                "eigrpMetrics@Choice.options": {
+                                    "custom@Display.label": "Custom",
+                                    "custom": {
+                                        "metrics@Display.label": "EIGRP Metrics",
+                                        "metrics": {
+                                            "bandwidth@Display.label": "Bandwidth",
+                                            "bandwidth@Searchable": {
+                                                "propName": "Bandwidth",
+                                                "description": "Bandwidth metric in kbps"
+                                            },
+                                            "bandwidth@Range": {
+                                                "min": 1,
+                                                "max": 4294967295
+                                            },
+                                            "bandwidth": 10000,
+                                            "delay@Display.label": "Delay",
+                                            "delay@Searchable": {
+                                                "propName": "Delay",
+                                                "description": "Route delay metric in tens of microseconds"
+                                            },
+                                            "delay@Range": {
+                                                "min": 0,
+                                                "max": 4294967295
+                                            },
+                                            "delay": 100,
+                                            "reliability@Display.label": "Reliability",
+                                            "reliability@Searchable": {
+                                                "propName": "Reliability",
+                                                "description": "Reliability metric where 255 is 100% reliable"
+                                            },
+                                            "reliability@Range": {
+                                                "min": 0,
+                                                "max": 255
+                                            },
+                                            "reliability": 255,
+                                            "loading@Display.label": "Loading",
+                                            "loading@Searchable": {
+                                                "propName": "Loading",
+                                                "description": "Effective Bandwidth metric (Loading) where 255 is 100% loaded"
+                                            },
+                                            "loading@Range": {
+                                                "min": 1,
+                                                "max": 255
+                                            },
+                                            "loading": 100,
+                                            "mtu@Display.label": "MTU",
+                                            "mtu@Searchable": {
+                                                "propName": "MTU",
+                                                "description": "Maximum Transmission Unit metric"
+                                            },
+                                            "mtu@Range": {
+                                                "min": 1,
+                                                "max": 65535
+                                            },
+                                            "mtu": 1500,
+                                            "@Required": [
+                                                "bandwidth",
+                                                "delay",
+                                                "reliability",
+                                                "loading",
+                                                "mtu"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "ospf@Display.label": "OSPF",
+                        "ospf": {
+                            "id@Display.label": "Process ID",
+                            "id": "",
+                            "area@Display.label": "Area",
+                            "area": "",
+                            "authentication@Display.label": "Authentication (optional)",
+                            "authentication": {
+                                "type@Display.label": "Type",
+                                "type@Select.options": {
+                                    "none": {},
+                                    "md5": {
+                                        "hash@Display.label": "Hash",
+                                        "hash": ""
+                                    },
+                                    "sha1": {
+                                        "hash@Display.label": "Hash",
+                                        "hash": ""
+                                    }
+                                },
+                                "type": "none"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

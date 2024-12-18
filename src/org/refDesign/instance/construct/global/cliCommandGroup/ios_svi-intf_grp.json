@@ -1,0 +1,25 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommandGroup.jtype"
+	},
+	"@id" : "ed17b47b-c445-46ae-9114-ebab5cabcb20",
+	"regEx" : "Vlan.+",
+	"ignoreDelete" : true,
+	"cliBlocks" : {
+		"@ref" : [
+			"/org/instance/construct/global/cliCommands/ios_svi-intf_cli.json"
+		]
+	},
+	"advanced" : {
+		"renderingConditions" : [
+		]
+	},
+	"maskCommands" : [
+		"^interface",
+		"^description",
+		"^ip address",
+		"^no ip redirects",
+		"^no ip proxy-arp",
+		"^no ip unreachables"
+	]
+}

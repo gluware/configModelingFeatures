@@ -1,0 +1,19 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/switchPortNamingProfile.jtype"
+	},
+	"@id" : "f0d210a7-21bb-4f39-bd0e-9da4d1595fa6",
+	"ethernetPorts" : {
+		"namedType" : "Port-channel",
+		"pathId" : "%portId"
+	},
+	"breakoutPorts" : {
+		"namedType" : "Ethernet",
+		"pathId" : "%stackId/0/%portId/%breakoutId"
+	},
+	"otherSettings" : {
+		"intialStackId" : 1
+	},
+	"comment1" : null,
+	"comment2" : null
+}

@@ -1,0 +1,21 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/feature/qos.jtype"
+	},
+	"@id" : "023c6a1f-97bc-4562-9d2d-cd6e956d9f5d",
+	"featureConcept" : {
+		"name" : "QOS Feature",
+		"cliCommandGroups" : {
+			"@ref" : [
+				"/org/instance/construct/global/cliCommandGroup/ios_qos-acl_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_qos-cmap_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_qos-pmap_grp.json"
+			]
+		}
+	},
+	"form" : {
+		"intf" : {
+			"bandwidth" : 20
+		}
+	}
+}

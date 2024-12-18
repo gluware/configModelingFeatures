@@ -1,0 +1,14 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "4a13cf14-bcb5-4c1c-bee6-485ec1e2a1ed",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_Dot1x.json"
+	},
+	"cliCommands" : [
+		"dot1x system-auth-control"
+	],
+	"advanced" : {
+	}
+}

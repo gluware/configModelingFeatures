@@ -1,0 +1,16 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "1eaae4ae-da5b-4546-98dd-b16f9dcb08fe",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/NXOS_TacacsServer.json"
+	},
+	"cliCommands" : [
+		"tacacs-server key 0 $context.aaa[*].tacacs[*].key",
+		"tacacs-server host $context.aaa[*].tacacs[*].ip"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

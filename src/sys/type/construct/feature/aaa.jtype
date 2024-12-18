@@ -1,0 +1,155 @@
+{
+    "@Info": {
+        "phaseNumber@Display.label": "Execution Order",
+        "phaseNumber": "final",
+        "displayName": "AAA Feature",
+        "description": "AAA Feature",
+        "featureDependencies": {
+            "jnib": {
+                "/sys/jnib/features/aaa/cm_aaa.template.jnib": {}
+            },
+            "preRequiredFeatures": {}
+        },
+        "domainDependencies": {},
+        "nodeDependencies": {},
+        "augments": {
+            "targets" : [
+                "/sys/type/construct/domain/aireosWirelessControllerAssembly",
+                "/sys/type/construct/domain/arubaosWirelessControllerAssembly",
+                "/sys/type/construct/domain/arubaoscxSwitchAssembly",
+                "/sys/type/construct/domain/arubaosSwitchAssembly",
+                "/sys/type/construct/domain/provisionSwitchAssembly",
+                "/sys/type/construct/domain/sgosWanOptimizerAssembly",
+                "/sys/type/construct/domain/dnosSwitchAssembly",
+                "/sys/type/construct/domain/gaiaFirewallAssembly",
+                "/sys/type/construct/domain/exSwitchAssembly",
+                "/sys/type/construct/domain/eosSwitchAssembly",
+                "/sys/type/construct/domain/srxRouterAssembly",
+                "/sys/type/construct/domain/mxRouterAssembly",
+                "/sys/type/construct/domain/qfxSwitchAssembly",
+                "/sys/type/construct/domain/iosSwitchAssembly",
+                "/sys/type/construct/domain/nxosSwitchAssembly",
+                "/sys/type/construct/domain/iosRouterAssembly",
+                "/sys/type/construct/domain/asaFirewallAssembly"
+            ],
+            "blocks": {
+                "expertFeatureOption": {
+                    "properties": {
+                        "name": "aaa",
+                        "featureLabel": "AAA Feature",
+                        "policyLabel": "AAA Policy",
+                        "policyPath": "/org/instance/construct/feature/aaa/*"
+                    }
+                }
+            }
+        }
+    },
+    "featureConcept@Display.tab": "Feature Concept",
+    "featureConcept": {
+        "name@Display.label": "Feature Concept Name",
+        "name@Display.description": "A name that describes the collection of the selected CLI Command Groups",
+        "name@Searchable": {
+            "propName": "Feature Concept Name",
+            "description": "Feature Concept Name"
+        },
+        "name@Required!": "",
+        "cliCommandGroups@Display.label": "CLI Command Groups",
+        "cliCommandGroups@Ref": {
+            "paths": [
+                "/org/instance/construct/global/cliCommandGroup/*",
+                "/org/instance/construct/global/vsCliCommandGroup/*"
+            ],
+            "many": true
+        },
+        "cliCommandGroups@Display.pickList": {
+            "optionsLabel": "Available",
+            "selectedLabel": "Selected",
+            "showReorder": true,
+            "showCheckAll": false,
+            "showUnCheckAll": false,
+            "multiSelect": true,
+            "minLineCount": 6
+        }
+    },
+    "form@Display.tab": "Configuration",
+    "form": {
+        "aaa@Display.label": "AAA",
+        "aaa@Display.addLabel": "Add Group",
+        "aaa": [
+            {
+                "name@Display.label": "Group Name",
+                "name@String": "",
+                "@Complete.options": {
+                    "@Display.addLabel": "Add Servers",
+                    "tacacs@Display.label": "Tacacs Server",
+                    "tacacs@Display.addLabel": "Add Tacacs Server",
+                    "tacacs": [
+                        {
+                            "name": "",
+                            "name@Display.label": "Server Name",
+                            "ip": "",
+                            "ip@Display.label": "IP Address",
+                            "key@Display.label": "Secret Key",
+                            "key@Display.password!": "",
+                            "key": "",
+                            "timeout@Display.label": "Timeout (secs)",
+                            "timeout": 30,
+                            "timeout@Number": {
+                                "min": 0,
+                                "max": 1000,
+                                "onlyInteger": true
+                            }
+                        }
+                    ],
+                    "radius@Display.label": "Radius Server",
+                    "radius@Display.addLabel": "Add Radius Server",
+                    "radius": [
+                        {
+                            "name": "",
+                            "name@Display.label": "Server Name",
+                            "ip": "",
+                            "ip@Display.label": "IP Address",
+                            "key@Display.label": "Secret Key",
+                            "key@Display.password!": "",
+                            "key": "",
+                            "timeout@Display.label": "Timeout (secs)",
+                            "timeout": 30,
+                            "timeout@Number": {
+                                "min": 0,
+                                "max": 1000,
+                                "onlyInteger": true
+                            },
+                            "port@Display.label": "Ports",
+                            "port": {
+                                "authentication@Display.label": "Authentication",
+                                "authentication@Enum": [
+                                    1645,
+                                    1812
+                                ],
+                                "authentication": 1812,
+                                "accounting@Display.label": "Accounting",
+                                "accounting@Enum": [
+                                    1646,
+                                    1813
+                                ],
+                                "accounting": 1813
+                            }
+                        }
+                    ]
+                },
+                "srcInt@Display.label" : "Source-Interface",
+                "srcInt@Display.description" : "You must set a portMap in the assembly or node instance in order to use this option.",
+                "srcInt@Ref" : {
+                    "paths" : ["/org/instance/construct/global/lanInterface", "/org/instance/construct/global/wanInterface"]
+                },
+                "srcIntOverride@Display.label": "Override Source-Interface",
+                "srcIntOverride@Display.description": "Set the interface used by Gluware to login to the device as the source-interface. (portMap not required)",
+                "srcIntOverride" : true,
+                "vrf@Display.label" : "VRF",
+                "vrf@Ref" : {
+                    "paths" : ["/org/instance/construct/global/vrf"]
+                }
+            }
+        ]
+    }
+}

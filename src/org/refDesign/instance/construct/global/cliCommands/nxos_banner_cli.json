@@ -1,0 +1,25 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "890da0bd-a22f-4e8b-b7a1-277ebfad8dac",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/NXOS_Banner.json"
+	},
+	"cliCommands" : [
+		"banner motd ^",
+		"###################################################### ",
+		"# UNAUTHORIZED ACCESS TO THIS DEVICE IS PROHIBITED   #",
+		"# You must have explicit, authorized permission to   #",
+		"# access or configure this device. Unauthorized      #",
+		"# attempts and actions to access or use this system  #",
+		"# may result in civil and/or criminal penalties.     #",
+		"# All activities performed on this device are logged #",
+		"# and monitored.                                     #",
+		"######################################################",
+		"^"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

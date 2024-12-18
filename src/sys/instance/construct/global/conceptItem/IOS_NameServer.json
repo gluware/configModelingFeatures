@@ -1,0 +1,33 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/conceptItem.jtype"
+	},
+	"@id" : "952c394b-b78b-4600-86eb-3ac0746aa458",
+	"name" : "DnsServer",
+	"vendors" : {
+		"cisco" : {
+			"type" : [
+				"ios"
+			]
+		}
+	},
+	"showCmds" : [
+		"sh run | sec ^ip name-server"
+	],
+	"mode" : "advanced",
+	"keyCliLine" : "ip name.server\\s(?:vrf\\s\\S+\\s)?(.+)",
+	"rootEntryFlag" : true,
+	"keyLineDepth" : 1,
+	"keyGroup" : 1,
+	"regEx" : "",
+	"metadata" : {
+		"@ref" : null
+	},
+	"boundaries" : {
+		"start" : null
+	},
+	"discover" : {
+	},
+	"removeSyntax" : {
+	}
+}

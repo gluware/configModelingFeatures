@@ -1,0 +1,16 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "ad1aee1c-4a69-4f6d-b607-d8e760b56afa",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_SSH.json"
+	},
+	"cliCommands" : [
+		"ip ssh version 2",
+		"ip ssh time-out 60"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

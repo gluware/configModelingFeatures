@@ -1,0 +1,19 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStatePolicy.jtype"
+	},
+	"@id" : "fcae09fd-8173-4c2f-ae27-6dabde37ce2d",
+	"list" : [
+		{
+			"item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/WLC_wlanSummary.json"
+            },
+            "query" : {
+                "@ref" : null
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : ""
+		}
+	]
+}

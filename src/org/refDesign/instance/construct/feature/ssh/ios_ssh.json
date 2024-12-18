@@ -1,0 +1,17 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/feature/ssh.jtype"
+	},
+	"@id" : "4eb7cf7c-13f7-40c1-974c-7f13fb40f754",
+	"featureConcept" : {
+		"name" : "SSH Server Configuration",
+		"cliCommandGroups" : {
+			"@ref" : [
+				"/org/instance/construct/global/cliCommandGroup/ios_ssh_grp.json"
+			]
+		}
+	},
+	"form" : {
+		"comment" : null
+	}
+}

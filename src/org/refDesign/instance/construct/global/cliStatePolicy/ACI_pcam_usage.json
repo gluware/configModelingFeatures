@@ -1,0 +1,25 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"cmd": "vsh_lc -c \"show plat internal hal health-stats\" | grep policy_count",
+	"groupName": "pcam",
+	"discover": {
+		"used": {
+			"expressions": [
+				"^policy_count+\\s+:\\s+(?<count>\\d+$)"
+			],
+			"localKey": "",
+			"preserveLocalKey": true
+		},
+		"total": {
+			"expressions": [
+				"^max_policy_count+\\s+:\\s+(?<count>\\d+$)"
+			],
+			"localKey": "",
+			"preserveLocalKey": true
+		}
+	},
+	"options": {},
+	"rootEntry": "yes"
+}

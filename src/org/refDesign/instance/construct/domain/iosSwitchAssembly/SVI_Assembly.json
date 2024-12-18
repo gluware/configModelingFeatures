@@ -1,0 +1,37 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/domain/iosSwitchAssembly.jtype"
+	},
+	"@id" : "85e6e6f9-b702-4b72-a4e6-02e893017a1b",
+	"domains" : {
+		"modules" : {
+			"switching" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/feature/switching/ios_vlan-db.json"
+				}
+			}
+		}
+	},
+	"interfaces" : {
+		"portLayout" : {
+			"@ref" : null
+		},
+		"portMap" : {
+			"@ref" : "/org/instance/construct/global/portMap/SVI_portMap.json"
+		},
+		"ipNumbering" : {
+			"@ref" : "/org/instance/construct/domain/ipAddressing/SVI_ipAssignment.json"
+		}
+	},
+	"agents" : {
+		"watchdog" : {
+			"policy" : {
+				"@ref" : null
+			}
+		}
+	},
+	"state" : {
+		"assessment" : {
+		}
+	}
+}

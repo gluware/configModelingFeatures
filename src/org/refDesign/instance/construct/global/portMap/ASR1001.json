@@ -1,0 +1,36 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/portMap.jtype"
+	},
+	"@id" : "47f4d527-cbb1-4b2a-903a-2613c2cb5f0e",
+	"map" : [
+		{
+			"refName" : {
+				"@ref" : "/org/instance/construct/global/wanInterface/ISP1.json"
+			},
+			"name" : "GigabitEthernet0/0/0",
+			"extendedName" : ""
+		},
+		{
+			"refName" : {
+				"@ref" : "/org/instance/construct/global/lanInterface/DATA.json"
+			},
+			"name" : "GigabitEthernet0/0/1",
+			"extendedName" : ""
+		},
+		{
+			"refName" : {
+				"@ref" : "/org/instance/construct/global/lanInterface/DATA2.json"
+			},
+			"name" : "GigabitEthernet0/0/2",
+			"extendedName" : ""
+		},
+		{
+			"refName" : {
+				"@ref" : "/org/instance/construct/global/lanInterface/MGNT1.json"
+			},
+			"name" : "Loopback0",
+			"extendedName" : ""
+		}
+	]
+}

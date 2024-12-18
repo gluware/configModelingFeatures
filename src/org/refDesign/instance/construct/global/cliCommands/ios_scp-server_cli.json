@@ -1,0 +1,15 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "33add9b7-f15e-4485-8e52-80d793a8d527",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_ScpServer.json"
+	},
+	"cliCommands" : [
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

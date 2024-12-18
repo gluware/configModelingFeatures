@@ -1,0 +1,40 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/domain/iosRouterAssembly.jtype"
+	},
+	"@id" : "7b212805-774d-4efe-a117-d0c7542182cc",
+	"domains" : {
+		"modules" : {
+			"dmvpn" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/feature/dmvpn/DMVPN-100-Hub.json"
+				}
+			}
+		}
+	},
+	"interfaces" : {
+		"portMap" : {
+			"@ref" : "/org/instance/construct/global/portMapGroup/cisco-portMapGroup.json"
+		},
+		"ipNumbering" : {
+			"@ref" : "/org/instance/construct/domain/ipAddressing/DMVPN-100.json"
+		}
+	},
+	"agents" : {
+		"watchdog" : {
+			"policy" : {
+				"@ref" : null
+			}
+		}
+	},
+	"boot" : {
+		"firmware" : {
+			"policy" : {
+				"@ref" : null
+			},
+			"catalog" : {
+				"@ref" : null
+			}
+		}
+	}
+}

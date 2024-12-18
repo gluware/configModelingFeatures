@@ -1,0 +1,17 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "50dd1445-6004-4c80-a74e-4913c5a408a6",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_Intf2.json"
+	},
+	"cliCommands" : [
+		"interface $context.portMap[*].name",
+		" ip access-group acl-wan-in in",
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

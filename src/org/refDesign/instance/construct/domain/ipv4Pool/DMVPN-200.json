@@ -1,0 +1,31 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/domain/ipv4Pool.jtype"
+	},
+	"@id" : "26e44bb9-4119-4618-b612-00b374923f64",
+	"description" : "",
+	"type" : "ipv4",
+	"summary" : "10.0.2.0/24",
+	"reservations" : [
+		{
+			"subnet" : "10.0.2.12",
+			"device" : {
+				"serialNumber" : "94SMC6ESD0I"
+			}
+		}
+	],
+	"ranges" : [
+		{
+			"name" : {
+				"@ref" : "/org/instance/construct/global/subnetRange/dmvpn-spoke-subnetRange.json"
+			},
+			"ips" : [
+				"10.0.2.1-10.0.2.10"
+			]
+		}
+	],
+	"allocationMode" : "hostBased",
+	"options" : {
+		"oversubscribingMode" : false
+	}
+}

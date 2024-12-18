@@ -1,0 +1,27 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/conceptItem.jtype"
+	},
+	"@id" : "b92cf5cf-c725-4f12-8b26-48d3b0dc1a70",
+	"name" : "NameServer",
+	"vendors" : {
+		"cisco" : {
+			"type" : [
+				"nxos"
+			]
+		}
+	},
+	"showCmds" : [
+		"sh run all | inc \"^ip name.server\""
+	],
+	"mode" : "basic",
+	"keyCliLine" : "ip name.server\\s(\\S+)(?:\\suse-vrf\\s\\S+)?",
+	"rootEntryFlag" : true,
+	"boundaries" : {
+		"start" : null
+	},
+	"discover" : {
+	},
+	"removeSyntax" : {
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "a7c8ffac-0e77-4785-823c-98c8be41119b",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_IpsecProposal.json"
+	},
+	"cliCommands" : [
+		"crypto ipsec transform-set AES256/SHA/TRANSPORT esp-aes 256 esp-sha-hmac",
+		" mode transport",
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

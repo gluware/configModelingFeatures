@@ -1,0 +1,20 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommandGroup.jtype"
+	},
+	"@id" : "fb4f9bdb-ebb6-47b7-9561-ac9d099869c4",
+	"regEx" : ".+",
+	"ignoreDelete" : true,
+	"cliBlocks" : {
+		"@ref" : [
+			"/org/instance/construct/global/cliCommands/ios_ip-bgp-new-format_cli.json"
+		]
+	},
+	"maskCommands" : [
+		"ip bgp-community"
+	],
+	"advanced" : {
+		"renderingConditions" : [
+		]
+	}
+}

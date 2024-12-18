@@ -1,0 +1,21 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "541ed957-7aad-4b9d-a012-aecbb977e986",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_Intf2.json"
+	},
+	"cliCommands" : [
+		"interface $context.portMap[*].name",
+		" description $context.portMap[*].description",
+		" ip address $context.portMap[*].ipv4.subnet.ipAddress $context.portMap[*].ipv4.subnet.subnetMask",
+		" no ip redirects",
+		" no ip unreachables",
+		" no ip proxy-arp",
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

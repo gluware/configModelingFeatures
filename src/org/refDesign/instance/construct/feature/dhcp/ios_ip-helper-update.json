@@ -1,0 +1,27 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/feature/dhcp.jtype"
+	},
+	"@id" : "6d7db4b7-2fce-4221-b4bb-05d1c014c707",
+	"featureConcept" : {
+		"name" : "IP Helper Update",
+		"cliCommandGroups" : {
+			"@ref" : [
+				"/org/instance/construct/global/cliCommandGroup/ios_ip-helper_grp.json"
+			]
+		}
+	},
+	"form" : {
+		"dhcp" : [
+			{
+				"pool" : "",
+				"intf" : {
+					"@ref" : null
+				},
+				"vrf" : {
+					"@ref" : null
+				}
+			}
+		]
+	}
+}

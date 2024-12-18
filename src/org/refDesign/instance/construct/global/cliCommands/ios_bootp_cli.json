@@ -1,0 +1,16 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "619d65b4-c81d-4d15-9e59-e259681cf104",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_Bootp.json"
+	},
+	"cliCommands" : [
+		"!"
+	],
+	"advanced" : {
+		"filter" : "platform",
+		"platform" : "(^ISR.+|^ASR.+|^AS53.+|^WS-C3.+|^WS-C4.+|^WS-C6.+|^C68.+|^CISCO\\S+)"
+	}
+}

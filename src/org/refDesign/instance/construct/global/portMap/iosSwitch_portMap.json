@@ -1,0 +1,29 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/portMap.jtype"
+	},
+	"@id" : "87ecb698-5e38-4140-bc49-c18bed9d7a69",
+	"map" : [
+		{
+			"refName" : {
+				"@ref" : "/org/instance/construct/global/lanInterface/VLAN200.json"
+			},
+			"name" : "Vlan200",
+			"extendedName" : ""
+		},
+		{
+			"refName" : {
+				"@ref" : "/org/instance/construct/global/lanInterface/VLAN400.json"
+			},
+			"name" : "Vlan400",
+			"extendedName" : ""
+		},
+		{
+			"refName" : {
+				"@ref" : "/org/instance/construct/global/lanInterface/VLAN600.json"
+			},
+			"name" : "Vlan600",
+			"extendedName" : ""
+		}
+	]
+}

@@ -1,0 +1,15 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "1083051b-7e1b-49d1-bc00-f6738ea64dfd",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_DomainLookup.json"
+	},
+	"cliCommands" : [
+		"ip domain lookup"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

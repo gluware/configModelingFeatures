@@ -1,0 +1,19 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/feature/banner.jtype"
+	},
+	"@id" : "655da9e2-3fa5-406b-bd98-5368a120289d",
+	"featureConcept" : {
+		"name" : "Cisco IOS/IOSXE Banner",
+		"cliCommandGroups" : {
+			"@ref" : [
+				"/org/instance/construct/global/cliCommandGroup/ios_banner_grp.json"
+			]
+		}
+	},
+	"form" : {
+		"banner" : {
+			"comment" : null
+		}
+	}
+}

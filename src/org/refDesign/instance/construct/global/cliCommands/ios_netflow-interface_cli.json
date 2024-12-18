@@ -1,0 +1,18 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "7137cdaf-9164-4f0f-910d-93894790b4c3",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_Intf.json"
+	},
+	"cliCommands" : [
+		"interface $context.portMap.ISP1.name",
+		" ip flow monitor $context.flow.monitor.name input",
+		" ip flow monitor $context.flow.monitor.name output",
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

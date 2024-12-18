@@ -1,0 +1,15 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "b26a741a-4336-4d79-bebc-d97d1487a29c",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_Hostname-mod.json"
+	},
+	"cliCommands" : [
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

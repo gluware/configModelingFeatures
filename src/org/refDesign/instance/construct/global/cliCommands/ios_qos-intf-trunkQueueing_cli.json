@@ -1,0 +1,17 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "6d7fb8fa-8380-4229-ac20-fe25f2abeb71",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_Switch_SwitchPort.json"
+	},
+	"cliCommands" : [
+		"interface $context.switchPorts[*].name",
+		" service-policy output pmap_qos-wan-queuing",
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

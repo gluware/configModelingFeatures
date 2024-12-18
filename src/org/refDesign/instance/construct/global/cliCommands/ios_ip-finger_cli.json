@@ -1,0 +1,15 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "d49fb408-1124-4487-a7aa-7a6ef3867937",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_Finger.json"
+	},
+	"cliCommands" : [
+		"no ip finger"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

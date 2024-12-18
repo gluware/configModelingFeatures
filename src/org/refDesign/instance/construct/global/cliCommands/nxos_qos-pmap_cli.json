@@ -1,0 +1,51 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "1f45d673-81e2-468e-af17-30dcddc431a9",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/NXOS_IpAcl.json"
+	},
+	"cliCommands" : [
+		"policy-map type qos qos-in-marking-5k",
+		"  description inbound classification/marking policy for trust boundaries.",
+		"  class qos-in-voice",
+		"    set dscp ef",
+		"    set qos-group 5",
+		"  class qos-in-clinical-life-critical",
+		"    set dscp cs5",
+		"    set qos-group 5",
+		"  class qos-in-multimedia-conferencing",
+		"    set dscp af41",
+		"    set qos-group 4",
+		"  class qos-in-real-time-interactive",
+		"    set dscp cs4",
+		"    set qos-group 4",
+		"  class qos-in-network-control",
+		"    set dscp cs6",
+		"    set qos-group 3",
+		"  class qos-in-multimedia-streaming",
+		"    set dscp af31",
+		"    set qos-group 3",
+		"  class qos-in-signaling",
+		"    set dscp cs3",
+		"    set qos-group 3",
+		"  class qos-in-low-latency-data",
+		"    set dscp af21",
+		"    set qos-group 3",
+		"  class qos-in-network-management",
+		"    set dscp cs2",
+		"    set qos-group 3",
+		"  class qos-in-high-throughput-data",
+		"    set dscp af11",
+		"    set qos-group 2",
+		"  class qos-in-low-priority-data",
+		"    set dscp cs1",
+		"    set qos-group 2",
+		"  class class-default",
+		"    set dscp default"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

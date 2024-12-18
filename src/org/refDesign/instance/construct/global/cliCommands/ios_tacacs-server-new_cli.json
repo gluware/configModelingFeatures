@@ -1,0 +1,19 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "54125c5c-fa88-4411-8a77-050a9d1383cf",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_TacacsServerNew.json"
+	},
+	"cliCommands" : [
+		"tacacs server $context.aaa[*].tacacs[*].name",
+		" address ipv4 $context.aaa[*].tacacs[*].ip",
+		" key $context.aaa[*].tacacs[*].key",
+		" timeout $context.aaa[*].tacacs[*].timeout",
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

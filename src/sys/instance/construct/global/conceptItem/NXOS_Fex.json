@@ -1,0 +1,27 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/conceptItem.jtype"
+	},
+	"@id" : "ffdd0d89-84e1-4401-8167-37d824e3eb47",
+	"name" : "FabricExtender",
+	"vendors" : {
+		"cisco" : {
+			"type" : [
+				"nxos"
+			]
+		}
+	},
+	"showCmds" : [
+		"sh run | sec ^fex"
+	],
+	"mode" : "basic",
+	"keyCliLine" : "fex (.+)",
+	"rootEntryFlag" : false,
+	"boundaries" : {
+		"start" : null
+	},
+	"discover" : {
+	},
+	"removeSyntax" : {
+	}
+}

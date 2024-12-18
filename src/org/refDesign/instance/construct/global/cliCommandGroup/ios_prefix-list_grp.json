@@ -1,0 +1,17 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommandGroup.jtype"
+	},
+	"@id" : "9ed265cd-a94b-47bd-b6fa-b422d25606d0",
+	"regEx" : "plist-default.+|plist-distribute.+",
+	"ignoreDelete" : false,
+	"cliBlocks" : {
+		"@ref" : [
+			"/org/instance/construct/global/cliCommands/ios_prefix-list_cli.json"
+		]
+	},
+	"advanced" : {
+	},
+	"maskCommands" : [
+	]
+}

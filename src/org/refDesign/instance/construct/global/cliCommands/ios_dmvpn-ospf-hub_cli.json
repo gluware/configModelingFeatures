@@ -1,0 +1,16 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "af7fbda4-b6ef-47a1-aaf5-a3980e61fa0d",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_Router.json"
+	},
+	"cliCommands" : [
+		"router ospf 100",
+		" redistribute eigrp 9999 metric 100 subnets route-map rmap-routing-EIGRP-TO-OSPF",
+		"!"
+	],
+	"advanced" : {
+	}
+}

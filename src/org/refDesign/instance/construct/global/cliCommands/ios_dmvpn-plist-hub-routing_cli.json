@@ -1,0 +1,24 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "2c75d5c7-73fd-43e4-ab80-84da217cbbd1",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_PrefixList.json"
+	},
+	"cliCommands" : [
+		"ip prefix-list plist-sfo-noc seq 10 permit 0.0.0.0/0",
+		"ip prefix-list plist-sfo-noc seq 20 permit 10.0.0.0/8",
+		"ip prefix-list plist-sfo-noc seq 30 permit $context.portMap.MGNT1.ipv4.subnet.ipPrefix",
+		"!",
+		"ip prefix-list plist-lax-noc seq 10 permit 10.1.1.0/11",
+		"!",
+		"ip prefix-list plist-DEFAULT-ROUTE seq 10 permit 0.0.0.0/0",
+		"!",
+		"ip prefix-list plist-FORWARDER_DEFAULT_ROUTE seq 10 permit 10.123.10.0/24",
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

@@ -1,0 +1,40 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/featureBinder.jtype"
+	},
+	"@id" : "7e9178ef-cef8-4d71-b88c-0803700c9225",
+	"vendor": "cisco",
+	"os" : "nxos",
+	"featureName" : "aaa",
+	"featureDisplayName" : "AAA Feature",
+	"renderList" : [
+		{
+			"item" : {
+				"@ref" : "/org/instance/construct/global/conceptItem/NXOS_AAA.json"
+			},
+			"maskCommands" : [
+				""
+			],
+			"dCli" : [
+			]
+		},
+		{
+			"item" : {
+				"@ref" : "/org/instance/construct/global/conceptItem/NXOS_AAAGroup.json"
+			},
+			"maskCommands" : [
+			],
+			"dCli" : [
+			]
+		},
+		{
+			"item" : {
+				"@ref" : "/org/instance/construct/global/conceptItem/NXOS_AAA_Accounting.json"
+			},
+			"maskCommands" : [
+			],
+			"dCli" : [
+			]
+		}
+	]
+}

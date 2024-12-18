@@ -1,0 +1,33 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/conceptItem.jtype"
+	},
+	"@id" : "e79d0a1c-c73d-4905-97dc-b671b83e14e6",
+	"name" : "VirtualDeviceContext",
+	"vendors" : {
+		"cisco" : {
+			"type" : [
+				"nxos"
+			]
+		}
+	},
+	"showCmds" : [
+		"sh run | sec ^vdc"
+	],
+	"mode" : "advanced",
+	"keyCliLine" : "vdc\\s(\\S+)\\s\\S+\\s(\\S+)",
+	"rootEntryFlag" : false,
+	"keyLineDepth" : 1,
+	"keyGroup" : 2,
+	"regEx" : "",
+	"metadata" : {
+		"@ref" : null
+	},
+	"boundaries" : {
+		"start" : null
+	},
+	"discover" : {
+	},
+	"removeSyntax" : {
+	}
+}

@@ -1,0 +1,49 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/domain/iosRouterAssembly.jtype"
+	},
+	"@id" : "9a90e6d0-7ebc-4ca7-bea7-05e896e15c6f",
+	"domains" : {
+		"modules" : {
+			"syslog" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/feature/syslog/ios_syslog.json"
+				}
+			},
+			"banner" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/feature/banner/ios_banner.json"
+				}
+			},
+			"snmp" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/feature/snmp/ios_snmp-v2c.json"
+				}
+			},
+			"ntp" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/feature/ntp/ios_ntp.json"
+				}
+			}
+		}
+	},
+	"interfaces" : {
+		"portMap" : {
+			"@ref" : null
+		},
+		"ipNumbering" : {
+			"@ref" : null
+		}
+	},
+	"agents" : {
+		"watchdog" : {
+			"policy" : {
+				"@ref" : null
+			}
+		}
+	},
+	"state" : {
+		"assessment" : {
+		}
+	}
+}

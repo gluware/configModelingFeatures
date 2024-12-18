@@ -1,0 +1,172 @@
+{
+	"@Info": {
+		"phaseNumber@Display.label": "Execution Order",
+		"phaseNumber": 10,
+		"displayName": "Switching Feature",
+		"description": "Switching Feature",
+		"featureDependencies": {
+			"jnib": {
+				"/sys/jnib/features/switching/cm_switching.template.jnib": {}
+			},
+			"preRequiredFeatures": {}
+		},
+		"domainDependencies": {},
+		"nodeDependencies": {},
+		"augments": {
+			"targets": [
+                "/sys/type/construct/domain/aireosWirelessControllerAssembly",
+                "/sys/type/construct/domain/arubaosWirelessControllerAssembly",
+                "/sys/type/construct/domain/arubaoscxSwitchAssembly",
+                "/sys/type/construct/domain/arubaosSwitchAssembly",
+                "/sys/type/construct/domain/provisionSwitchAssembly",
+                "/sys/type/construct/domain/sgosWanOptimizerAssembly",
+                "/sys/type/construct/domain/dnosSwitchAssembly",
+                "/sys/type/construct/domain/gaiaFirewallAssembly",
+                "/sys/type/construct/domain/eosSwitchAssembly",
+                "/sys/type/construct/domain/exSwitchAssembly",
+                "/sys/type/construct/domain/srxRouterAssembly",
+                "/sys/type/construct/domain/qfxSwitchAssembly",
+                "/sys/type/construct/domain/mxRouterAssembly",
+                "/sys/type/construct/domain/iosSwitchAssembly",
+                "/sys/type/construct/domain/nxosSwitchAssembly",
+                "/sys/type/construct/domain/iosRouterAssembly",
+                "/sys/type/construct/domain/asaFirewallAssembly"
+            ],
+            "blocks": {
+				"expertFeatureOption": {
+					"properties": {
+						"name": "switching",
+						"featureLabel": "Switching Feature",
+						"policyLabel": "Switching Policy",
+						"policyPath": "/org/instance/construct/feature/switching/*"
+					}
+				}
+			}
+		}
+	},
+	"featureConcept@Display.tab": "Feature Concept",
+	"featureConcept": {
+		"name@Display.label": "Feature Concept Name",
+		"name@Display.description": "A name that describes the collection of the selected CLI Command Groups",
+		"name@Searchable": {
+			"propName": "Feature Concept Name",
+			"description": "Feature Concept Name"
+		},
+		"name@Required!": "",
+		"cliCommandGroups@Display.label": "CLI Command Groups",
+		"cliCommandGroups@Ref": {
+			"paths": [
+				"/org/instance/construct/global/cliCommandGroup/*",
+				"/org/instance/construct/global/vsCliCommandGroup/*"
+			],
+			"many": true
+		},
+		"cliCommandGroups@Display.pickList": {
+			"optionsLabel": "Available",
+			"selectedLabel": "Selected",
+			"showReorder": true,
+			"showCheckAll": false,
+			"showUnCheckAll": false,
+			"multiSelect": true,
+			"minLineCount": 6
+		}
+	},
+	"form@Display.tab": "Configuration",
+	"form": {
+		"layer2@Display.label": "VLAN Database",
+		"layer2@Display.addLabel": "Add VLAN",
+		"layer2": [
+			{
+				"vlan@Display.label": "VLAN",
+				"vlan@Ref": {
+					"paths": [
+						"/org/instance/construct/global/vlan/*"
+					]
+				},
+				"intf@Display.label": "Logical Interface",
+				"intf@Ref": {
+					"paths": [
+						"/org/instance/construct/global/lanInterface/*"
+					]
+				}
+			}
+		],
+		"switchports@Display.label": "Switchport Interfaces",
+		"switchports": {
+			"profile@Display.label": "Switch Porfile",
+			"profile@Select.options": {
+				"4port@Display.label": "4-Port Switch",
+				"4port": {
+					"0": {
+						"/switchport@TypeRef": {}
+					},
+					"1": {
+						"/switchport@TypeRef": {}
+					},
+					"2": {
+						"/switchport@TypeRef": {}
+					},
+					"3": {
+						"/switchport@TypeRef": {}
+					},
+					"0@Display.tab": "Port 1",
+					"1@Display.tab": "Port 2",
+					"2@Display.tab": "Port 3",
+					"3@Display.tab": "Port 4"
+				},
+				"8port@Display.label": "8-Port Switch",
+				"8port": {
+					"0": {
+						"/switchport@TypeRef": {}
+					},
+					"1": {
+						"/switchport@TypeRef": {}
+					},
+					"2": {
+						"/switchport@TypeRef": {}
+					},
+					"3": {
+						"/switchport@TypeRef": {}
+					},
+					"4": {
+						"/switchport@TypeRef": {}
+					},
+					"5": {
+						"/switchport@TypeRef": {}
+					},
+					"6": {
+						"/switchport@TypeRef": {}
+					},
+					"7": {
+						"/switchport@TypeRef": {}
+					},
+					"0@Display.tab": "Port 1",
+					"1@Display.tab": "Port 2",
+					"2@Display.tab": "Port 3",
+					"3@Display.tab": "Port 4",
+					"4@Display.tab": "Port 5",
+					"5@Display.tab": "Port 6",
+					"6@Display.tab": "Port 7",
+					"7@Display.tab": "Port 8"
+				}
+			},
+			"profile": "4port"
+		}
+	},
+	"switchport@TypeDef": {
+		"data@Display.label": "Data VLAN",
+		"data@Ref": {
+			"path": "/org/instance/construct/global/vlan/*"
+		},
+		"voice@Display.label": "Voice VLAN",
+		"voice@Ref": {
+			"path": "/org/instance/construct/global/vlan/*"
+		},
+		"guest@Display.label": "Guest VLAN",
+		"guest@Ref": {
+			"path": "/org/instance/construct/global/vlan/*"
+		},
+		"dot1x@Display.label": "802.11x",
+		"dot1x": false
+	}
+}

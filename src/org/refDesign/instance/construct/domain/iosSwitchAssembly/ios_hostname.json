@@ -1,0 +1,37 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/domain/iosSwitchAssembly.jtype"
+	},
+	"@id" : "df7ced0c-bc8b-4dd8-a793-869f310a024b",
+	"domains" : {
+		"modules" : {
+            "globals" : {
+                "policy" : {
+                    "@ref" : "/org/instance/construct/feature/globals/ios_hostname-ip-config.json"
+                }
+            }
+		}
+	},
+	"interfaces" : {
+		"portLayout" : {
+			"@ref" : null
+		},
+		"portMap" : {
+			"@ref" : null
+		},
+		"ipNumbering" : {
+			"@ref" : null
+		}
+	},
+	"agents" : {
+		"watchdog" : {
+			"policy" : {
+				"@ref" : null
+			}
+		}
+	},
+	"state" : {
+		"assessment" : {
+		}
+	}
+}

@@ -1,0 +1,18 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "a5c94370-9c6e-48ad-9005-84120188d727",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/NXOS_AAA.json"
+	},
+	"cliCommands" : [
+		"aaa authentication login default group $context.aaa[*].name",
+		"aaa authorization commands default group $context.aaa[*].name local",
+		"aaa accounting default group $context.aaa[*].name",
+		"aaa authentication login error-enable"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

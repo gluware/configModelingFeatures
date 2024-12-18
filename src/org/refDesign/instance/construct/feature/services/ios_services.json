@@ -1,0 +1,21 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/feature/services.jtype"
+	},
+	"@id" : "1a1c46b3-dc0f-4923-a463-4f40581723f9",
+	"featureConcept" : {
+		"name" : " ",
+		"cliCommandGroups" : {
+			"@ref" : [
+				"/org/instance/construct/global/cliCommandGroup/ios_bootp_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_ftp-server_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_http_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_scp-server_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_service_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_tftp-server_grp.json"
+			]
+		}
+	},
+	"form" : {
+	}
+}

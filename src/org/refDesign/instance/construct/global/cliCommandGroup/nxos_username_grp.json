@@ -1,0 +1,19 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommandGroup.jtype"
+	},
+	"@id" : "ffdc3ddc-4b9e-44c3-9e07-5e87ae7b1434",
+	"regEx" : "testUser|gluUser",
+	"ignoreDelete" : true,
+	"cliBlocks" : {
+		"@ref" : [
+			"/org/instance/construct/global/cliCommands/nxos_username_cli.json"
+		]
+	},
+	"advanced" : {
+		"renderingConditions" : [
+		]
+	},
+	"maskCommands" : [
+	]
+}

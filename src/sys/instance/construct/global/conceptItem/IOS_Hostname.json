@@ -1,0 +1,32 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/conceptItem.jtype"
+	},
+	"@id" : "5f61de64-2656-4db5-8130-00e6fea659b8",
+	"name" : "Hostname",
+	"vendors" : {
+		"cisco" : {
+			"type" : [
+				"ios"
+			]
+		}
+	},
+	"showCmds" : [
+		"sh run | inc ^hostname"
+	],
+	"mode" : "basic",
+	"keyCliLine" : "",
+	"rootEntryFlag" : true,
+	"boundaries" : {
+		"start" : null
+	},
+	"discover" : {
+		"hostname" : {
+			"expressions" : [
+				"hostname\\s(.+)"
+			]
+		}
+	},
+	"removeSyntax" : {
+	}
+}

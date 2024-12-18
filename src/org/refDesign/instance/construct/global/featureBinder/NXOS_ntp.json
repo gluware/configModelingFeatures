@@ -1,0 +1,21 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/featureBinder.jtype"
+	},
+	"@id" : "7caec02f-284e-42da-8649-5bc419678c77",
+	"vendor": "cisco",
+	"os" : "nxos",
+	"featureName" : "ntp",
+	"featureDisplayName" : "NTP Feature",
+	"renderList" : [
+		{
+			"item" : {
+				"@ref" : "/org/instance/construct/global/conceptItem/NXOS_NtpAgent.json"
+			},
+			"maskCommands" : [
+			],
+			"dCli" : [
+			]
+		}
+	]
+}

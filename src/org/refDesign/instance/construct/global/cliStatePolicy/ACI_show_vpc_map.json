@@ -1,0 +1,18 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"cmd": "show vpc map",
+	"groupName": "vpc",
+	"discover": {
+		"vpc": {
+			"expressions": [
+				"^\s(?<name>\S+)\s+(?<domain>\d+)\s+(?<virtualIp>\S+)\s+(?<peerIp>\S+)\s+(?<vpcId>\d+)\s+(?<leafId>\d+),(?<leafName>\S+)\s+(?<pcId>\S+)\s+(?<portId>\S+)$"
+			],
+			"localKey": "",
+			"preserveLocalKey": true
+		},
+	},
+	"options": {},
+	"rootEntry": "yes"
+}

@@ -1,0 +1,39 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/conceptItem.jtype"
+	},
+	"@id" : "83dfa19a-af96-481e-8590-7140cb67ca15",
+	"name" : "Intf",
+	"vendors" : {
+		"cisco" : {
+			"type" : [
+				"nxos"
+			]
+		}
+	},
+	"showCmds" : [
+		"sh run all | sec ^interface"
+	],
+	"mode" : "basic",
+	"keyCliLine" : "interface (.+)",
+	"rootEntryFlag" : false,
+	"boundaries" : {
+		"start" : null
+	},
+	"discover" : {
+		"accessVlan" : {
+			"expressions" : [
+				"switchport access vlan (.+)"
+			]
+		},
+		"interface" : {
+			"expressions" : [
+				"interface\\s(?<trustedLan>Ethernet0\\/0$|Ethernet0\\/0\\/0$)",
+				"interface\\s(?<untrustedLan>Ethernet0\\/1$|Ethernet0\\/0\\/1$)",
+				"interface\\s(?<serial>mgmt0$)"
+			]
+		}
+	},
+	"removeSyntax" : {
+	}
+}

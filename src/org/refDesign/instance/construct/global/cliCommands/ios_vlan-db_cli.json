@@ -1,0 +1,17 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "b7bb5eb4-5f87-4e79-8a6d-cce0662e9e13",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_Vlan.json"
+	},
+	"cliCommands" : [
+		"vlan $context.layer2[*].vlan.id",
+		" name $context.layer2[*].vlan.name",
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "f8abad02-bf8d-4fb2-a9e3-c5697cee3915",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_TacacsSrcIntf.json"
+	},
+	"cliCommands" : [
+		"ip tacacs source-interface $context.portMap.MGNT1.name"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

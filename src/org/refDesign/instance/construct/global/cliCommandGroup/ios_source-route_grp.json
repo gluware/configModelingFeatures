@@ -1,0 +1,20 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommandGroup.jtype"
+	},
+	"@id" : "dc40b117-a7c0-4a1d-8c72-3875ce3ff8fc",
+	"regEx" : ".+",
+	"ignoreDelete" : true,
+	"cliBlocks" : {
+		"@ref" : [
+			"/org/instance/construct/global/cliCommands/ios_source-route_cli.json"
+		]
+	},
+	"maskCommands" : [
+		"ip source-route"
+	],
+	"advanced" : {
+		"renderingConditions" : [
+		]
+	}
+}

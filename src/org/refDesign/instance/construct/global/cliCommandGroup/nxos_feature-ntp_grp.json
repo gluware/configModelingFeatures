@@ -1,0 +1,19 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommandGroup.jtype"
+	},
+	"@id" : "95458bc5-536a-4c3a-b181-5af6ce2ae6e3",
+	"regEx" : "ntp",
+	"ignoreDelete" : false,
+	"cliBlocks" : {
+		"@ref" : [
+			"/org/instance/construct/global/cliCommands/nxos_feature-ntp_cli.json"
+		]
+	},
+	"advanced" : {
+		"renderingConditions" : [
+		]
+	},
+	"maskCommands" : [
+	]
+}

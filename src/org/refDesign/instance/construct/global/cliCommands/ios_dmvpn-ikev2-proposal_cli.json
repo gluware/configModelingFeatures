@@ -1,0 +1,19 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "5e72721f-ac9e-4123-904b-be0f7d15391f",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_IkeProposalV2.json"
+	},
+	"cliCommands" : [
+		"crypto ikev2 proposal DMVPN-IKE-PROPOSAL-$context.networks[*].overlayNetwork.id",
+		" encryption aes-cbc-256",
+		" integrity sha512",
+		" group 2",
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

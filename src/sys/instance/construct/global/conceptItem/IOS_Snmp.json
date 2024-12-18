@@ -1,0 +1,33 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/conceptItem.jtype"
+	},
+	"@id" : "5fe19781-884e-4de6-9ab2-c9cc248eba4e",
+	"name" : "Snmp",
+	"vendors" : {
+		"cisco" : {
+			"type" : [
+				"ios"
+			]
+		}
+	},
+	"showCmds" : [
+		"sh run | inc ^snmp|^no snmp"
+	],
+	"mode" : "advanced",
+	"keyCliLine" : "(snmp\\s|snmp-server\\s)(\\S+)",
+	"rootEntryFlag" : true,
+	"keyLineDepth" : 1,
+	"keyGroup" : 2,
+	"regEx" : "",
+	"metadata" : {
+		"@ref" : null
+	},
+	"boundaries" : {
+		"start" : null
+	},
+	"discover" : {
+	},
+	"removeSyntax" : {
+	}
+}

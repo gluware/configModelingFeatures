@@ -1,0 +1,42 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/feature/aaa.jtype"
+	},
+	"@id" : "2e24fe9a-1734-40df-b173-5036033c64ab",
+	"featureConcept" : {
+		"name" : "AAA Tacacs",
+		"cliCommandGroups" : {
+			"@ref" : [
+				"/org/instance/construct/global/cliCommandGroup/ios_tacacs-add-single-step_grp.json"
+			]
+		}
+	},
+	"form" : {
+		"aaa" : [
+			{
+				"name" : "Glue-ACS",
+				"tacacs" : [
+					{
+						"name" : "Glue-ACS1",
+						"ip" : "10.10.10.2",
+						"key" : "abcdef",
+						"timeout" : 30
+					},
+					{
+						"name" : "Glue-ACS2",
+						"ip" : "10.10.10.3",
+						"key" : "abcdef",
+						"timeout" : 30
+					}
+				],
+				"srcInt" : {
+					"@ref" : null
+				},
+				"srcIntOverride" : true,
+				"vrf" : {
+					"@ref" : null
+				}
+			}
+		]
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/conceptItem.jtype"
+	},
+	"@id" : "c7bd1f1e-4ae0-4f9a-b0a9-fa507e92b947",
+	"name" : "InstallFeatureSet",
+	"vendors" : {
+		"cisco" : {
+			"type" : [
+				"nxos"
+			]
+		}
+	},
+	"showCmds" : [
+		"sh run | inc ^install feature-set"
+	],
+	"mode" : "basic",
+	"keyCliLine" : "install feature-set (.+)",
+	"rootEntryFlag" : true,
+	"boundaries" : {
+		"start" : null
+	},
+	"discover" : {
+	},
+	"removeSyntax" : {
+	}
+}

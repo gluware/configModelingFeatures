@@ -1,0 +1,21 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateQuery.jtype"
+	},
+	"@id" : "b3ff0abb-2171-444f-9e03-4d96fc1b967a",
+	"mode" : "advanced",
+	"table" : [
+		{
+			"type" : "lookup",
+			"fields" : [
+				{
+					"keyType" : "regex",
+					"key" : ".+",
+					"category" : "rate",
+					"field" : "successRate",
+					"value" : "^(?:[8-9]\\d|\\d{3,})$"
+				}
+			]
+		}
+	]
+}

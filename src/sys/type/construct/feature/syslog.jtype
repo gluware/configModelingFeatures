@@ -1,0 +1,144 @@
+{
+    "@Info": {
+        "phaseNumber@Display.label": "Execution Order",
+        "phaseNumber": 10,
+        "displayName": "Syslog Feature",
+        "description": "Syslog Feature",
+        "featureDependencies": {
+            "jnib": {
+                "/sys/jnib/features/syslog/cm_syslog.template.jnib": {}
+            },
+            "preRequiredFeatures": {}
+        },
+        "domainDependencies": {},
+        "nodeDependencies": {},
+        "augments": {
+            "targets": [
+                "/sys/type/construct/domain/sgosWanOptimizerAssembly",
+                "/sys/type/construct/domain/arubaosWirelessControllerAssembly",
+                "/sys/type/construct/domain/arubaoscxSwitchAssembly",
+                "/sys/type/construct/domain/arubaosSwitchAssembly",
+                "/sys/type/construct/domain/provisionSwitchAssembly",
+                "/sys/type/construct/domain/dnosSwitchAssembly",
+                "/sys/type/construct/domain/gaiaFirewallAssembly",
+                "/sys/type/construct/domain/eosSwitchAssembly",
+                "/sys/type/construct/domain/exSwitchAssembly",
+                "/sys/type/construct/domain/srxRouterAssembly",
+                "/sys/type/construct/domain/qfxSwitchAssembly",
+                "/sys/type/construct/domain/mxRouterAssembly",
+                "/sys/type/construct/domain/iosSwitchAssembly",
+                "/sys/type/construct/domain/nxosSwitchAssembly",
+                "/sys/type/construct/domain/iosRouterAssembly",
+                "/sys/type/construct/domain/asaFirewallAssembly"
+            ],
+            "blocks": {
+                "expertFeatureOption": {
+                    "properties": {
+                        "name": "syslog",
+                        "featureLabel": "Syslog Feature",
+                        "policyLabel": "Syslog Policy",
+                        "policyPath": "/org/instance/construct/feature/syslog/*"
+                    }
+                }
+            }
+        }
+    },
+    "featureConcept@Display.tab": "Feature Concept",
+    "featureConcept": {
+        "name@Display.label": "Feature Concept Name",
+        "name@Display.description": "A name that describes the collection of the selected CLI Command Groups",
+        "name@Searchable": {
+            "propName": "Feature Concept Name",
+            "description": "Feature Concept Name"
+        },
+        "name@Required!": "",
+        "cliCommandGroups@Display.label": "CLI Command Groups",
+        "cliCommandGroups@Ref": {
+            "paths": [
+                "/org/instance/construct/global/cliCommandGroup/*",
+                "/org/instance/construct/global/vsCliCommandGroup/*"
+            ],
+            "many": true
+        },
+        "cliCommandGroups@Display.pickList": {
+            "optionsLabel": "Available",
+            "selectedLabel": "Selected",
+            "showReorder": true,
+            "showCheckAll": false,
+            "showUnCheckAll": false,
+            "multiSelect": true,
+            "minLineCount": 6
+        }
+    },
+    "form@Display.tab": "Configuration",
+    "form": {
+        "syslog@Display.label": "Syslog",
+        "syslog": {
+	        "level@Display.label" : "Logging level",
+	        "level" : "debugging",
+            "level@Enum" : ["emergencies",
+                            "alerts",
+                            "critical",
+                            "errors",
+                            "warnings",
+                            "notifications",
+                            "informational",
+                            "debugging"
+            ],
+	        "srcInt@Display.label" : "Source Interface",
+	        "srcInt@Ref" : {
+	            "paths" : ["/org/instance/construct/global/lanInterface", "/org/instance/construct/global/wanInterface"]
+	        },
+	        "bufferSize@Display.label" : "Logging Buffer Size",
+	        "bufferSize@Number" : { "min": 4096, "max": 2147483647, "onlyInteger": true },
+	        "mode@Display.label" : "Mode",
+	        "mode@Select.options" : { 
+	            "basic@Display.label" : "Basic",
+	            "basic" : {
+	                "server@Display.label" : "Syslog Servers",
+	                "server@Display.addLabel" : "Add Server", 
+	                "server" : [{
+	                    "ip@Display.label" : "IP Address",
+	                    "ip" : ""
+	                }]
+	            },
+	            "advanced@Display.label" : "Advanced",
+	            "advanced" : {
+	                "server@Display.label" : "Syslog Servers",
+	                "server@Display.addLabel" : "Add Server",
+	                "server" : [{
+	                    "ip@Display.label" : "IP Address",
+	                    "ip" : "",
+	                    "protocol@Display.label" : "Protocol\n(Cisco only)",
+	                    "protocol@Enum" : ["tcp", "udp"],
+	                    "protocol" : "udp",
+	                    "port@Display.label" : "Port",
+	                    "port@Number" : { "min": 1, "max": 65535, "onlyInteger": true },
+	                    "port" : 514,
+	                    "level@Display.label" : "Logging level",
+                        "level" : "debugging",
+                        "level@Enum" : ["emergencies",
+                                        "alerts",
+                                        "critical",
+                                        "errors",
+                                        "warnings",
+                                        "notifications",
+                                        "informational",
+                                        "debugging"
+                        ],
+                        "sessionId@Display.label" : "Session ID",
+	                    "sessionId@Select.options" : { 
+	                        "hostname": {},
+	                        "ipv4": {},
+	                        "ipv6" : {},
+	                        "string": {
+	                            "name@Display.label" : "String",
+	                            "name" : ""    
+	                        }
+	                    }
+	                }]
+	            }
+	        }
+        }
+    }
+}

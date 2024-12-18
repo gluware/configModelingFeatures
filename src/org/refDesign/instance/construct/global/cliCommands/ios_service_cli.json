@@ -1,0 +1,22 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "8746ff0b-3087-4721-98ad-0dc9764a2fff",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_Service2.json"
+	},
+	"cliCommands" : [
+		"service password-encryption",
+		"service sequence-numbers",
+		"service tcp-keepalives-in",
+		"service tcp-keepalives-out",
+		"service timestamps debug datetime msec localtime",
+		"service timestamps log datetime msec localtime",
+		"service counters max age 0",
+		"no service pad"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

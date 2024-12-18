@@ -1,0 +1,18 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/feature/security.jtype"
+	},
+	"@id" : "ca6b4dbc-9155-4366-a66e-4a29eae7e70c",
+	"featureConcept" : {
+		"name" : "Security WAN ACL",
+		"cliCommandGroups" : {
+			"@ref" : [
+				"/org/instance/construct/global/cliCommandGroup/ios_wan-acl-in_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_wan-intf_grp.json"
+			]
+		}
+	},
+	"form" : {
+		"comment" : null
+	}
+}

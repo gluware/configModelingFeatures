@@ -1,0 +1,17 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "076c2828-1b68-445e-8772-38a953307842",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_AAAGroup.json"
+	},
+	"cliCommands" : [
+		"aaa group server tacacs+ $context.aaa[*].name",
+		" server-private $context.aaa[*].tacacs[*].ip key 7 $context.aaa[*].tacacs[*].key",
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

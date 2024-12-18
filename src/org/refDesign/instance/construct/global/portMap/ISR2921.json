@@ -1,0 +1,43 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/portMap.jtype"
+	},
+	"@id" : "5beaf3c6-b664-41be-a59a-49e3976fe620",
+	"map" : [
+		{
+			"refName" : {
+				"@ref" : "/org/instance/construct/global/wanInterface/ISP1.json"
+			},
+			"name" : "GigabitEthernet0/0",
+			"extendedName" : ""
+		},
+		{
+			"refName" : {
+				"@ref" : "/org/instance/construct/global/lanInterface/DATA.json"
+			},
+			"name" : "GigabitEthernet0/1",
+			"extendedName" : ""
+		},
+		{
+			"refName" : {
+				"@ref" : "/org/instance/construct/global/lanInterface/MGNT1.json"
+			},
+			"name" : "Loopback0",
+			"extendedName" : ""
+		},
+		{
+			"refName" : {
+				"@ref" : "/org/instance/construct/global/lanInterface/OVRL1.json"
+			},
+			"name" : "Tunnel100",
+			"extendedName" : ""
+		},
+		{
+			"refName" : {
+				"@ref" : "/org/instance/construct/global/lanInterface/OVRL2.json"
+			},
+			"name" : "Tunnel200",
+			"extendedName" : ""
+		}
+	]
+}

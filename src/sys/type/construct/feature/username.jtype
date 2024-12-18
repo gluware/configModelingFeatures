@@ -1,0 +1,137 @@
+{
+    "@Info": {
+        "phaseNumber@Display.label": "Execution Order",
+        "phaseNumber": 10,
+        "displayName": "Username Feature",
+        "description": "Username Feature",
+        "featureDependencies": {
+            "jnib": {
+                "/sys/jnib/features/username/cm_username.template.jnib": {}
+            },
+            "preRequiredFeatures": {}
+        },
+        "domainDependencies": {},
+        "nodeDependencies": {},
+        "augments": {
+            "targets": [
+                "/sys/type/construct/domain/dnosSwitchAssembly",
+                "/sys/type/construct/domain/arubaosWirelessControllerAssembly",
+                "/sys/type/construct/domain/arubaoscxSwitchAssembly",
+                "/sys/type/construct/domain/arubaosSwitchAssembly",
+                "/sys/type/construct/domain/provisionSwitchAssembly",
+                "/sys/type/construct/domain/sgosWanOptimizerAssembly",
+                "/sys/type/construct/domain/gaiaFirewallAssembly",
+                "/sys/type/construct/domain/eosSwitchAssembly",
+                "/sys/type/construct/domain/exSwitchAssembly",
+                "/sys/type/construct/domain/srxRouterAssembly",
+                "/sys/type/construct/domain/qfxSwitchAssembly",
+                "/sys/type/construct/domain/mxRouterAssembly",
+                "/sys/type/construct/domain/iosSwitchAssembly",
+                "/sys/type/construct/domain/nxosSwitchAssembly",
+                "/sys/type/construct/domain/iosRouterAssembly",
+                "/sys/type/construct/domain/asaFirewallAssembly"
+            ],
+            "blocks": {
+                "expertFeatureOption": {
+                    "properties": {
+                        "name": "username",
+                        "featureLabel": "Username Feature",
+                        "policyLabel": "Username Policy",
+                        "policyPath": "/org/instance/construct/feature/username/*"
+                    }
+                }
+            }
+        }
+    },
+    "featureConcept@Display.tab": "Feature Concept",
+    "featureConcept": {
+        "name@Display.label": "Feature Concept Name",
+        "name@Display.description": "A name that describes the collection of the selected CLI Command Groups",
+        "name@Searchable": {
+            "propName": "Feature Concept Name",
+            "description": "Feature Concept Name"
+        },
+        "name@Required!": "",
+        "cliCommandGroups@Display.label": "CLI Command Groups",
+        "cliCommandGroups@Ref": {
+            "paths": [
+                "/org/instance/construct/global/cliCommandGroup/*",
+                "/org/instance/construct/global/vsCliCommandGroup/*"
+            ],
+            "many": true
+        },
+        "cliCommandGroups@Display.pickList": {
+            "optionsLabel": "Available",
+            "selectedLabel": "Selected",
+            "showReorder": true,
+            "showCheckAll": false,
+            "showUnCheckAll": false,
+            "multiSelect": true,
+            "minLineCount": 6
+        }
+    },
+    "form@Display.tab": "Configuration",
+    "form": {
+        "user@Display.label": "Local Users",
+        "user@Display.addLabel": "Add User",
+        "user": [{
+            "name@Display.label": "Username",
+            "name": "",
+            "password@Display.label": "Password",
+            "password@Display.password!" : "",
+            "password": "",
+            "hash": "cleartext",
+            "hash@Display.label": "Password Hash",
+            "hash@Enum": [ "cleartext",
+                           "plaintext",
+                           "ciphertext",
+                           "md5",
+                           "scrypt",
+                           "sha256",
+                           "sha512"
+            ],
+            "view@Display.label": "View / Group",
+            "view": "",
+            "privilege": "15",
+            "privilege@Display.label": "Privilege Level",
+            "privilege@Enum": [ "0",
+                                "1",
+                                "2",
+                                "3",
+                                "4",
+                                "5",
+                                "6",
+                                "7",
+                                "8",
+                                "9",
+                                "10",
+                                "11",
+                                "12",
+                                "13",
+                                "14",
+                                "15",
+                                "dev-ops",
+                                "network-admin",
+                                "network-operator",
+                                "priv-0",
+                                "priv-1",
+                                "priv-10",
+                                "priv-11",
+                                "priv-12",
+                                "priv-13",
+                                "priv-14",
+                                "priv-15",
+                                "priv-2",
+                                "priv-3",
+                                "priv-4",
+                                "priv-5",
+                                "priv-6",
+                                "priv-7",
+                                "priv-8",
+                                "priv-9",
+                                "vdc-admin",
+                                "vdc-operator"
+            ]
+        }]
+    }
+}

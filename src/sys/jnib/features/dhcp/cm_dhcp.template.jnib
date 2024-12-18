@@ -1,0 +1,193 @@
+// Copyright (C) 2017 Glue Networks - All Rights Reserved
+// This feature package is provided as is with no implied warranties or fitness for a particular purpose.
+// Glue Networks, Inc. will not provide maintenance, support, updates, enhancements or modifications.
+__: loadNIB("/sys/jnib/lib/classes/shared/Ipv4Subnet.NDKClass.jnib"),
+
+featureParams : {
+
+    // featureParams currently contains two fields: concept and portMap.
+    //   • concept is that path to the featureConcept global. That's the CLI model for this pbr template feature.
+    //   • portMap is the path to the abstraction map global. This is used to model all the interfaces involved in 
+    //   the template in order to call/refer to them by name. That allows deploying the same feature across platform with a
+    //   different port/interface layout. For instance, for a firewall using wan, lan and dmz as ports for the physical
+    //   appliance vs port1, port2 and port3 for the virtual edition, the abstraction map can declare these three interfaces
+    //   and calling them by name in the CLI under $context.intfs (for ex. $context.intfs.DATA or $context.intfs.ISP).
+
+},
+
+initFeature: function() {
+
+    // TODO (optional): Add here the pre processing code for the $(feature) feature.
+    // This function will be executed before the processFeature function will run. This function is useful when
+    // conditional concept files need to be used. As a consequence, the concept file can be loaded dynamically. 
+    // For instance, when vendor and/or hardware abstraction is required: 
+    //   switch (node.vendor) {
+    //     case "cisco":
+    //       thisNib.featureParams.concept = "/org/instance/construct/global/featureConcept/qosFeatureConcept_for_Cisco.json";         
+    //       break;
+    //     case "juniper":
+    //       thisNib.featureParams.concept = "/org/instance/construct/global/featureConcept/qosFeatureConcept_for_Juniper.json";         
+    //       break;
+    //   }
+
+},
+
+processFeature : function () {
+
+    let portMapData = thisNib.ref.portMap;
+    let subnets = ["0.0.0.0", "128.0.0.0", "192.0.0.0", "224.0.0.0", "240.0.0.0", "248.0.0.0", "252.0.0.0", "254.0.0.0", "255.0.0.0", "255.128.0.0", "255.192.0.0", "255.224.0.0", "255.240.0.0", "255.248.0.0", "255.252.0.0", "255.254.0.0", "255.255.0.0", "255.255.128.0", "255.255.192.0", "255.255.224.0", "255.255.240.0", "255.255.248.0", "255.255.252.0", "255.255.254.0", "255.255.255.0", "255.255.255.128", "255.255.255.192", "255.255.255.224", "255.255.255.240", "255.255.255.248", "255.255.255.252", "255.255.255.254", "255.255.255.255"];
+    let intf;
+    let routingProc;
+    var type = getKey(node);
+
+    let discoverIntfData;
+    let discoverRouterData;
+
+
+    if (!util.isEmpty(thisNib.discoverRef)) {
+        if (node.type === "asa") {
+            discoverIntfData = thisNib.getGroupWiseDiscoveryRefObjForCI("Intf");
+            discoverRouterData = thisNib.getGroupWiseDiscoveryRefObjForCI("Router");
+        } else {
+            discoverIntfData =  thisNib.getDiscoveryRefObjForCI("Intf");
+            discoverRouterData =  thisNib.getDiscoveryRefObjForCI("Router");
+        }
+        if (util.isEmpty(portMapData)) {
+            portMapData = discoverIntfData;
+            log.debug("Dynamically applying PortMap for all features.");
+            node.portMap = portMapData;
+        }
+    }
+
+    // discover interfaces in running-config and assign them to an empty portMap in order to be referenced
+    if (!util.isEmpty(portMapData)) {
+        for (let portMapIntfName in portMapData) {
+            for (let discoverIntfName in discoverIntfData) {
+                intf = discoverIntfData[discoverIntfName];
+                if (!util.isEmpty(intf.ipv4) & discoverIntfName === portMapData[portMapIntfName].name) {
+                    // parse subnet mask VS subnet bits depending on vendor
+                    //
+                    if (node.vendor === "arista" || node.vendor === "juniper") {
+                        var ipv4 = new Ipv4Subnet(intf.ipv4.ipAddress);
+                    } else {
+                        var ipv4 = new Ipv4Subnet(intf.ipv4.ipAddress+"/"+subnets.indexOf(intf.ipv4.subnetMask));
+                    }
+                    portMapData[portMapIntfName].ipv4 = {};
+                    portMapData[portMapIntfName].ipv4.subnet = JSON.parse(JSON.stringify(ipv4));
+                    log.debug("Discovered IP Addresses "+ JSON.stringify(intf));
+                } else if (!util.isEmpty(intf.subnet) & discoverIntfName === portMapData[portMapIntfName].name) {
+                    if (node.vendor === "arista" || node.vendor === "juniper") {
+                        var ipv4 = new Ipv4Subnet(intf.subnet.address);
+                    } else {
+                        var ipv4 = new Ipv4Subnet(intf.subnet.address+"/"+subnets.indexOf(intf.subnet.mask));
+                    }
+                    portMapData[portMapIntfName].ipv4 = {};
+                    portMapData[portMapIntfName].ipv4.subnet = JSON.parse(JSON.stringify(ipv4));
+                    log.debug("Discovered IP Addresses "+ JSON.stringify(intf));
+                }
+            }
+        }
+    }
+
+    // discover routing protocols in running-config and allow them to be referenced         
+    if (!util.isEmpty(discoverRouterData)){
+        log.debug("Discovered a Concept Item related to Routing Protocols: "+ discoverObj);
+        for (let procName in discoverRouterData) {
+            routingProc = discoverRouterData[procName];
+            if (procName.match(/bgp/)) {
+                var bgpLine = procName.split(" ");
+                thisNib.ref.bgp = {};
+                thisNib.ref.bgp.procId = procName;
+                thisNib.ref.asnNumber = bgpLine[1];
+            } else if (procName.match(/ospf/)) {
+                thisNib.ref.ospf = {};
+                thisNib.ref.ospf.procId = procName;
+            } else if (procName.match(/eigrp/)) {
+                thisNib.ref.eigrp = {};
+                thisNib.ref.eigrp.procId = procName;
+            } else if (procName.match(/rip/)) {
+                thisNib.ref.rip = {};
+                thisNib.ref.rip.procId = procName;
+            } else if (procName.match(/isis/)) {
+                thisNib.ref.isis = {};
+                thisNib.ref.isis.procId = procName;
+            }
+        }
+    }
+
+    // assign discovered portMapData back into @ref
+    thisNib.ref.portMap = portMapData;
+
+    // set source-interface based on the Feature references
+    if(!util.isEmpty(thisNib.ref.dhcp)) {
+        for (var i=0; i<thisNib.ref.dhcp.length; i++) {
+            if (!util.isEmpty(thisNib.ref.dhcp[i].intf)) {
+                if (!util.isEmpty(thisNib.ref.portMap)) {
+                    if (thisNib.ref.portMap[getGlobalInstanceName(thisNib.ref.dhcp[i].intf)]) {
+                        thisNib.ref.dhcp[i].intf = thisNib.ref.portMap[getGlobalInstanceName(thisNib.ref.dhcp[i].intf)].name;
+                        log.debug("Setting the DHCP source-interface as " + thisNib.ref.dhcp[i].intf);
+                    } else {
+                        abort("The Source-interface (" + getGlobalInstanceName(thisNib.ref.dhcp[i].intf) + ") selected in the DHCP Feature does NOT exist in " + node.name + "'s portMap.");
+                    }
+                } else {
+                    log.warning("A portMap is NOT present on this device's Assembly.");
+                }
+            } else {
+                log.warning("A Source-interface is NOT selected in the DHCP Feature.");
+            }
+            
+            if (!util.isEmpty(thisNib.ref.dhcp[i].vrf)) {
+                thisNib.ref.dhcp[i].vrf = getGlobalInstanceName(thisNib.ref.dhcp[i].vrf);
+            }
+        }
+    }
+
+},
+
+postProcess : function () {
+
+    // TODO (optional): Add here the post processing code for the $(feature) feature.
+    // This function will be executed after the FSE has finished rendering all the objects in the node object store.
+    // This is an optional feature that is useful if the feature required handling of additional commands once the CLI
+    // configuration has been sent to the target node (for instance, enrolling a certificate once the trustpoint has
+    // been configured). This method is optional.
+    //
+    // Quick reminder of the shell commands available:
+    //   • send() is what is sending the CLI command to the node.
+    //   • getSendResponseStr() is the method that gets the CLI response.
+    //   • getSendResponseMatch() is the equivalent that is mapped to a regex match.
+    //   • setResponseInactivityTimeout() defines the inactivity timer the engine will wait the node response.
+    //   • registerResponseInactivity(<function>, args…) calls the <function> when the inactivity timer has been triggered.
+    //   • registerConnectSuccess(<function>, args…) calls the <function> when the connection with the node is successful.
+
+},
+
+deleteNode: function() {
+
+    // TODO (optional): Add here all the processing required when the node is being deleted such as cleaning up some data 
+    // in the attached storage or similar. This method is optional.
+
+},
+
+unprovision: function() {
+
+    // TODO (optional): Add here all the processing required when the feature is being removed from the node assembly.
+    // If you want the feature to become unmanaged (in other words, you want the associated CLI to be kept in the node
+    // but no longer handled by gluware, then remove the unprovision() call. However, if you want the feature to be
+    // also removed from the target node, then this is why the unprovision() call has been designed for. 
+    // Remember that the rendering is always called after the expert code and the FSE will look into the node object
+    // store to see what objects needs to be rendered. If the object store is empty (because you don't do anything
+    // in the unprovision() mathod, and because the FSE works with a declarative approach, all the objects following
+    // the naming convention (and associated CLI commands) will be removed from the target node. 
+    // This method is optional.
+
+},
+
+preview: function() {
+
+    // TODO (optional): Add here all the processing required when you want to make visible an output when the preview action
+    // is called. This method is optional.
+
+    thisNib.run();
+
+}

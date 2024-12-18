@@ -1,0 +1,19 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "b71e4ee1-a07a-4656-be97-4e3cfcc245c2",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/NXOS_SystemQos.json"
+	},
+	"cliCommands" : [
+		"system qos",
+		"  service-policy type queuing input fcoe-default-in-policy",
+		"  service-policy type queuing output fcoe-default-out-policy",
+		"  service-policy type qos input fcoe-default-in-policy",
+		"  service-policy type network-qos fcoe-default-nq-policy"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/feature/globals.jtype"
+	},
+	"@id" : "07e86e12-21d5-434c-997e-50fe0ab4a2c4",
+	"featureConcept" : {
+		"name" : " ",
+		"cliCommandGroups" : {
+			"@ref" : [
+				"/org/instance/construct/global/cliCommandGroup/ios_classless_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_enable-passwd_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_enable-secret_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_gratuitous-arp_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_hostname_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_ip-finger_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_ip-bgp-new-format_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_line-aux_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_ssh-in-acl_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_line-vty-con_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_source-route_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_subnet-zero_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_tcp_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_ip-tftp-source_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_ip-ftp-source_grp.json"
+			]
+		}
+	},
+	"form" : {
+		"globals" : {
+			"hostName" : true,
+			"domainName" : "nuc.lab"
+		}
+	}
+}

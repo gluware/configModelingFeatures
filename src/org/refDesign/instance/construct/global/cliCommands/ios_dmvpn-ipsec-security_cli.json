@@ -1,0 +1,16 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "75cd3cbd-946a-4e59-a7af-51e1900b0ee4",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_IpsecSecurity.json"
+	},
+	"cliCommands" : [
+		"crypto ipsec security-association replay window-size 1024",
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

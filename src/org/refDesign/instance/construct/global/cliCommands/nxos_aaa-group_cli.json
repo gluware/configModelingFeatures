@@ -1,0 +1,16 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "35a81037-7fe1-43f8-ba20-8241eb6a0422",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/NXOS_AAAGroup.json"
+	},
+	"cliCommands" : [
+		"aaa group server tacacs+ $context.aaa[*].tacacs[*].name",
+		"  server $context.aaa[*].tacacs[*].ip"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

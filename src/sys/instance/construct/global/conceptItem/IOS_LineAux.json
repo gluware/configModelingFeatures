@@ -1,0 +1,34 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/conceptItem.jtype"
+	},
+	"@id" : "13e722d9-9ca2-4caa-bfe9-18748466c8fc",
+	"name" : "LineAux",
+	"vendors" : {
+		"cisco" : {
+			"type" : [
+				"ios"
+			]
+		}
+	},
+	"showCmds" : [
+		"sh run | sec ^line.(con|vty|aux|[0-9])"
+	],
+	"mode" : "basic",
+	"keyCliLine" : "line ((?:con|vty|aux)\\s\\d+(?:\\s\\d+)*)",
+	"rootEntryFlag" : false,
+	"boundaries" : {
+		"start" : null
+	},
+	"discover" : {
+		"line" : {
+			"expressions" : [
+				"line\\s(?<aux>aux).+",
+				"line\\s(?<vty>vty).+",
+				"line\\s(?<con>con).+"
+			]
+		}
+	},
+	"removeSyntax" : {
+	}
+}

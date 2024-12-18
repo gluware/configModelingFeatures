@@ -1,0 +1,19 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "0f698e53-dd47-4b2b-bfe6-e095483cd5d8",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_IkeKeyringV2.json"
+	},
+	"cliCommands" : [
+		"crypto ikev2 keyring DMVPN-KEYRING-$context.networks[*].overlayNetwork.id",
+		" peer ANY",
+		"  address 0.0.0.0 0.0.0.0",
+		"  pre-shared-key $context.networks[*].overlayNetwork.authentication.key",
+		" !"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

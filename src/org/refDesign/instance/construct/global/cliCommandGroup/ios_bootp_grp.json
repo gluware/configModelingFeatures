@@ -1,0 +1,20 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommandGroup.jtype"
+	},
+	"@id" : "b93a49c3-96a8-4a63-8ef7-0328274a7ff7",
+	"regEx" : ".+",
+	"ignoreDelete" : true,
+	"cliBlocks" : {
+		"@ref" : [
+			"/org/instance/construct/global/cliCommands/ios_bootp_cli.json"
+		]
+	},
+	"maskCommands" : [
+		"ip bootp"
+	],
+	"advanced" : {
+		"renderingConditions" : [
+		]
+	}
+}

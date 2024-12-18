@@ -1,0 +1,17 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "e8c03c60-f1fe-4cd8-998c-19451978f37f",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_Intf2.json"
+	},
+	"cliCommands" : [
+		"interface $context.portMap.DATA.name",
+		" ip policy route-map rmap_pbr",
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "66b9e9fe-7f04-40c0-8d5b-801775e80779",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_Switch_SwitchPort.json"
+	},
+	"cliCommands" : [
+		"interface $context.switchPorts[*].name",
+		" switchport mode trunk",
+		" switchport trunk allowed vlan $context.switchPorts[*].dot1q.includedVlansRange",
+		" switchport trunk native vlan $context.switchPorts[*].dot1q.nativeVlan",
+		" channel-group $context.switchPorts[*].portChannel.id mode $context.switchPorts[*].portChannel.mode",
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

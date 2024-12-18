@@ -1,0 +1,15 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "b7b484cb-c0f8-420c-bdd2-60cd0966264f",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_TacacsServer.json"
+	},
+	"cliCommands" : [
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

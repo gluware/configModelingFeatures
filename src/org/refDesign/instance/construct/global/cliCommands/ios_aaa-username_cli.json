@@ -1,0 +1,15 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "0d469a13-7ad6-46c5-becf-d9a154add9fc",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_Username.json"
+	},
+	"cliCommands" : [
+		"username $context.users[*].name privilege 15 secret 0 $context.users[*].password"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

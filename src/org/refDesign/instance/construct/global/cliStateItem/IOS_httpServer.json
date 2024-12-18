@@ -1,0 +1,20 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id" : "5851f1bc-97f3-4553-a9d2-bda88bebbf2b",
+	"cmd" : "show ip http server all",
+	"rootEntry" : "yes",
+	"groupName" : "httpServer",
+	"discover" : {
+		"state" : {
+			"expressions" : [
+				"HTTP server port: (?<httpPort>\\d+)",
+				"HTTP server status: (?<status>Enabled|Disabled)"
+			],
+			"localKey" : ""
+		}
+	},
+	"options" : {
+	}
+}

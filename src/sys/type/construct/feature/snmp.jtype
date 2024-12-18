@@ -1,0 +1,198 @@
+{
+    "@Info": {
+        "phaseNumber@Display.label": "Execution Order",
+        "phaseNumber": 10,
+        "displayName": "SNMP Feature",
+        "description": "SNMP Feature",
+        "featureDependencies": {
+            "jnib": {
+                "/sys/jnib/features/snmp/cm_snmp.template.jnib": {}
+            },
+            "preRequiredFeatures": {}
+        },
+        "domainDependencies": {},
+        "nodeDependencies": {},
+        "augments": {
+            "targets": [
+                "/sys/type/construct/domain/aireosWirelessControllerAssembly",
+                "/sys/type/construct/domain/arubaosWirelessControllerAssembly",
+                "/sys/type/construct/domain/arubaoscxSwitchAssembly",
+                "/sys/type/construct/domain/arubaosSwitchAssembly",
+                "/sys/type/construct/domain/provisionSwitchAssembly",
+                "/sys/type/construct/domain/sgosWanOptimizerAssembly",
+                "/sys/type/construct/domain/dnosSwitchAssembly",
+                "/sys/type/construct/domain/gaiaFirewallAssembly",
+                "/sys/type/construct/domain/eosSwitchAssembly",
+                "/sys/type/construct/domain/exSwitchAssembly",
+                "/sys/type/construct/domain/srxRouterAssembly",
+                "/sys/type/construct/domain/qfxSwitchAssembly",
+                "/sys/type/construct/domain/mxRouterAssembly",
+                "/sys/type/construct/domain/iosSwitchAssembly",
+                "/sys/type/construct/domain/nxosSwitchAssembly",
+                "/sys/type/construct/domain/iosRouterAssembly",
+                "/sys/type/construct/domain/asaFirewallAssembly"
+            ],
+            "blocks": {
+                "expertFeatureOption": {
+                    "properties": {
+                        "name": "snmp",
+                        "featureLabel": "SNMP Feature",
+                        "policyLabel": "SNMP Policy",
+                        "policyPath": "/org/instance/construct/feature/snmp/*"
+                    }
+                }
+            }
+        }
+    },
+    "featureConcept@Display.tab": "Feature Concept",
+    "featureConcept": {
+        "name@Display.label": "Feature Concept Name",
+        "name@Display.description": "A name that describes the collection of the selected CLI Command Groups",
+        "name@Searchable": {
+            "propName": "Feature Concept Name",
+            "description": "Feature Concept Name"
+        },
+        "name@Required!": "",
+        "cliCommandGroups@Display.label": "CLI Command Groups",
+        "cliCommandGroups@Ref": {
+            "paths": [
+                "/org/instance/construct/global/cliCommandGroup/*",
+                "/org/instance/construct/global/vsCliCommandGroup/*"
+            ],
+            "many": true
+        },
+        "cliCommandGroups@Display.pickList": {
+            "optionsLabel": "Available",
+            "selectedLabel": "Selected",
+            "showReorder": true,
+            "showCheckAll": false,
+            "showUnCheckAll": false,
+            "multiSelect": true,
+            "minLineCount": 6
+        }
+    },
+    "form@Display.tab": "Configuration",
+    "form": {
+        "snmp@Display.label": "SNMP",
+        "snmp": {
+            "location@Display.label": "Location",
+            "location": "",
+            "contact@Display.label": "Contact",
+            "contact": "",
+            "version@Display.label": "Version",
+            "version": {
+                "@Complete.options": {
+                    "@Display.addLabel": "Add Version",
+                    "v2c@Display.label": "Version 2c",
+                    "v2c": {
+                        "community@Display.label": "Communities",
+                        "community@Display.addLabel": "Add Community",
+                        "community": [ 
+                            {
+                                "name@Display.label":"Community Name",
+                                "name":"",
+                                "accessList@Display.label":"Access-list",
+                                "accessList":"",
+                                "accessType@Display.label": "Access Type",
+                                "accessType": "RO",
+                                "accessType@Select.options": {
+                                    "RO@Display.label":"Read-Only",
+                                    "RO": {
+                                        "host@Display.label": "Host",
+                                        "host@Display.addLabel": "Add Host",
+                                        "host": [
+                                            {
+                                                "ip@Display.label": "IP Address",
+                                                "ip": ""
+                                            }
+                                        ]
+                                    },
+                                    "RW@Display.label":"Read-Write",
+                                    "RW": {
+                                        "host@Display.label": "Host",
+                                        "host@Display.addLabel": "Add Host",
+                                        "host": [
+                                            {
+                                                "ip@Display.label": "IP Address",
+                                                "ip": ""
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "v3@Display.label": "Version 3",
+                    "v3": {
+                        "group@Display.label": "Groups",
+                        "group@Display.addLabel": "Add Group",
+                        "group": [
+                            {
+                                "name": "",
+                                "name@Display.label": "Group Name",
+                                "method": "authPriv",
+                                "method@Display.label": "Authentication & Encryption",
+                                "method@Searchable": {
+                                    "propName": "Authentication & Encryption",
+                                    "description": "Authentication & Encryption"
+                                },
+                                "method@Enum": ["noAuthNoPriv", "authNoPriv", "authPriv"],
+                                "view@Display.label": "Views",
+                                "view": {
+                                    "@Complete.options": {
+                                        "@Display.addLabel": "Add View",
+                                        "read@Display.label": "Read View",
+                                        "read": {
+                                            "name@Display.label": "Name",
+                                            "name@Searchable": {
+                                                "propName": "Read View Name",
+                                                "description": "Read View"
+                                            },
+                                            "name": ""
+                                        },
+                                        "write@Display.label": "Write View",
+                                        "write": {
+                                            "name@Display.label": "Name",
+                                            "name@Searchable": {
+                                                "propName": "Write View Name",
+                                                "description": "Write View"
+                                            },
+                                            "name": ""
+                                        }
+                                    }
+                                }
+                            }
+                        ],
+                        "user@Display.label": "Users",
+                        "user@Display.addLabel": "Add User",
+                        "user": [
+                            {
+                                "name@Display.label": "Username",
+                                "name": "",
+                                "authentication@Display.label": "Authentication Parameters",
+                                "authentication": {
+                                    "hash@Display.label": "HMAC Algorithm",
+                                    "hash@Enum": [ "md5", "sha" ],
+                                    "hash": "sha",
+                                    "password@Display.label": "Password",
+                                    "password@Display.password!": "",
+                                    "password": ""
+                                },
+                                "encryption@Display.label": "Encryption Parameters",
+                                "encryption": {
+                                    "cipher": "aes 256",
+                                    "cipher@Display.label": "Algorithm",
+                                    "cipher@Enum": [ "des", "3des", "aes 128", "aes 192", "aes 256" ],
+                                    "cipher@Display.enum": [ "des", "3des", "aes128", "aes192", "aes256" ],
+                                    "password@Display.label": "Password",
+                                    "password@Display.password!": "",
+                                    "password": ""
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/featureBinder.jtype"
+	},
+	"@id" : "b3e4f84c-0423-4ddd-94ad-ed4a75e86f45",
+	"vendor": "cisco",
+	"os" : "nxos",
+	"featureName" : "nac",
+	"featureDisplayName" : "NAC Feature",
+	"renderList" : [
+		{
+			"item" : {
+				"@ref" : "/org/instance/construct/global/conceptItem/NXOS_Dot1x.json"
+			},
+			"maskCommands" : [
+			],
+			"dCli" : [
+			]
+		}
+	]
+}

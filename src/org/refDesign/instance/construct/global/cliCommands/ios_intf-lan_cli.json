@@ -1,0 +1,21 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "fb13b3a6-1cbe-4f6c-99b6-ba969b80af11",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_Intf2.json"
+	},
+	"cliCommands" : [
+		"interface GigabitEthernet0/1",
+		" description Inside Interface",
+		" ip address 192.168.168.1 255.255.255.0",
+		" no ip redirects",
+		" no ip unreachables",
+		" no ip proxy-arp",
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

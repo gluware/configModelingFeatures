@@ -1,0 +1,16 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStatePolicy.jtype"
+	},
+	"@id" : "5e698aea-3859-4eee-a0a3-33b597185413",
+	"list" : [
+        {
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/NXOS_show_interface.json"
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : ""
+        }
+	]
+}

@@ -1,0 +1,15 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "914ad306-ac66-4b4a-92e2-7438ef24afb4",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_TftpServer.json"
+	},
+	"cliCommands" : [
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

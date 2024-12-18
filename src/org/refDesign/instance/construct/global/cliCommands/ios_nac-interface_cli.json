@@ -1,0 +1,31 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "60a80624-4297-416d-8b52-de7a66b48cdd",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_Switch_SwitchPort.json"
+	},
+	"cliCommands" : [
+		"interface $context.switchPorts[*].name",
+		" authentication open",
+		" authentication control-direction in",
+		" authentication event fail action next-method",
+		" authentication event server dead action reinitialize vlan $discover.vlan.access",
+		" authentication event server dead action authorize voice",
+		" authentication event server alive action reinitialize",
+		" authentication host-mode multi-auth",
+		" authentication order mab dot1x",
+		" authentication priority dot1x mab",
+		" authentication port-control auto",
+		" authentication periodic",
+		" authentication timer reauthenticate server",
+		" authentication violation restrict",
+		" mab",
+		" dot1x pae authenticator",
+		" dot1x timeout tx-period 3",
+		"!"
+	],
+	"advanced" : {
+	}
+}

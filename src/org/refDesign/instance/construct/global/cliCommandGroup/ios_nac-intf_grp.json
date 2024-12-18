@@ -1,0 +1,29 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommandGroup.jtype"
+	},
+	"@id" : "b85ed6f6-5c50-4b4f-8faa-eef8a6c502ec",
+	"regEx" : ".+",
+	"ignoreDelete" : true,
+	"cliBlocks" : {
+		"@ref" : [
+			"/org/instance/construct/global/cliCommands/ios_nac-intf_cli.json"
+		]
+	},
+	"advanced" : {
+		"renderingConditions" : [
+			"$discover.vlan.accessMode.enabled == true",
+			"$discover.vlan.access != 201"
+		]
+	},
+	"maskCommands" : [
+		"authentication",
+		"mab",
+		"dot1x",
+		"interface"
+	],
+	"removeSyntax" : {
+		"list" : [
+		]
+	}
+}

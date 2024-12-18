@@ -1,0 +1,48 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStatePolicy.jtype"
+	},
+	"@id" : "fe06232c-b77d-4a5c-8087-465f06918374",
+	"list" : [
+		{
+			"item" : {
+                "@ref": "/org/instance/construct/global/cliStateItem/IOS_Upgrade_BGP_Neighbor_Count.json"
+            },
+            "params" : "",
+			"includePattern" : ".+",
+			"excludePattern" : ""
+		},
+        {
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/IOS_Upgrade_BGP_Neighbor_Details.json"
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : ""
+        },
+        {
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/IOS_Upgrade_default_route.json"
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : ""
+        },
+        {
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/IOS_Upgrade_interfaces_status.json"
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : ""
+        },
+        {
+            "item" : {  
+                "@ref" : "/org/instance/construct/global/cliStateItem/IOS_Upgrade_ip_route_full.json"
+            },
+            "params" : "",
+            "includePattern" : ".+",
+            "excludePattern" : ""
+        },
+	]
+}

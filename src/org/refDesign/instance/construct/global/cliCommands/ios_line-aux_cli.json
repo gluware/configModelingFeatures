@@ -1,0 +1,20 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "c749d798-a7d3-445e-ac0a-f08ed4ccf7cf",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_LineConVty.json"
+	},
+	"cliCommands" : [
+		"line aux 0",
+		" exec-timeout 15 0",
+		" no exec",
+		" stopbits 1",
+		" password 7 095C4F1A0A1218000F",
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

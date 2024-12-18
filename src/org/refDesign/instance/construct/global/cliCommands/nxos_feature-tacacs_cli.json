@@ -1,0 +1,15 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "d98466f2-9914-4d77-a50a-47812a1fc068",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/NXOS_Feature.json"
+	},
+	"cliCommands" : [
+		"feature tacacs+"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

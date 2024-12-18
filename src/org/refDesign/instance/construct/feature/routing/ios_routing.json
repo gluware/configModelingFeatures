@@ -1,0 +1,21 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/feature/routing.jtype"
+	},
+	"@id" : "3fdcdd29-37ab-47e4-8aad-b39f591173e8",
+	"featureConcept" : {
+		"name" : "DC Routing",
+		"cliCommandGroups" : {
+			"@ref" : [
+			]
+		}
+	},
+	"form" : {
+		"distributionLayer" : {
+			"ipv4" : {
+				"routingProtocol" : {
+				}
+			}
+		}
+	}
+}

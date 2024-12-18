@@ -1,0 +1,23 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommandGroup.jtype"
+	},
+	"@id" : "6aef05e9-f10c-4ff9-9d0d-4236ec4c786d",
+	"regEx" : ".+",
+	"ignoreDelete" : false,
+	"cliBlocks" : {
+		"@ref" : [
+			"/org/instance/construct/global/cliCommands/ios_snmp-server_cli.json"
+		]
+	},
+	"maskCommands" : [
+		"snmp-server community",
+		"snmp-server location",
+		"snmp-server contact",
+		"snmp-server host"
+	],
+	"advanced" : {
+		"renderingConditions" : [
+		]
+	}
+}

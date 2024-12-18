@@ -1,0 +1,15 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "fe2fc888-250b-40d9-af47-19165e0aad96",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_EnablePassword.json"
+	},
+	"cliCommands" : [
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

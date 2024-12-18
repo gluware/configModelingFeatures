@@ -1,0 +1,43 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/domain/iosSwitchAssembly.jtype"
+	},
+	"domains" : {
+        "modules": {
+            "aaa" : {
+	            "policy" : {
+	                "@ref" : "/org/instance/construct/feature/aaa/tacacs-single-step.json"
+	            }
+	        }
+        }
+	},
+	"interfaces" : {
+		"portLayout" : {
+			"@ref" : null
+		},
+		"portMap" : {
+			"@ref" : null
+		},
+		"ipNumbering" : {
+			"@ref" : null
+		}
+	},
+	"agents" : {
+		"watchdog" : {
+			"policy" : {
+				"@ref" : null
+			}
+		}
+	},
+	"state" : {
+		"assessment" : {
+			"provision" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/global/cliStatePolicy/ping_tacacs-single-step.json"
+				},
+				"schedule" : "before",
+				"action" : "abort"
+			}
+		}
+	}
+}

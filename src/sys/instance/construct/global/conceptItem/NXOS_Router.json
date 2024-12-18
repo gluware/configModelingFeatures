@@ -1,0 +1,33 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/conceptItem.jtype"
+	},
+	"@id" : "b2db2848-f7c5-41f9-af64-e07fafef57ce",
+	"name" : "Router",
+	"vendors" : {
+		"cisco" : {
+			"type" : [
+				"nxos"
+			]
+		}
+	},
+	"showCmds" : [
+		"sh run | sec ^router"
+	],
+	"mode" : "advanced",
+	"keyCliLine" : "router (\\w+\\s.+)",
+	"rootEntryFlag" : false,
+	"keyLineDepth" : 1,
+	"keyGroup" : 1,
+	"regEx" : "",
+	"metadata" : {
+		"@ref" : "/org/instance/construct/global/cliMetadata/IOS_Router_cliMetadata.json"
+	},
+	"boundaries" : {
+		"start" : null
+	},
+	"discover" : {
+	},
+	"removeSyntax" : {
+	}
+}

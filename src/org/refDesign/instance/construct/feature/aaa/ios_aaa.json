@@ -1,0 +1,36 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/feature/aaa.jtype"
+	},
+	"@id" : "ff64b844-f566-4117-ae4d-0ca30eea6119",
+	"featureConcept" : {
+		"name" : "AAA Feature",
+		"cliCommandGroups" : {
+			"@ref" : [
+				"/org/instance/construct/global/cliCommandGroup/ios_aaa-auth_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_aaa-tacacs-server_grp.json"
+			]
+		}
+	},
+	"form" : {
+		"aaa" : [
+			{
+				"name" : "tacacsServer",
+				"tacacs" : [
+					{
+						"name" : "testServer",
+						"ip" : "10.1.255.203",
+						"key" : "thisKey",
+						"timeout" : 5
+					}
+				],
+				"srcInt" : {
+					"@ref" : null
+				},
+				"vrf" : {
+					"@ref" : null
+				}
+			}
+		]
+	}
+}

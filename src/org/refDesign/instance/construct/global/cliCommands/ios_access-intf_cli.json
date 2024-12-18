@@ -1,0 +1,20 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "8043c5af-7982-48ca-9ee0-11c58bacc530",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_Switch_SwitchPort.json"
+	},
+	"cliCommands" : [
+		"interface $context.switchPorts[*].name",
+		" description $context.switchPorts[*].description",
+		" switchport mode access",
+		" switchport access vlan $context.switchPorts[*].settings.vlan.access",
+		" switchport voice vlan $context.switchPorts[*].settings.vlan.voice",
+		"!"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

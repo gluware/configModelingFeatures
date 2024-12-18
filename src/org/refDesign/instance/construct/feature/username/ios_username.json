@@ -1,0 +1,30 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/feature/username.jtype"
+	},
+	"@id" : "9be0f21e-9621-48e3-ad89-617a466eb0b8",
+	"featureConcept" : {
+		"name" : "Local Users",
+		"cliCommandGroups" : {
+			"@ref" : [
+				"/org/instance/construct/global/cliCommandGroup/ios_username_grp.json"
+			]
+		}
+	},
+	"form" : {
+		"user" : [
+			{
+				"name" : "testUser",
+				"password" : "myUserPassword",
+				"hash" : "cleartext",
+				"privilege" : "15"
+			},
+			{
+				"name" : "gluUser",
+				"password" : "myGluPassword",
+				"hash" : "cleartext",
+				"privilege" : "15"
+			}
+		]
+	}
+}

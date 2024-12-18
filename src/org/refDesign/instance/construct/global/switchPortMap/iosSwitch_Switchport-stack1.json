@@ -1,0 +1,258 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/switchPortMap.jtype"
+	},
+	"@id" : "659d718f-8c9d-4a70-8910-bb0112255374",
+	"platform" : {
+		"onBoard" : {
+			"ports" : "24",
+			"layout" : {
+				"1" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"2" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"3" : {
+					"description" : "",
+					"settings" : {
+                        "@ref" : null
+					}
+				},
+				"4" : {
+					"description" : "",
+					"settings" : {
+                        "@ref" : null
+					}
+				},
+				"5" : {
+					"description" : "",
+					"settings" : {
+                        "@ref" : null
+					}
+				},
+				"6" : {
+					"description" : "",
+					"settings" : {
+                        "@ref" : null
+					}
+				},
+				"7" : {
+					"description" : "",
+					"settings" : {
+                        "@ref" : null
+					}
+				},
+				"8" : {
+					"description" : "",
+					"settings" : {
+                        "@ref" : null
+					}
+				},
+				"9" : {
+					"description" : "",
+					"settings" : {
+                        "@ref" : null
+					}
+				},
+				"10" : {
+					"description" : "",
+					"settings" : {
+                        "@ref" : null
+					}
+				},
+				"11" : {
+					"description" : "",
+					"settings" : {
+                        "@ref" : null
+					}
+				},
+				"12" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"13" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"14" : {
+					"description" : "",
+					"settings" : {
+                        "@ref" : null
+					}
+				},
+				"15" : {
+					"description" : "",
+					"settings" : {
+                        "@ref" : null
+					}
+				},
+				"16" : {
+					"description" : "",
+					"settings" : {
+                        "@ref" : null
+					}
+				},
+				"17" : {
+					"description" : "",
+					"settings" : {
+                        "@ref" : null
+					}
+				},
+				"18" : {
+					"description" : "",
+					"settings" : {
+                        "@ref" : null
+					}
+				},
+				"19" : {
+					"description" : "",
+					"settings" : {
+                        "@ref" : null
+					}
+				},
+				"20" : {
+					"description" : "",
+					"settings" : {
+                        "@ref" : null
+					}
+				},
+				"21" : {
+					"description" : "",
+					"settings" : {
+                        "@ref" : null
+					}
+				},
+				"22" : {
+					"description" : "",
+					"settings" : {
+                        "@ref" : null
+					}
+				},
+				"23" : {
+					"description" : "",
+					"settings" : {
+                        "@ref" : null
+					}
+				},
+				"24" : {
+					"description" : "",
+					"settings" : {
+                        "@ref" : null
+					}
+				}
+			},
+			"templates" : [
+			]
+		},
+		"uplinks" : {
+			"ports" : "2",
+			"layout" : {
+				"1" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				},
+				"2" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : null
+					}
+				}
+			},
+			"templates" : [
+				{
+					"cliCommandGroups" : {
+						"@ref" : [
+							"/org/instance/construct/global/switchportCommandGroup/ios_trunk-interface-swCliGroup.json"
+						]
+					},
+					"ports" : [
+						"1",
+						"2"
+					]
+				}
+			]
+		},
+		"aggregated" : {
+		},
+		"module1" : {
+			"ports" : "4",
+			"layout" : {
+				"1" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : "/org/instance/construct/global/switchportSettings/trunk-uplink-vlan-assignment.json"
+					}
+				},
+				"2" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : "/org/instance/construct/global/switchportSettings/trunk-uplink-vlan-assignment.json"
+					}
+				},
+				"3" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : "/org/instance/construct/global/switchportSettings/trunk-uplink-vlan-assignment.json"
+					}
+				},
+				"4" : {
+					"description" : "",
+					"settings" : {
+						"@ref" : "/org/instance/construct/global/switchportSettings/trunk-uplink-vlan-assignment.json"
+					}
+				}
+			},
+			"templates" : [
+				{
+					"cliCommandGroups" : {
+						"@ref" : [
+							"/org/instance/construct/global/switchportCommandGroup/ios_trunk-interface-swCliGroup.json"
+						]
+					},
+					"ports" : [
+						"1",
+						"2",
+						"3",
+						"4"
+					]
+				}
+			]
+		},
+		"module2" : {
+			"ports" : "none"
+		}
+	},
+	"namingConventions" : {
+		"unmanaged" : "",
+		"portNamingPolicies" : {
+			"onBoard" : {
+				"@ref" : "/org/instance/construct/global/switchPortNamingProfile/onboardNamingProfile.json"
+			},
+			"uplinks" : {
+				"@ref" : "/org/instance/construct/global/switchPortNamingProfile/uplink-3850.json"
+			},
+			"aggregated" : {
+				"@ref" : null
+			},
+			"module1" : {
+				"@ref" : "/org/instance/construct/global/switchPortNamingProfile/mod1-3850.json"
+			},
+			"module2" : {
+				"@ref" : null
+			}
+		}
+	}
+}

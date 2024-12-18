@@ -1,0 +1,27 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/conceptItem.jtype"
+	},
+	"@id" : "b1fea0a6-3378-4145-ad2a-20e70730750d",
+	"name" : "TacacsServerLegacy",
+	"vendors" : {
+		"cisco" : {
+			"type" : [
+				"ios"
+			]
+		}
+	},
+	"showCmds" : [
+		"sh run | inc ^tacacs-server"
+	],
+	"keyCliLine" : "tacacs-server \\S+ (.+)",
+	"rootEntryFlag" : true,
+	"mode" : "basic",
+	"boundaries" : {
+		"start" : null
+	},
+	"discover" : {
+	},
+	"removeSyntax" : {
+	}
+}

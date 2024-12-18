@@ -1,0 +1,22 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/stackPortMap.jtype"
+	},
+	"@id" : "9d13c233-c991-408b-b3f4-d8326948a760",
+	"stack" : [
+		{
+			"switchPortMap" : {
+				"@ref" : "/org/instance/construct/global/switchPortMap/iosSwitch_Switchport-stack1.json"
+			}
+		}
+	],
+	"aggregated" : {
+	},
+	"namingConventions" : {
+		"portNamingPolicies" : {
+			"aggregated" : {
+				"@ref" : null
+			}
+		}
+	}
+}

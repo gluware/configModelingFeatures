@@ -1,0 +1,15 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "65626612-4d74-4610-8744-8ba4bb220f02",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/NXOS_Username.json"
+	},
+	"cliCommands" : [
+		"username $context.user[*].name password $context.user[*].hash $context.user[*].password  role $context.user[*].privilege"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

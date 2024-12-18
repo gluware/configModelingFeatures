@@ -1,0 +1,18 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliCommands.jtype"
+	},
+	"@id" : "7445beda-b696-4de0-a664-ee013c2a9a5f",
+	"item" : {
+		"@ref" : "/org/instance/construct/global/conceptItem/IOS_TacacsServer.json"
+	},
+	"cliCommands" : [
+		"tacacs-server host 10.30.255.20",
+		"tacacs-server host 10.58.255.20",
+		"tacacs-server timeout 15",
+		"tacacs-server key 7 104D000A0618"
+	],
+	"advanced" : {
+		"filter" : null
+	}
+}

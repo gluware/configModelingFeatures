@@ -1,0 +1,27 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id" : "8155b975-c3ab-4963-8ef0-2493dfd4dbda",
+    "cmd": "ping #context.ipAddress",
+    "groupName": "ping",
+    "discover": {
+        "rate": {
+            "expressions": [
+                "Sending \\d+, (?<pcktSize>\\d+)\\-byte ICMP Echos to (?<ipAddress>\\d+.\\d+.\\d+.\\d+), timeout is \\d+ seconds",
+                "Success rate is (?<successRate>\\d+).*"
+            ],
+            "localKey": ""
+        }
+    },
+    "options": {
+        "params": [
+            {
+                "name": "ipAddress",
+                "label": "IP Address",
+                "description": "ip of server to ping"
+            }
+        ]
+    },
+    "rootEntry": "yes"
+}

@@ -1,0 +1,44 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/domain/iosSwitchAssembly.jtype"
+	},
+	"@id" : "39832856-5b2d-41d2-8ff3-2deb6af7cd77",
+	"domains" : {
+        "modules": {
+            "aaa" : {
+	            "policy" : {
+	                "@ref" : "/org/instance/construct/feature/aaa/tacacs-step2.json"
+	            }
+            }
+        }
+	},
+	"interfaces" : {
+		"portLayout" : {
+			"@ref" : null
+		},
+		"portMap" : {
+			"@ref" : "/org/instance/construct/global/portMap/nyu-switch.json"
+		},
+		"ipNumbering" : {
+			"@ref" : null
+		}
+	},
+	"agents" : {
+		"watchdog" : {
+			"policy" : {
+				"@ref" : null
+			}
+		}
+	},
+	"state" : {
+		"assessment" : {
+			"provision" : {
+				"policy" : {
+					"@ref" : "/org/instance/construct/global/cliStatePolicy/ping_tacacs-step2.json"
+				},
+				"schedule" : "before",
+				"action" : "abort"
+			}
+		}
+	}
+}

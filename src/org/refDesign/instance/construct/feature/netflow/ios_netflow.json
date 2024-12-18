@@ -1,0 +1,56 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/feature/netflow.jtype"
+	},
+	"@id" : "c7d161a5-4a24-43e2-9ba9-c48c61c6f7b1",
+	"featureConcept" : {
+		"name" : "Netflow",
+		"cliCommandGroups" : {
+			"@ref" : [
+				"/org/instance/construct/global/cliCommandGroup/ios_netflow-record_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_netflow-exporter_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_netflow-monitor_grp.json",
+				"/org/instance/construct/global/cliCommandGroup/ios_netflow-interface_grp.json"
+			]
+		}
+	},
+	"form" : {
+		"flow" : {
+			"record" : {
+				"name" : "FlowRecord",
+				"description" : "This is a FlowRecord"
+			},
+			"exporter" : [
+				{
+					"name" : "FlowExporter1",
+					"description" : "This is my FlowExporter1",
+					"srcInt" : {
+						"@ref" : null
+					},
+					"destination" : {
+						"ip" : "10.1.1.55",
+						"port" : "2055"
+					}
+				},
+				{
+					"name" : "FlowExporter2",
+					"description" : "This is my FlowExporter2",
+					"srcInt" : {
+						"@ref" : null
+					},
+					"destination" : {
+						"ip" : "10.2.2.55",
+						"port" : "2055"
+					}
+				}
+			],
+			"monitor" : {
+				"name" : "FlowMonitor",
+				"description" : "This is a FlowMonitor",
+				"inactive" : 400,
+				"active" : 200,
+				"entries" : 10000
+			}
+		}
+	}
+}

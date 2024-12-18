@@ -1,0 +1,8 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/lanInterface.jtype"
+	},
+	"@id" : "98401de4-aedb-4b0a-bc9c-1ec3a41e2af7",
+	"description" : "",
+	"location" : "internal"
+}
